@@ -1,0 +1,17 @@
+uuid: 9ca29bfb-894d-490e-a5ca-dbbbc2589a69
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Blog Post'
+type: blog
+description: 'Create a new entry into the site''s blog.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: true
