@@ -1,0 +1,20 @@
+uuid: 2e31f7e8-1aff-4bde-b25d-b0942186e4ef
+langcode: en
+status: true
+dependencies:
+  theme:
+    - camp_bartik
+_core:
+  default_config_hash: 9seqZgVoBr8RbATwuq1rk49zkoLyE-ORidPG7qQk6-0
+id: camp_bartik_page_title
+theme: camp_bartik
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

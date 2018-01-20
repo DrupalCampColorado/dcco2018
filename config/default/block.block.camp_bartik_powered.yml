@@ -1,0 +1,22 @@
+uuid: 3e92d65b-d1a3-45b8-9750-91c92d7f8fed
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - camp_bartik
+_core:
+  default_config_hash: _z12zrTcnqVF4BCl0Ec0f5snYU19AEKd17DVyn6bC5U
+id: camp_bartik_powered
+theme: camp_bartik
+region: footer_fifth
+weight: 10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

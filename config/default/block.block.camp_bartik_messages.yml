@@ -1,0 +1,22 @@
+uuid: 0eede004-a28e-44b1-9996-d521a29e3b12
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - camp_bartik
+_core:
+  default_config_hash: aw2sRiZyB0SFnCOsMGSod9Yc0m57E0l-aAlu7BQdmKc
+id: camp_bartik_messages
+theme: camp_bartik
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

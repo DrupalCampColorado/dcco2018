@@ -1,0 +1,22 @@
+uuid: c2040446-a858-4094-8d85-896c30e6b057
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - camp_bartik
+_core:
+  default_config_hash: 5ldqFxNNzsZTfYmpsmxXiYbOpEOSWaDBqYQ1UMHQmBw
+id: camp_bartik_breadcrumbs
+theme: camp_bartik
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,26 @@
+uuid: d5c9132d-9dd3-4a2d-9d3a-8a8fe7b7d928
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - camp_bartik
+_core:
+  default_config_hash: JNNBoaM2Pv2sgIyazOSGacIf3D93pUoHX_MDpn9iwf0
+id: camp_bartik_tools
+theme: camp_bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Tools
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

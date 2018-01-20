@@ -1,0 +1,20 @@
+uuid: 43763f31-67f2-4480-b5b7-24c8c74137e5
+langcode: en
+status: true
+dependencies:
+  theme:
+    - camp_bartik
+_core:
+  default_config_hash: eNkwZR9JIfs8WFothIRgLLkp5W1rFk-F-dfqfkjntFI
+id: camp_bartik_local_actions
+theme: camp_bartik
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: f0cc86db-3af4-46f6-b818-e19b32c88b41
+langcode: en
+status: true
+dependencies:
+  theme:
+    - camp_bartik
+_core:
+  default_config_hash: ISWrluaM134TxAmK63sL3Vb5akX0vbo081fI1PJE6wM
+id: camp_bartik_local_tasks
+theme: camp_bartik
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

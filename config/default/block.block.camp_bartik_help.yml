@@ -1,0 +1,22 @@
+uuid: 94039817-bf93-42fc-92ca-5d52cf1f570f
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - camp_bartik
+_core:
+  default_config_hash: o6nS7X9AbSRJbHBf3lqmdIObCDHhhiwEPXMbzJAc2hE
+id: camp_bartik_help
+theme: camp_bartik
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

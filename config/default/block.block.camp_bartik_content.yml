@@ -1,0 +1,22 @@
+uuid: c8beaa71-6335-450a-9196-034a6ea17c1f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - camp_bartik
+_core:
+  default_config_hash: Tr1xwS8gklVkfvPjdQDi3xzLQRHfQKAgngJ_pFAarXg
+id: camp_bartik_content
+theme: camp_bartik
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }
