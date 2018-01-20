@@ -1,0 +1,25 @@
+uuid: 2968ce2d-8e70-492a-9b45-13da63ec09d0
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - themekit
+_core:
+  default_config_hash: p4sLn1SKTz03L12PxF2S3nRV87R-YJS7GKTDe95Yj5g
+id: themekit_branding
+theme: themekit
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

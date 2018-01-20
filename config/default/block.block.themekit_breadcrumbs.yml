@@ -1,0 +1,22 @@
+uuid: 3efec72b-22ac-4c11-a501-228e6a547ef3
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - themekit
+_core:
+  default_config_hash: 5ldqFxNNzsZTfYmpsmxXiYbOpEOSWaDBqYQ1UMHQmBw
+id: themekit_breadcrumbs
+theme: themekit
+region: header
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

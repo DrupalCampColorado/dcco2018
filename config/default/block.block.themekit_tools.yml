@@ -1,0 +1,26 @@
+uuid: e5f67279-8a1b-4b20-9fb7-4e8f4104c8d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - themekit
+_core:
+  default_config_hash: JNNBoaM2Pv2sgIyazOSGacIf3D93pUoHX_MDpn9iwf0
+id: themekit_tools
+theme: themekit
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Tools
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

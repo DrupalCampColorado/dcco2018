@@ -1,0 +1,22 @@
+uuid: 73e0538c-1fe7-4250-b5b7-e375540e3c0d
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - themekit
+_core:
+  default_config_hash: o6nS7X9AbSRJbHBf3lqmdIObCDHhhiwEPXMbzJAc2hE
+id: themekit_help
+theme: themekit
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

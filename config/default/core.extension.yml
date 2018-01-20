@@ -17,6 +17,7 @@ module:
   datetime_range: 0
   dblog: 0
   dynamic_page_cache: 0
+  e3_google_tag: 0
   editor: 0
   entity_reference: 0
   entity_reference_revisions: 0
@@ -67,6 +68,7 @@ theme:
   seven: 0
   camp_bartik: 0
   adminimal_theme: 0
+  themekit: 0
 profile: camp
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

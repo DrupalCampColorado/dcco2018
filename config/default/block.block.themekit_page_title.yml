@@ -1,0 +1,20 @@
+uuid: 9064a2eb-b216-4a1a-8ef2-f13f529aac5c
+langcode: en
+status: true
+dependencies:
+  theme:
+    - themekit
+_core:
+  default_config_hash: 9seqZgVoBr8RbATwuq1rk49zkoLyE-ORidPG7qQk6-0
+id: themekit_page_title
+theme: themekit
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

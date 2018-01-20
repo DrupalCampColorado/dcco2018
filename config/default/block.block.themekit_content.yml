@@ -1,0 +1,22 @@
+uuid: 04bfd4da-792c-4640-9746-76b505f02475
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - themekit
+_core:
+  default_config_hash: Tr1xwS8gklVkfvPjdQDi3xzLQRHfQKAgngJ_pFAarXg
+id: themekit_content
+theme: themekit
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }
