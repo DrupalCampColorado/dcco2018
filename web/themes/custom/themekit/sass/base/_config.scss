@@ -1,0 +1,145 @@
+////
+/// General theme configuration.
+/// @group Configuration
+////
+
+/// Configuration for Drupal Admin tabs.
+$drupal-tabs: (
+  wrap: (
+    background: #fafafa,
+    border: #efefef
+  ),
+  link: (
+    color: #251923,
+    background: #efefef,
+    hover-color: #ffffff,
+    hover-background: #251923
+  ),
+  alt-colors: #b6c4c5 #575642 #4c4650 #251923
+);
+
+/// z-index organization.
+/// See links below for more information.
+///
+/// @link https://css-tricks.com/handling-z-index/
+/// @link http://www.sitepoint.com/using-sass-maps/
+$z-layers: (
+  skip-link: 8000,
+  ajax-throbber: 7000,
+  debug: 1000,
+  default: 0,
+  bottomless-pit: -9999,
+  front: 30,
+  middle: 20s,
+  back: 10,
+  behind: -1,
+
+  // example nested z-index.
+  banner: (
+    default: 100,
+    video: -20,
+    video-filters: -10
+  )
+);
+
+/// Button config
+$buttons: (
+  _base: (
+    background: slategray,
+    color: #fff,
+    border: slategray,
+    active-background: darken(slategray, 10%),
+    active-color: #fff,
+    active-border: darken(slategray, 10%)
+  ),
+  blue: (
+    extend: _base
+  ),
+  gray: (
+    extend: _base,
+    background: $font-gray,
+    color: $white,
+    border: $font-gray,
+    active-background: darken($font-gray, 10%),
+    active-color: $white,
+    active-border: darken($font-gray, 10%)
+  ),
+  ghost: (
+      extend: _base,
+      background: transparent,
+      color: $white,
+      border: $white,
+      active-background: $white,
+      active-color: $font-gray,
+      active-border: $white
+  )
+);
+
+$layouts: (
+  page: (
+    width: 1085px,
+    gutters: (
+      small: 20px,
+      large: 40px
+    )
+  ),
+  content: (
+    width: 780,
+    gutters: (
+      small: 20px,
+      large: 40px
+    )
+  ),
+  header: (
+    width: 1005px,
+    gutters: (
+      small: 10px,
+      medium: 20px,
+      large: 70px
+    )
+  )
+);
+
+$selector-groups: (
+  form-inputs: (
+    text: "[type='text']",
+    password: "[type='password']",
+    date: "[type='date']",
+    datetime: "[type='datetime']",
+    datetime-local: "[type='datetime-local']",
+    month: "[type='month']",
+    week: "[type='week']",
+    email: "[type='email']",
+    number: "[type='number']",
+    search: "[type='search']",
+    tel: "[type='tel']",
+    time: "[type='time']",
+    url: "[type='url']",
+    color: "[type='color']",
+    textarea: "textarea"
+  ),
+  headers: (
+    h1: 'h1',
+    h2: 'h2',
+    h3: 'h3',
+    h4: 'h4',
+    h5: 'h5',
+    h6: 'h6'
+  ),
+  buttons: (
+    input: '[type="button"]',
+    submit: '[type="submit"]',
+    button: 'button'
+  ),
+  body-text: (
+    p: 'p',
+    ul: 'ul',
+    ol: 'ol',
+    div: 'div'
+  ),
+  active: (
+    hover: "&:hover",
+    focus: "&:focus",
+    active: "&:active"
+  )
+);
