@@ -13,6 +13,10 @@ Once you have Amazee's environment installed on your machine running the site re
 * `docker-compose up -d` - starts the local environment
 * `docker-compose exec --user drupal drupal bash` - ssh into the local Docker environment
 
+## Git
+
+Active development happens on the `develop` branch and is merged to `master` on release. Branches should be managed using the [Git Flow methodoloy](http://nvie.com/posts/a-successful-git-branching-model/).
+
 ## Composer
 
 This site uses Composer to manage all of its dependencies, and the vendor directory is intentionally excluded. You'll need to run `composer install` to install everything required to run the site.
