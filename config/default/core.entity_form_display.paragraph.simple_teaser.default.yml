@@ -1,0 +1,35 @@
+uuid: 3e9caf1d-77e2-4b33-a39e-119b29943a40
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.simple_teaser.field_heading
+    - field.field.paragraph.simple_teaser.field_text_area
+    - paragraphs.paragraphs_type.simple_teaser
+  module:
+    - text
+id: paragraph.simple_teaser.default
+targetEntityType: paragraph
+bundle: simple_teaser
+mode: default
+content:
+  field_heading:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_area:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

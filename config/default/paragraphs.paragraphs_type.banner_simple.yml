@@ -1,0 +1,9 @@
+uuid: aa5ab7f6-9629-476c-9027-6436789eb0a1
+langcode: en
+status: true
+dependencies: {  }
+id: banner_simple
+label: 'Banner - Simple'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

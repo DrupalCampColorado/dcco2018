@@ -1,0 +1,9 @@
+uuid: c1e8577e-6f27-4eb1-bda6-0a29fe1e6b3a
+langcode: en
+status: true
+dependencies: {  }
+id: banner_featured_header
+label: 'Banner - Featured Header'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

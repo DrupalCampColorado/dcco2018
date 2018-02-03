@@ -1,0 +1,24 @@
+uuid: 5d536712-08c4-4c83-baa3-4fb9794f619c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.banner_simple.field_heading
+    - paragraphs.paragraphs_type.banner_simple
+id: paragraph.banner_simple.default
+targetEntityType: paragraph
+bundle: banner_simple
+mode: default
+content:
+  field_heading:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true
