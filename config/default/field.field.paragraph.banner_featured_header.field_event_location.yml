@@ -1,0 +1,36 @@
+uuid: 1f8625b7-b8fe-4452-89c0-3bca646f00bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_event_location
+    - paragraphs.paragraphs_type.banner_featured_header
+  module:
+    - address
+id: paragraph.banner_featured_header.field_event_location
+field_name: field_event_location
+entity_type: paragraph
+bundle: banner_featured_header
+label: 'Event Location'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries:
+    US: US
+  fields:
+    administrativeArea: administrativeArea
+    locality: locality
+    dependentLocality: dependentLocality
+    postalCode: postalCode
+    addressLine1: addressLine1
+    addressLine2: addressLine2
+    sortingCode: '0'
+    organization: '0'
+    givenName: '0'
+    additionalName: '0'
+    familyName: '0'
+  langcode_override: ''
+field_type: address

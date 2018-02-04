@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: media_browser_thumb
+label: 'Media browser thumb'
+effects:
+  1b0810aa-4c8f-45c1-b242-bb42ebf1fe0d:
+    uuid: 1b0810aa-4c8f-45c1-b242-bb42ebf1fe0d
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 180
+      height: 80

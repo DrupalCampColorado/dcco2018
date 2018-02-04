@@ -1,0 +1,21 @@
+uuid: 3d06ee19-190c-4c8a-bd4a-a8e988637ca8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_area
+    - paragraphs.paragraphs_type.simple_teaser
+  module:
+    - text
+id: paragraph.simple_teaser.field_text_area
+field_name: field_text_area
+entity_type: paragraph
+bundle: simple_teaser
+label: 'Text Area'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

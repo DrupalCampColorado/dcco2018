@@ -1,0 +1,25 @@
+uuid: eab3a49d-1409-4335-a3e4-498128e65f28
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.reference_block.field_block_reference
+    - paragraphs.paragraphs_type.reference_block
+id: paragraph.reference_block.default
+targetEntityType: paragraph
+bundle: reference_block
+mode: default
+content:
+  field_block_reference:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

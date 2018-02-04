@@ -1,0 +1,9 @@
+uuid: 4fc31654-07ff-445a-a96c-518093b87d69
+langcode: en
+status: true
+dependencies: {  }
+id: simple_teaser
+label: 'Simple - Teaser'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

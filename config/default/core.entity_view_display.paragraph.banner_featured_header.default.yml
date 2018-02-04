@@ -1,0 +1,66 @@
+uuid: 639714d6-8ec0-4171-ba75-9a13df55d423
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.banner_featured_header.field_bg_video
+    - field.field.paragraph.banner_featured_header.field_event_date
+    - field.field.paragraph.banner_featured_header.field_event_location
+    - field.field.paragraph.banner_featured_header.field_image
+    - field.field.paragraph.banner_featured_header.field_p_featured_teasers
+    - paragraphs.paragraphs_type.banner_featured_header
+  module:
+    - address
+    - entity_reference_revisions
+    - image
+    - video_embed_field
+id: paragraph.banner_featured_header.default
+targetEntityType: paragraph
+bundle: banner_featured_header
+mode: default
+content:
+  field_bg_video:
+    weight: 3
+    label: above
+    settings:
+      responsive: true
+      width: 854
+      height: 480
+      autoplay: true
+    third_party_settings: {  }
+    type: video_embed_field_video
+    region: content
+  field_event_date:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_event_location:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_image:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_p_featured_teasers:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }
