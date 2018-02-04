@@ -39,6 +39,7 @@
         "drupal/token": "^1.1",
         "drupal/twig_field_value": "^1.1",
         "drupal/video_embed_field": "^1.0",
+        "drush/drush": "~8.0",
         "oomphinc/composer-installers-extender": "^1.1",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
