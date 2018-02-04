@@ -27,6 +27,7 @@
         "drupal/field_tools": "^1.0@alpha",
         "drupal/google_analytics": "^2.2",
         "drupal/inline_entity_form": "^1.0@beta",
+        "drupal/mailchimp": "^1.5",
         "drupal/menu_block": "^1.4",
         "drupal/metatag": "^1.4",
         "drupal/name": "^1.0@beta",
