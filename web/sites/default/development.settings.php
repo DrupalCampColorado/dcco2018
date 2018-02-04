@@ -19,3 +19,7 @@ $config['system.performance']['js']['preprocess'] = 1;
 
 // Sets Mailchimp API key
 $config['mailchimp.settings']['api_key'] = getenv('AMAZEEIO_MAILCHIMP_API_KEY');
+
+// Configure shield for dev environment.
+$config['shield.settings']['user'] = 'dcco';
+$config['shield.settings']['pass'] = '3ditdcco';
