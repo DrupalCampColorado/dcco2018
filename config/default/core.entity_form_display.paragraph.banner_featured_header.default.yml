@@ -3,19 +3,29 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.banner_featured_header.field_bg_video
     - field.field.paragraph.banner_featured_header.field_event_date
+    - field.field.paragraph.banner_featured_header.field_event_location
     - field.field.paragraph.banner_featured_header.field_image
     - field.field.paragraph.banner_featured_header.field_p_featured_teasers
     - image.style.thumbnail
     - paragraphs.paragraphs_type.banner_featured_header
   module:
+    - address
     - image
     - paragraphs
+    - video_embed_field
 id: paragraph.banner_featured_header.default
 targetEntityType: paragraph
 bundle: banner_featured_header
 mode: default
 content:
+  field_bg_video:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: video_embed_field_textfield
+    region: content
   field_event_date:
     weight: 0
     settings:
@@ -23,6 +33,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_event_location:
+    weight: 4
+    settings:
+      default_country: null
+    third_party_settings: {  }
+    type: address_default
     region: content
   field_image:
     weight: 1

@@ -1,0 +1,25 @@
+uuid: 79c7454a-2483-44a2-a216-86b32ee84c14
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_bg_video
+    - paragraphs.paragraphs_type.banner_featured_header
+  module:
+    - video_embed_field
+id: paragraph.banner_featured_header.field_bg_video
+field_name: field_bg_video
+entity_type: paragraph
+bundle: banner_featured_header
+label: 'Background Video'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_providers:
+    vimeo: vimeo
+    youtube: youtube
+    youtube_playlist: '0'
+field_type: video_embed_field
