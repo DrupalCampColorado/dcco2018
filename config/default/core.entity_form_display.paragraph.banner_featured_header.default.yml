@@ -1,0 +1,50 @@
+uuid: a9c5aef9-33f0-4e8d-80b1-1921c72e0c50
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.banner_featured_header.field_event_date
+    - field.field.paragraph.banner_featured_header.field_image
+    - field.field.paragraph.banner_featured_header.field_p_featured_teasers
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.banner_featured_header
+  module:
+    - image
+    - paragraphs
+id: paragraph.banner_featured_header.default
+targetEntityType: paragraph
+bundle: banner_featured_header
+mode: default
+content:
+  field_event_date:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_p_featured_teasers:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

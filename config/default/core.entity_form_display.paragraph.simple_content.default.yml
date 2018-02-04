@@ -5,9 +5,11 @@ dependencies:
   config:
     - field.field.paragraph.simple_content.field_cta
     - field.field.paragraph.simple_content.field_heading
+    - field.field.paragraph.simple_content.field_svg
     - field.field.paragraph.simple_content.field_text_area
     - paragraphs.paragraphs_type.simple_content
   module:
+    - file
     - link
     - text
 id: paragraph.simple_content.default
@@ -30,6 +32,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_svg:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
     region: content
   field_text_area:
     weight: 1

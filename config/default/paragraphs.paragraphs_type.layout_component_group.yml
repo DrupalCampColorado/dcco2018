@@ -1,0 +1,9 @@
+uuid: 661d5b8f-afea-4817-9c78-e33a35467c78
+langcode: en
+status: true
+dependencies: {  }
+id: layout_component_group
+label: 'Layout - Component Group'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }
