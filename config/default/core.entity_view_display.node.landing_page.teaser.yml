@@ -15,4 +15,6 @@ content:
   links:
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_p_content: true
+  field_p_header: true

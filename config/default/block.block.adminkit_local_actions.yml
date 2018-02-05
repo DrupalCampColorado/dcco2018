@@ -1,0 +1,20 @@
+uuid: 0e08f5a0-862d-4e7a-a388-34851c0dfa66
+langcode: en
+status: true
+dependencies:
+  theme:
+    - adminkit
+_core:
+  default_config_hash: 6QXi1oFKPhPO_HRPi6DOv6Ya7pJhcjSk_pEJIi7Vwhg
+id: adminkit_local_actions
+theme: adminkit
+region: content
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }
