@@ -1,0 +1,19 @@
+uuid: d4cfee22-2d24-45da-801d-85e34494c62c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_credit
+    - paragraphs.paragraphs_type.simple_testimonial
+id: paragraph.simple_testimonial.field_credit
+field_name: field_credit
+entity_type: paragraph
+bundle: simple_testimonial
+label: Credit
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

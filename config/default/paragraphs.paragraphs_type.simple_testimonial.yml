@@ -1,0 +1,9 @@
+uuid: d574674b-1bc8-44e9-a529-11d667e78013
+langcode: en
+status: true
+dependencies: {  }
+id: simple_testimonial
+label: 'Simple - Testimonial'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }
