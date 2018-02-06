@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.field.paragraph.reference_block.field_block_reference
     - paragraphs.paragraphs_type.reference_block
+  module:
+    - block_field
 id: paragraph.reference_block.default
 targetEntityType: paragraph
 bundle: reference_block
@@ -12,10 +14,9 @@ mode: default
 content:
   field_block_reference:
     weight: 0
-    label: above
-    settings:
-      link: true
+    label: hidden
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_label
+    type: block_field
     region: content
 hidden: {  }
