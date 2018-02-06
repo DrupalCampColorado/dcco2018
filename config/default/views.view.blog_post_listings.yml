@@ -1,4 +1,4 @@
-uuid: 718a117f-5b3e-497b-a8ba-7735143e69b1
+uuid: 4defc94f-3f7b-4d32-ac33-82fbdea0b0bc
 langcode: en
 status: true
 dependencies:
@@ -8,10 +8,10 @@ dependencies:
   module:
     - node
     - user
-id: blog_listings
-label: 'Blog Listings'
+id: blog_post_listings
+label: 'Blog Post Listings'
 module: views
-description: 'Create site listing displays for blog content.'
+description: 'Listings of various displays for site blog content.'
 tag: ''
 base_table: node_field_data
 base_field: nid
@@ -198,6 +198,11 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+      use_more: true
+      use_more_always: true
+      use_more_text: 'View All'
+      link_url: /news
+      link_display: custom_url
     cache_metadata:
       max-age: -1
       contexts:
@@ -207,14 +212,60 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
+  block_1:
+    display_plugin: block
+    id: block_1
+    display_title: 'Teaser Block'
+    position: 2
+    display_options:
+      display_extenders: {  }
+      block_description: 'News & Updates Listing'
+      allow:
+        items_per_page: true
+      display_description: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  block_2:
+    display_plugin: block
+    id: block_2
+    display_title: 'Featured Block'
+    position: 3
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      block_description: 'Recent News & Events'
+      pager:
+        type: some
+        options:
+          items_per_page: 3
+          offset: 0
+      defaults:
+        pager: false
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
   page_1:
     display_plugin: page
     id: page_1
-    display_title: Page
+    display_title: 'Teaser Page'
     position: 1
     display_options:
       display_extenders: {  }
-      path: news
+      path: blog
+      enabled: false
+      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:
