@@ -21,7 +21,7 @@ mode: default
 content:
   field_bg_video:
     weight: 3
-    label: above
+    label: hidden
     settings:
       responsive: true
       width: 854
@@ -32,7 +32,7 @@ content:
     region: content
   field_event_date:
     weight: 0
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -40,14 +40,14 @@ content:
     region: content
   field_event_location:
     weight: 4
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: address_default
     region: content
   field_image:
     weight: 1
-    label: above
+    label: hidden
     settings:
       image_style: ''
       image_link: ''
@@ -57,7 +57,7 @@ content:
   field_p_featured_teasers:
     type: entity_reference_revisions_entity_view
     weight: 2
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
