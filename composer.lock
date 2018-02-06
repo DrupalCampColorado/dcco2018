@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "fccb430e2b72210643869ba1061efc3a",
+    "content-hash": "793fae3a8ddd1d1f29aef1f3e3276174",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -170,7 +170,7 @@
                 }
             ],
             "description": "Easily create a website for a Drupal camp in a short amount of time.",
-            "time": "2018-01-17 17:32:42"
+            "time": "2018-01-17T17:32:42+00:00"
         },
         {
             "name": "commerceguys/addressing",
@@ -1518,6 +1518,61 @@
             "homepage": "https://www.drupal.org/project/adminimal_theme",
             "support": {
                 "source": "http://cgit.drupalcode.org/adminimal_theme"
+            }
+        },
+        {
+            "name": "drupal/block_field",
+            "version": "1.0.0-alpha5",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/block_field",
+                "reference": "8.x-1.0-alpha5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/block_field-8.x-1.0-alpha5.zip",
+                "reference": "8.x-1.0-alpha5",
+                "shasum": "6ca14bb009457490f8b9d58652af2e36487a88d2"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha5",
+                    "datestamp": "1511317688",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "acbramley",
+                    "homepage": "https://www.drupal.org/user/1036766"
+                },
+                {
+                    "name": "fenstrat",
+                    "homepage": "https://www.drupal.org/user/362649"
+                },
+                {
+                    "name": "jrockowitz",
+                    "homepage": "https://www.drupal.org/user/371407"
+                }
+            ],
+            "description": "Provides a field that allows a content entity to create and configure custom block instances.",
+            "homepage": "https://www.drupal.org/project/block_field",
+            "support": {
+                "source": "http://cgit.drupalcode.org/block_field"
             }
         },
         {
@@ -3317,7 +3372,7 @@
             ],
             "description": "Drush is a command line shell and scripting interface for Drupal, a veritable Swiss Army knife designed to make life easier for those of us who spend some of our working hours hacking away at the command prompt.",
             "homepage": "http://www.drush.org",
-            "time": "2018-02-04 05:35:59"
+            "time": "2018-02-04T05:35:59+00:00"
         },
         {
             "name": "easyrdf/easyrdf",
@@ -8335,6 +8390,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "badcamp/camp": 20,
+        "drupal/block_field": 15,
         "drupal/field_tools": 15,
         "drupal/inline_entity_form": 10,
         "drupal/name": 10

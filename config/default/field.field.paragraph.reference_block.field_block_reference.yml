@@ -1,10 +1,12 @@
-uuid: 1a88150f-4c96-4b45-aaf9-27464000f4c1
+uuid: 9db8a589-03ba-49ab-81e0-a2ab33e0dbab
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_block_reference
     - paragraphs.paragraphs_type.reference_block
+  module:
+    - block_field
 id: paragraph.reference_block.field_block_reference
 field_name: field_block_reference
 entity_type: paragraph
@@ -16,8 +18,5 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:block'
-  handler_settings:
-    target_bundles: null
-    auto_create: false
-field_type: entity_reference
+  plugin_ids: {  }
+field_type: block_field
