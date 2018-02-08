@@ -7,7 +7,7 @@ dependencies:
     - paragraphs.paragraphs_type.simple_testimonial
     - taxonomy.vocabulary.colors
   content:
-    - 'taxonomy_term:colors:19178f10-6086-418d-991e-83dd3f7bd303'
+    - 'taxonomy_term:colors:b2565d96-a3a0-492d-a5eb-fe6a714b5c63'
 id: paragraph.simple_testimonial.field_background_color
 field_name: field_background_color
 entity_type: paragraph
@@ -18,7 +18,7 @@ required: true
 translatable: false
 default_value:
   -
-    target_uuid: 19178f10-6086-418d-991e-83dd3f7bd303
+    target_uuid: b2565d96-a3a0-492d-a5eb-fe6a714b5c63
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
