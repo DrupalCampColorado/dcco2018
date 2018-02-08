@@ -1,0 +1,40 @@
+uuid: 24f33a34-bd50-4802-8730-8a908faf5a9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.promo_link
+    - field.field.block_content.promo_link.field_link
+    - field.field.block_content.promo_link.field_svg
+  module:
+    - file
+    - link
+id: block_content.promo_link.default
+targetEntityType: block_content
+bundle: promo_link
+mode: default
+content:
+  field_link:
+    weight: 28
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_svg:
+    weight: 27
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

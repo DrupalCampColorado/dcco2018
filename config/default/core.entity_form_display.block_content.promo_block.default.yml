@@ -1,0 +1,40 @@
+uuid: 5897ecb0-0d11-4e94-b6a4-ba3bebd10f3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.promo_block
+    - field.field.block_content.promo_block.field_block_reference
+    - field.field.block_content.promo_block.field_heading
+  module:
+    - block_field
+id: block_content.promo_block.default
+targetEntityType: block_content
+bundle: promo_block
+mode: default
+content:
+  field_block_reference:
+    weight: 28
+    settings:
+      plugin_id: ''
+      settings: {  }
+    third_party_settings: {  }
+    type: block_field_default
+    region: content
+  field_heading:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

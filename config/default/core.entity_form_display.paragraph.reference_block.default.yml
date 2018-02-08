@@ -22,5 +22,6 @@ content:
     region: content
 hidden:
   created: true
+  field_heading: true
   status: true
   uid: true

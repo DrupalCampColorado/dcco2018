@@ -19,4 +19,5 @@ content:
     third_party_settings: {  }
     type: block_field
     region: content
-hidden: {  }
+hidden:
+  field_heading: true
