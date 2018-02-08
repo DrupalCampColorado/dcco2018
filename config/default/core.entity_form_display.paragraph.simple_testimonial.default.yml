@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.simple_testimonial.field_background_color
     - field.field.paragraph.simple_testimonial.field_credit
     - field.field.paragraph.simple_testimonial.field_quote
     - paragraphs.paragraphs_type.simple_testimonial
@@ -11,6 +12,15 @@ targetEntityType: paragraph
 bundle: simple_testimonial
 mode: default
 content:
+  field_background_color:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_credit:
     weight: 1
     settings:

@@ -1,0 +1,33 @@
+uuid: e5aab1e5-3e86-48a7-9ba7-087735cbe308
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.simple_testimonial
+    - taxonomy.vocabulary.colors
+  content:
+    - 'taxonomy_term:colors:19178f10-6086-418d-991e-83dd3f7bd303'
+id: paragraph.simple_testimonial.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: simple_testimonial
+label: 'Background Color'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: 19178f10-6086-418d-991e-83dd3f7bd303
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      colors: colors
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
