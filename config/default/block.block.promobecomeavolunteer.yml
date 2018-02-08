@@ -1,0 +1,33 @@
+uuid: 78db8e8d-7a23-4d51-8e78-5e3213eb3285
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:promo_link:601d00fd-ade6-4201-9eaa-da18bd6b7034'
+  module:
+    - block_content
+    - node
+  theme:
+    - themekit
+id: promobecomeavolunteer
+theme: themekit
+region: sidebar_second
+weight: -3
+provider: null
+plugin: 'block_content:601d00fd-ade6-4201-9eaa-da18bd6b7034'
+settings:
+  id: 'block_content:601d00fd-ade6-4201-9eaa-da18bd6b7034'
+  label: 'Promo: Become a volunteer'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      blog: blog
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
