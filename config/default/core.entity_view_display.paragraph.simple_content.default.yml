@@ -30,7 +30,7 @@ content:
     type: link
     region: content
   field_heading:
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       link_to_entity: false
@@ -38,7 +38,7 @@ content:
     type: string
     region: content
   field_svg:
-    weight: 1
+    weight: 0
     label: hidden
     settings: {  }
     third_party_settings: {  }

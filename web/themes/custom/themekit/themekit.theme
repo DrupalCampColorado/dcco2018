@@ -43,7 +43,16 @@ function themekit_preprocess_node(&$variables) {
  * Implements template_preprocess_field().
  */
 function themekit_preprocess_field(&$variables) {
+  switch ($variables['field_name']) {
+    case 'field_svg':
+      $variables['svg_url'] = null;
+      $svg_file_entity = $variables['element'][0]['#file'];
 
+      if (is_object($svg_file_entity) && method_exists($svg_file_entity, 'getFileUri')) {
+        $variables['svg_url'] = file_create_url($svg_file_entity->getFileUri());
+      }
+      break;
+  }
 }
 
 /**

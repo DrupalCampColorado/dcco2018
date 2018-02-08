@@ -66,6 +66,12 @@
     font-size: 20px;
   }
 
+  .field--name-field-svg {
+    max-width: 110px;
+    @include left-right(margin, auto);
+    margin-bottom: 25px;
+  }
+
   .paragraph--type--layout-component-group & {
     $padding: px-to-percent(75px, 500px);
     padding: $padding $padding 0 $padding;
