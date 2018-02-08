@@ -1,0 +1,19 @@
+name: 'Camp Sponsors'
+description: 'Create listings of event sponsors.'
+type: module
+core: 8.x
+dependencies:
+  - camp_global
+  - draggableviews
+  - field
+  - file
+  - image
+  - link
+  - menu_ui
+  - node
+  - path
+  - taxonomy
+  - text
+  - user
+  - views
+version: 8.x-1.0
