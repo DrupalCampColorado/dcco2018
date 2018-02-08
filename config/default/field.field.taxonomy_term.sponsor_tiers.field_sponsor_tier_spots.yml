@@ -1,0 +1,25 @@
+uuid: 3e0a8e0d-2a2d-44ba-9847-a523a92618c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_sponsor_tier_spots
+    - taxonomy.vocabulary.sponsor_tiers
+_core:
+  default_config_hash: pK0WQmOOO2Tto-ZSAYbAL5nwDcEJRr_asTzUCZWcJG4
+id: taxonomy_term.sponsor_tiers.field_sponsor_tier_spots
+field_name: field_sponsor_tier_spots
+entity_type: taxonomy_term
+bundle: sponsor_tiers
+label: 'Spots Available'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

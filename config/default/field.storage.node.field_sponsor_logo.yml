@@ -6,6 +6,8 @@ dependencies:
     - file
     - image
     - node
+_core:
+  default_config_hash: rZa-vZ3v688fK0oZny0c5ZzUdTX8jk54ON0_7oItnYQ
 id: node.field_sponsor_logo
 field_name: field_sponsor_logo
 entity_type: node

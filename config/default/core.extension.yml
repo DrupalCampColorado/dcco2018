@@ -10,8 +10,11 @@ module:
   breakpoint: 0
   camp: 0
   camp_core: 0
+  camp_global: 0
+  camp_sponsors: 0
   ckeditor: 0
   config: 0
+  config_update: 0
   contextual: 0
   ctools: 0
   datetime: 0
@@ -23,6 +26,8 @@ module:
   editor: 0
   entity_reference: 0
   entity_reference_revisions: 0
+  features: 0
+  features_ui: 0
   field: 0
   field_group: 0
   field_tools: 0

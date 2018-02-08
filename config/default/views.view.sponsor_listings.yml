@@ -12,6 +12,8 @@ dependencies:
     - node
     - taxonomy
     - user
+_core:
+  default_config_hash: WKwS4ZtA55h90Px9AQUwUdvj5bQddShqFC9RYbZAzkQ
 id: sponsor_listings
 label: 'Sponsor Listings'
 module: views

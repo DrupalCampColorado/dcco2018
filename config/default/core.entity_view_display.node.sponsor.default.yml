@@ -13,6 +13,8 @@ dependencies:
     - link
     - text
     - user
+_core:
+  default_config_hash: SaZihS__8RFaVg1kVk-J66ktuSI6x0CXyE9S7jOVark
 id: node.sponsor.default
 targetEntityType: node
 bundle: sponsor

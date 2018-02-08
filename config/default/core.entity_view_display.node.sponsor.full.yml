@@ -14,6 +14,8 @@ dependencies:
     - link
     - text
     - user
+_core:
+  default_config_hash: NRigbmDpSWIjtnEcBM_Wz1bf1lH2BE7NX0CCG6Hnbbw
 id: node.sponsor.full
 targetEntityType: node
 bundle: sponsor

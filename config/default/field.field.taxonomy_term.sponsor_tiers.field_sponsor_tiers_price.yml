@@ -1,0 +1,25 @@
+uuid: b244e76a-8a1b-4605-b014-f047de8c0be9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_sponsor_tiers_price
+    - taxonomy.vocabulary.sponsor_tiers
+_core:
+  default_config_hash: Z2nX8kn1TYzTHLJNqOV2qDztE_w9GYHiqJh9GIJWlTA
+id: taxonomy_term.sponsor_tiers.field_sponsor_tiers_price
+field_name: field_sponsor_tiers_price
+entity_type: taxonomy_term
+bundle: sponsor_tiers
+label: Price
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: $
+  suffix: ''
+field_type: decimal

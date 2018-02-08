@@ -7,6 +7,8 @@ dependencies:
     - node.type.sponsor
   module:
     - image
+_core:
+  default_config_hash: 00Bug_WJ4XqZECYgNUm_jBYDgd1ozrq-9HI4tTJycG0
 id: node.sponsor.field_sponsor_logo
 field_name: field_sponsor_logo
 entity_type: node
