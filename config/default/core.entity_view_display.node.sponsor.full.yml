@@ -5,10 +5,12 @@ dependencies:
   config:
     - core.entity_view_mode.node.full
     - field.field.node.sponsor.body
+    - field.field.node.sponsor.field_sponsor_logo
     - field.field.node.sponsor.field_sponsor_tier
     - field.field.node.sponsor.field_sponsor_url
     - node.type.sponsor
   module:
+    - image
     - link
     - text
     - user
@@ -20,10 +22,19 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 2
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_sponsor_logo:
+    type: image
+    weight: 2
+    region: content
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
   field_sponsor_tier:
     weight: 0
     label: above
