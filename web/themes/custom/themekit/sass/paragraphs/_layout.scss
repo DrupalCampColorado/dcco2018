@@ -3,26 +3,66 @@
 .paragraph--type--layout-component-group {
   position: relative;
   z-index: 10;
+  text-align: center;
+  color: $font-gray;
+  padding-top: 80px;
+
   &:before {
     content: '';
     position: absolute;
-    top: -40px;
+    top: 0;
     left: -200%;
     width: 500%;
-    height: calc(100% + 40px);
+    height: 100%;
     background: $tan;
     z-index: z(behind);
   }
+
   &:after {
     content: '';
     position: absolute;
-    top: -40px;
+    top: 0;
     left: -100%;
     width: 300%;
-    height: calc(100% + 40px);
+    height: 100%;
     background: url(../images/map-texture.png);
     z-index: z(behind);
     opacity: 0.15;
+  }
+
+  > .heading,
+  > .field--name-field-text-area {
+    @include content-width(content);
+  }
+
+  > .heading {
+    color: $dark-orange;
+    font-size: 32px;
+    font-weight: normal;
+  }
+
+  > .field--name-field-text-area {
+    font-size: 24px;
+    line-height: 1.333;
+
+    @include selectors(body-text) {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .field--name-field-p-columns {
+    padding-bottom: 40px;
+    @include breakpoint(medium) {
+      display: flex;
+      padding-bottom: 80px;
+
+      > * {
+        flex: 1;
+        width: 0;
+      }
+    }
   }
 }
 

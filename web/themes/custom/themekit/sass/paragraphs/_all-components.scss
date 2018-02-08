@@ -18,31 +18,6 @@
   }
 }
 
-.paragraph--type--layout-component-group {
-  position: relative;
-  &:before {
-    content: '';
-    position: absolute;
-    top: -40px;
-    left: -200%;
-    width: 500%;
-    height: calc(100% + 40px);
-    background: $tan;
-    z-index: z(behind);
-  }
-  &:after {
-    content: '';
-    position: absolute;
-    top: -40px;
-    left: -100%;
-    width: 300%;
-    height: calc(100% + 40px);
-    background: url(../images/map-texture.png);
-    z-index: z(behind);
-    opacity: 0.15;
-  }
-}
-
 .paragraph--type--layout-advanced-ctas {
   .field--name-field-p-columns {
     display: flex;

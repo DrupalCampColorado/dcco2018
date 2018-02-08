@@ -95,8 +95,12 @@ function themekit_theme_suggestions_field_alter(array &$suggestions, array $vari
   // Apply theme suggestions for "field_heading" based on paragraph bundle.
   if ($field_name == 'field_heading' && $is_paragraph) {
     switch($bundle) {
+      case 'layout_component_group':
+        array_unshift($suggestions, 'field__heading_2');
+        break;
       case 'banner_standard':
       case 'single_heading':
+      case 'simple_content':
         array_unshift($suggestions, 'field__heading_3');
         break;
     }

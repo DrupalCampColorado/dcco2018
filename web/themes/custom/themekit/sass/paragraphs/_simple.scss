@@ -53,3 +53,27 @@
     z-index: z(front);
   }
 }
+
+/// Simple - Content
+/// ====================
+.paragraph--type--simple-content {
+  color: $font-gray;
+
+  .heading {
+    color: $dark-orange;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 20px;
+  }
+
+  .paragraph--type--layout-component-group & {
+    $padding: px-to-percent(75px, 500px);
+    padding: $padding $padding 0 $padding;
+
+    .field--name-field-cta a {
+      @include btn(gray);
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+  }
+}
