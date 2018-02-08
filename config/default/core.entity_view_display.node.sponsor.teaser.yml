@@ -10,7 +10,8 @@ dependencies:
     - field.field.node.sponsor.field_sponsor_url
     - node.type.sponsor
   module:
-    - text
+    - image
+    - linked_field
     - user
 _core:
   default_config_hash: v-6tKAEDgbIpCvblHi5bv4o2GmWFBGDl8glz5MOMqpc
@@ -19,18 +20,22 @@ targetEntityType: node
 bundle: sponsor
 mode: teaser
 content:
-  body:
+  field_sponsor_logo:
+    type: image
+    weight: 0
+    region: content
     label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
     settings:
-      trim_length: 600
-    third_party_settings: {  }
-    region: content
-  links:
-    weight: 100
-    region: content
+      image_style: ''
+      image_link: ''
+    third_party_settings:
+      linked_field:
+        linked: '1'
+        type: field
+        destination: field_sponsor_url
+        advanced: {  }
 hidden:
-  field_sponsor_logo: true
+  body: true
   field_sponsor_tier: true
   field_sponsor_url: true
+  links: true
