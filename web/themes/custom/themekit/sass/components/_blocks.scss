@@ -1,0 +1,32 @@
+////
+/// Component - Blocks
+////
+
+.block-views-blockblog-post-listings-block-2 {
+  padding: $medium-large-margin $medium-margin;
+  @include breakpoint(medium) {
+    padding: $medium-large-margin $large-margin;
+  }
+  > h2 {
+    margin-bottom: 35px;
+    font-size: rem-calc(20);
+    line-height: rem-calc(28);
+    text-transform: uppercase;
+    text-align: center;
+    color: $dark-orange;
+  }
+  .more-link {
+    text-align: center;
+    font-size: rem-calc(24px);
+    a {
+      color: $font-gray;
+      @include selectors(active) {
+        color: rgba($font-gray, 0.7);
+      }
+      &:after {
+        content: '\00bb';
+        margin-left: 10px;
+      }
+    }
+  }
+}

@@ -27,6 +27,10 @@ function themekit_preprocess_page(&$variables) {
  * Implements template_preprocess_node().
  */
 function themekit_preprocess_node(&$variables) {
+  $node = $variables['node'];
+  $type = $node->getType();
+  $view_mode = $variables['view_mode'];
+
   // Set our own node type preprocess, drupal creates them by default, but seems to only run hook_preprocess_node__event
   // on event full pages, not event teasers as well
   if (!empty($variables['node']) && is_object($variables['node']) && method_exists($variables['node'], 'getType')) {
@@ -37,6 +41,14 @@ function themekit_preprocess_node(&$variables) {
     }
   }
 
+  switch ($type) {
+    case 'blog':
+      $created = $node->getCreatedTime();
+      $variables['day'] = date('d', $created);
+      $variables['month'] = date('M', $created);
+      $variables['year'] = date('Y', $created);
+      break;
+  }
 }
 
 /**
