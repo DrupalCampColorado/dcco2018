@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.reference_block.field_block_reference
+    - field.field.paragraph.reference_block.field_heading
     - paragraphs.paragraphs_type.reference_block
   module:
     - block_field
@@ -13,11 +14,18 @@ bundle: reference_block
 mode: default
 content:
   field_block_reference:
-    weight: 0
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: block_field
     region: content
-hidden:
-  field_heading: true
+  field_heading:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden: {  }
