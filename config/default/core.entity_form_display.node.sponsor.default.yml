@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.sponsor.body
+    - field.field.node.sponsor.field_metatags
     - field.field.node.sponsor.field_sponsor_logo
     - field.field.node.sponsor.field_sponsor_tier
     - field.field.node.sponsor.field_sponsor_url
@@ -12,6 +13,7 @@ dependencies:
   module:
     - image
     - link
+    - metatag
     - path
     - text
 _core:
@@ -36,6 +38,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_metatags:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
   field_sponsor_logo:
     weight: 1
     settings:

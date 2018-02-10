@@ -4,9 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.blog.body
+    - field.field.node.blog.field_metatags
     - field.field.node.blog.field_tags
     - node.type.blog
   module:
+    - metatag
     - text
     - user
 id: node.blog.default
@@ -20,6 +22,13 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_metatags:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
     region: content
   field_tags:
     weight: 102
