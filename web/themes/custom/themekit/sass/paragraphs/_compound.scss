@@ -11,6 +11,7 @@
 
 .paragraph--type--banner-featured-header {
   position: relative;
+  padding-top: 1.25rem;
   &:before {
     content: '';
     position: absolute;
@@ -23,6 +24,7 @@
   }
 
   .content-wrap {
+    @include content-width(header);
     color: $white;
     padding: rem-calc(40 60);
     position: relative;
@@ -30,7 +32,17 @@
     margin: 0 auto;
     z-index: z(banner, default);
     background-color: $burnt-orange;
-    @include content-width(header);
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url(../images/halftone.png) rgba(#ff9000, 0.6);
+      background-size: contain;
+      z-index: -1;
+    }
 
     @include breakpoint(medium-large) {
       min-height: 530px;
@@ -39,10 +51,17 @@
 
   .banner-header {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     flex-basis: auto;
     justify-content: space-between;
+    align-items: center;
+    text-align: center;
     margin-bottom: rem-calc(20px);
+    @include breakpoint(medium) {
+      flex-flow: row nowrap;
+      align-items: initial;
+      text-align: initial;
+    }
   }
 
   .site-logo {
@@ -70,14 +89,17 @@
       display: block;
     }
 
-    &:before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0; right: 0; bottom: 0; left: 0;
-      background: url(../images/halftone.png) rgba(#ff9000, 0.5);
-      z-index: 1;
-    }
+    //&:before {
+    //  content: '';
+    //  display: block;
+    //  position: absolute;
+    //  top: 0;
+    //  right: 0;
+    //  bottom: 0;
+    //  left: 0;
+    //  background: url(../images/halftone.png) rgba(#ff9000, 0.5);
+    //  z-index: 1;
+    //}
 
     &.loaded {
       opacity: 1;
@@ -91,13 +113,16 @@
   .location-wrapper {
     align-self: flex-start;
     font-family: $font-arvo;
-    text-align: right;
+    text-align: center;
     text-transform: uppercase;
     line-height: 1.6;
-    max-width: 45%;
+    margin: 0 auto;
 
     @include breakpoint(medium) {
       line-height: rem-calc(28);
+      max-width: 45%;
+      text-align: right;
+      margin: 0;
     }
 
     .field--name-field-event-date {
@@ -261,6 +286,7 @@
     }
     a {
       color: $white;
+      text-decoration: underline;
     }
   }
 }

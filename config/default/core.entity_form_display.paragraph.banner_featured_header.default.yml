@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.banner_featured_header.field_bg_video
     - field.field.paragraph.banner_featured_header.field_block_reference
     - field.field.paragraph.banner_featured_header.field_event_date
     - field.field.paragraph.banner_featured_header.field_event_location
@@ -12,22 +11,15 @@ dependencies:
     - image.style.thumbnail
     - paragraphs.paragraphs_type.banner_featured_header
   module:
-    - address
     - block_field
     - image
+    - link
     - paragraphs
-    - video_embed_field
 id: paragraph.banner_featured_header.default
 targetEntityType: paragraph
 bundle: banner_featured_header
 mode: default
 content:
-  field_bg_video:
-    weight: 3
-    settings: {  }
-    third_party_settings: {  }
-    type: video_embed_field_textfield
-    region: content
   field_block_reference:
     weight: 5
     settings:
@@ -45,11 +37,12 @@ content:
     type: string_textfield
     region: content
   field_event_location:
-    weight: 4
+    weight: 6
     settings:
-      default_country: null
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings: {  }
-    type: address_default
+    type: link_default
     region: content
   field_image:
     weight: 1
