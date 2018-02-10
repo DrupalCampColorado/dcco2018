@@ -2,6 +2,14 @@
 /// Component - Blocks
 ////
 
+#block-themekit-page-title {
+  width: 100%;
+  padding: 100px 0;
+  background: black;
+  color: white;
+  text-align: center;
+}
+
 .block-views-blockblog-post-listings-block-1,
 .block-views-blockblog-post-listings-block-2 {
   padding: $medium-large-margin $medium-margin;
