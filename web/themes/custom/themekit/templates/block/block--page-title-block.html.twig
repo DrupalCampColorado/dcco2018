@@ -30,8 +30,8 @@
 <div{{ attributes }}>
   {{ title_prefix }}
   {% if label %}
+    <span class="date">{{ date }}</span>
     <h2{{ title_attributes }}>{{ label }}</h2>
-    {{ date }}
   {% endif %}
   {{ title_suffix }}
   {% block content %}

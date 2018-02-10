@@ -22,7 +22,6 @@
 
 @import "regions/header";
 @import "regions/footer";
-@import "regions/page";
 
 @import "components/drupal";
 @import "components/accessibility";
@@ -38,3 +37,4 @@
 // @TODO: Choose one format and remove the other from the project
 @import "content/page";
 @import "content/teaser";
+@import "content/full";

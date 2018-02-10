@@ -2,14 +2,29 @@
 /// Component - Blocks
 ////
 
+// Page Title display
 #block-themekit-page-title {
-  width: 100%;
-  padding: 100px 0;
-  background: black;
-  color: white;
-  text-align: center;
+  .page-node-type-blog &, .page-node-type-sponsor & {
+    width: 100%;
+    margin: 25px 0 50px;
+    padding: 50px 0;
+    background: url(../images/mountain-banner.png);
+    color: $font-gray;
+    font-family: $font-cabin;
+    text-align: center;
+    @include breakpoint(medium) {
+      margin: 25px 0 100px;
+      padding: 135px 0;
+    }
+    .date {
+      font-size: rem-calc(18px);
+      font-family: $font-arvo;
+      color: $dark-orange;
+    }
+  }
 }
 
+// Blog Post Listings
 .block-views-blockblog-post-listings-block-1,
 .block-views-blockblog-post-listings-block-2 {
   padding: $medium-large-margin $medium-margin;
@@ -20,7 +35,7 @@
   }
   > h2 {
     margin-bottom: 35px;
-    font-family: 'arvo', serif;
+    font-family: $font-arvo;
     font-size: rem-calc(20);
     line-height: rem-calc(28);
     text-transform: uppercase;
