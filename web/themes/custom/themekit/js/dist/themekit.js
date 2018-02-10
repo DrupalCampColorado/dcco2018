@@ -50,6 +50,8 @@
 
 	__webpack_require__(3);
 
+	__webpack_require__(5);
+
 /***/ }),
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -439,6 +441,24 @@
 	  $el.height(Math.ceil(height));
 	  $el.width(Math.ceil(height * ratio));
 	}
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _jquery = __webpack_require__(2);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	(0, _jquery2.default)('.mobile-menu').click(function (e) {
+	  (0, _jquery2.default)(this).toggleClass('open cross');
+	  (0, _jquery2.default)('.menu--main').toggleClass('open');
+	  (0, _jquery2.default)('.layout-container').toggleClass('fixed');
+	});
 
 /***/ })
 /******/ ]);

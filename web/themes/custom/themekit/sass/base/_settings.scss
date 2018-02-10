@@ -107,7 +107,7 @@ $medium-font-size: rem-calc(18);
 $large-font-size: rem-calc(24);
 
 @include add-foundation-colors;
-
+$img-dir: '../images/';
 
 
 // 1.Drupal - All of these settings should be copied over when the _settings.scss partial is updated on new version of foundation!!!
