@@ -5,6 +5,8 @@
 .block-views-blockblog-post-listings-block-1,
 .block-views-blockblog-post-listings-block-2 {
   padding: $medium-large-margin $medium-margin;
+  background-color: $white;
+  position: relative;
   @include breakpoint(medium) {
     padding: $medium-large-margin $large-margin;
   }
@@ -31,9 +33,4 @@
       }
     }
   }
-}
-
-.block-views-blockblog-post-listings-block-2 {
-  background-color: $white;
-  position: relative;
 }

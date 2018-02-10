@@ -66,8 +66,14 @@ view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
         {{ rendered_content.field_event_date }}
         {{ rendered_content.field_event_location }}
       </div>
+      <div class="signup-wrapper">
+        {{ rendered_content.field_block_reference }}
+      </div>
     </div>
 
     <img class="site-logo" src="/themes/custom/themekit/images/DCCO2018_Logo_White.svg" alt="Drupal Camp Colorado 2018 Logo">
+  </div>
+  <div class="featured-teasers">
+    {{ rendered_content.field_p_featured_teasers }}
   </div>
 </div>

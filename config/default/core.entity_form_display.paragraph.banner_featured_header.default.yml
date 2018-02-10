@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.banner_featured_header.field_bg_video
+    - field.field.paragraph.banner_featured_header.field_block_reference
     - field.field.paragraph.banner_featured_header.field_event_date
     - field.field.paragraph.banner_featured_header.field_event_location
     - field.field.paragraph.banner_featured_header.field_image
@@ -12,6 +13,7 @@ dependencies:
     - paragraphs.paragraphs_type.banner_featured_header
   module:
     - address
+    - block_field
     - image
     - paragraphs
     - video_embed_field
@@ -25,6 +27,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: video_embed_field_textfield
+    region: content
+  field_block_reference:
+    weight: 5
+    settings:
+      plugin_id: ''
+      settings: {  }
+    third_party_settings: {  }
+    type: block_field_default
     region: content
   field_event_date:
     weight: 0

@@ -10,7 +10,17 @@
 }
 
 .paragraph--type--banner-featured-header {
-  background: $light-orange;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: $light-orange;
+    z-index: -1;
+  }
 
   .content-wrap {
     color: $white;
@@ -79,6 +89,7 @@
   }
 
   .location-wrapper {
+    align-self: flex-start;
     font-family: $font-arvo;
     text-align: right;
     text-transform: uppercase;
@@ -192,6 +203,64 @@
       &:active {
         transform: scale(.9)
       }
+    }
+  }
+
+  .featured-teasers {
+    //margin: 0 calc(50% - 50vw);
+  }
+  .field--name-field-p-featured-teasers {
+    display: flex;
+    flex-flow: column nowrap;
+    flex-basis: auto;
+    padding: rem-calc(20);
+    @include breakpoint(medium-large) {
+      flex-flow: row nowrap;
+    }
+    @include breakpoint(large) {
+      padding: rem-calc(20) 0;
+    }
+    .field__item {
+      + .field__item {
+        margin-top: 1rem;
+        @include breakpoint(medium-large) {
+          margin-top: 0;
+        }
+      }
+    }
+    .field--name-field-heading {
+      position: relative;
+      color: $white;
+      font-size: rem-calc(24);
+      line-height: rem-calc(30);
+      letter-spacing: 0.6px;
+      padding-left: 2rem;
+      padding-right: rem-calc(46);
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: rem-calc(22);
+        height: rem-calc(34);
+        background: url(../images/svg/ribbon-orange.png) no-repeat;
+        background-position: 50% 50%;
+        background-size: contain;
+      }
+    }
+    .field--name-field-text-area {
+      color: $white;
+      font-size: 1rem;
+      line-height: rem-calc(24);
+      letter-spacing: 0.4px;
+      padding-left: 2rem;
+      padding-right: rem-calc(46);
+      p {
+        margin: 0;
+      }
+    }
+    a {
+      color: $white;
     }
   }
 }
