@@ -1,0 +1,34 @@
+.simple-heading {
+  color: #f17b39;
+  font-family: $font-arvo;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 20px;
+  text-align: center;
+}
+
+.paragraph--type--reference-block {
+  position: relative;
+  z-index: 1;
+}
+
+.view-id-sponsor_listings.view-display-id-block_1 {
+  background-color: #fff;
+
+  .views-rows {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 2rem 0 3rem;
+    max-width: 600px;
+
+    .views-row {
+      width: 33.333%;
+
+      .node--type-sponsor.node--view-mode-teaser {
+        text-align: center;
+      }
+    }
+  }
+}
