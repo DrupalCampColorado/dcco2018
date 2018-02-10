@@ -55,13 +55,13 @@ function themekit_preprocess_node(&$variables) {
  * Implements template_preprocess_block().
  */
 function themekit_preprocess_block(&$variables) {
-    $id = $variables['plugin_id'];
-    switch ($id) {
-        case 'page_title_block':
-            $node = \Drupal::request()->attributes->get('node');
-            $variables['date'] = date('M d, Y', $node->getCreatedTime());
-            break;
-    }
+  $id = $variables['plugin_id'];
+  switch ($id) {
+    case 'page_title_block':
+      $node = \Drupal::request()->attributes->get('node');
+      $variables['date'] = date('M d, Y', $node->getCreatedTime());
+      break;
+  }
 }
 
 /**
