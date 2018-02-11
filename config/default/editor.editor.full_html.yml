@@ -17,6 +17,7 @@ settings:
           items:
             - Bold
             - Italic
+            - Format
         -
           name: Links
           items:
@@ -37,10 +38,10 @@ settings:
           items:
             - Source
   plugins:
-    stylescombo:
-      styles: ''
     language:
       language_list: un
+    stylescombo:
+      styles: ''
 image_upload:
   status: true
   scheme: public

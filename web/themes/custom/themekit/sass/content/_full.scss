@@ -12,6 +12,15 @@
       padding: 0 1rem;
       .content {
         margin-bottom: 50px;
+        h2 {
+          margin-top: 25px;
+          font-family: $font-arvo;
+          color: $dark-orange;
+          text-transform: uppercase;
+          font-size: rem-calc(18px);
+          line-height: rem-calc(28px);
+          font-weight: bold;
+        }
         .field {
           margin-bottom: 25px;
           .field__label {
