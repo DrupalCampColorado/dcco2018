@@ -75,6 +75,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       max-width: rem-calc(350px);
+      width: 100%;
     }
   }
 
@@ -197,6 +198,8 @@
       position: relative;
       display: flex;
       flex-flow: column nowrap;
+      flex-basis: auto;
+      align-items: flex-start;
     }
     
     .form-item {
