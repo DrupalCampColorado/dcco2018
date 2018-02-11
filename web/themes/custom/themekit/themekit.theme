@@ -81,6 +81,25 @@ function themekit_preprocess_field(&$variables) {
 }
 
 /**
+ * Implements template_preprocess_paragraph().
+ */
+function themekit_preprocess_paragraph(&$variables) {
+  $paragraph = $variables['paragraph'];
+  $bundle = $paragraph->bundle();
+
+  switch ($bundle) {
+    case 'reference_block':
+    case 'simple_content':
+      if (isset($paragraph->field_background_color) && $paragraph->field_background_color->getValue()) {
+        $color = $paragraph->field_background_color->entity->getName();
+        $variables['attributes']['class'][] = 'color-scheme--' . strtolower($color);
+      }
+      break;
+  }
+
+}
+
+/**
  * Implements template_preprocess_node_article().
  */
 function themekit_preprocess_node_article(&$variables) {

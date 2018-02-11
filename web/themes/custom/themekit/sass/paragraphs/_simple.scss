@@ -70,11 +70,60 @@
     max-width: 110px;
     @include left-right(margin, auto);
     margin-bottom: 25px;
+
+    & ~ * {
+      text-align: center;
+    }
+  }
+
+  &[class^="color-scheme--"] {
+    position: relative;
+    z-index: 1;
+
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 500%;
+      height: 100%;
+      z-index: -1;
+
+      .field__item:last-child & {
+        left: 0;
+      }
+    }
+  }
+
+  &.color-scheme--orange {
+    color: #fff;
+
+    &:after {
+      background: $dark-orange;
+    }
+
+    .heading {
+      color: #fff;
+    }
+  }
+
+  &.color-scheme--green {
+    color: #fff;
+
+    &:after {
+      background: $green;
+    }
+
+    .heading {
+      color: #fff;
+    }
   }
 
   .paragraph--type--layout-component-group & {
     $padding: px-to-percent(75px, 500px);
-    padding: $padding $padding 0 $padding;
+    padding: $padding;
 
     .field--name-field-cta a {
       @include btn(gray);

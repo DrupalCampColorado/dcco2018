@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.simple_content.field_background_color
     - field.field.paragraph.simple_content.field_cta
     - field.field.paragraph.simple_content.field_heading
     - field.field.paragraph.simple_content.field_svg
@@ -17,6 +18,12 @@ targetEntityType: paragraph
 bundle: simple_content
 mode: default
 content:
+  field_background_color:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_cta:
     weight: 2
     settings:

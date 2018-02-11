@@ -3,9 +3,8 @@
 .paragraph--type--layout-component-group {
   position: relative;
   z-index: 10;
-  text-align: center;
+  text-align: left;
   color: $font-gray;
-  padding-top: 80px;
 
   &:before {
     content: '';
@@ -39,11 +38,19 @@
     color: $dark-orange;
     font-size: 32px;
     font-weight: normal;
+
+    &:first-child {
+      padding-top: 80px;
+    }
   }
 
   > .field--name-field-text-area {
     font-size: 24px;
     line-height: 1.333;
+
+    &:first-child {
+      padding-top: 80px;
+    }
 
     @include selectors(body-text) {
       &:last-child {
@@ -53,10 +60,8 @@
   }
 
   .field--name-field-p-columns {
-    padding-bottom: 40px;
     @include breakpoint(medium) {
       display: flex;
-      padding-bottom: 80px;
 
       > * {
         flex: 1;

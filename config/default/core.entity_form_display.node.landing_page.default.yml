@@ -32,24 +32,24 @@ content:
     type: entity_reference_paragraphs
     weight: 122
     settings:
-      title: Paragraph
-      title_plural: Paragraphs
+      title: Component
+      title_plural: Components
       edit_mode: open
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: ''
+      default_paragraph_type: _none
     third_party_settings: {  }
     region: content
   field_p_header:
     type: entity_reference_paragraphs
     weight: 121
     settings:
-      title: Paragraph
-      title_plural: Paragraphs
+      title: Component
+      title_plural: Components
       edit_mode: open
-      add_mode: dropdown
+      add_mode: select
       form_display_mode: default
-      default_paragraph_type: ''
+      default_paragraph_type: _none
     third_party_settings: {  }
     region: content
   path:
@@ -99,4 +99,6 @@ content:
   url_redirects:
     weight: 50
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }
