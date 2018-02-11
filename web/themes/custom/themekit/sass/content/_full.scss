@@ -4,21 +4,51 @@
 ////
 
 .node--view-mode-full {
-  &.node--type-blog {
+  &.node--type-blog, &.node--type-sponsor {
     .node__content {
       position: relative;
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: space-between;
-      align-items: top;
-      flex-basis: auto;
       max-width: $global-width;
       margin: 0 auto;
+      padding: 0 1rem;
       .content {
-        width: 60%;
+        margin-bottom: 50px;
+        h2 {
+          margin-top: 25px;
+          font-family: $font-arvo;
+          color: $dark-orange;
+          text-transform: uppercase;
+          font-size: rem-calc(18px);
+          line-height: rem-calc(28px);
+          font-weight: bold;
+        }
+        .field {
+          margin-bottom: 25px;
+          .field__label {
+            font-family: $font-arvo;
+            text-transform: uppercase;
+            color: $dark-orange;
+          }
+        }
       }
       .sidebar {
-        width: 30%;
+        max-width: 350px;
+        margin-bottom: 50px;
+      }
+      @include breakpoint(large) {
+        padding: 0;
+      }
+      @include breakpoint(medium-large) {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: top;
+        flex-basis: auto;
+        .content {
+          width: 60%;
+        }
+        .sidebar {
+          width: 35%;
+        }
       }
     }
   }
