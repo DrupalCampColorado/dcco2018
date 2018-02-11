@@ -70,7 +70,21 @@
     @include breakpoint(medium) {
       align-items: flex-start;
       display: flex;
+      flex-flow: wrap;
+      justify-content: center;
+
+      .views-row {
+        max-width: 33.333%;
+        padding: 0 .5rem;
+        width: 50%;
+      }
+    }
+
+    @include breakpoint(xlarge) {
+      flex-flow: nowrap;
       justify-content: space-evenly;
+      max-width: none;
+      width: 100%;
 
       .views-row {
         flex: 1;

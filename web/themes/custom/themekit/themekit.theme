@@ -87,6 +87,19 @@ function themekit_preprocess_field(&$variables) {
         $variables['svg_url'] = file_create_url($svg_file_entity->getFileUri());
       }
       break;
+
+    case 'field_sponsor_tier_spots':
+      $element = $variables['element'];
+
+      // Override -1 values to be unlimited.
+      foreach ($element['#items']->getValue() as $key => $value) {
+        if ($value['value'] < 0) {
+          $variables['items'][$key]['content'] = [
+            '#markup' => t('Unlimited'),
+          ];
+        }
+      }
+      break;
   }
 }
 
