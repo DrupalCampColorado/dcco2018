@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.banner_simple.field_background_color
     - field.field.paragraph.banner_simple.field_heading
     - field.field.paragraph.banner_simple.field_image
     - field.field.paragraph.banner_simple.field_svg
@@ -15,9 +16,17 @@ targetEntityType: paragraph
 bundle: banner_simple
 mode: default
 content:
+  field_background_color:
+    weight: 3
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_heading:
     weight: 0
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -25,7 +34,7 @@ content:
     region: content
   field_image:
     weight: 1
-    label: above
+    label: hidden
     settings:
       image_style: ''
       image_link: ''
@@ -34,7 +43,7 @@ content:
     region: content
   field_svg:
     weight: 2
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: file_default

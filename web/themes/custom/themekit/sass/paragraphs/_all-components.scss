@@ -1,8 +1,9 @@
-.node__content > .paragraph:not(.paragraph--type--banner-featured-header) {
+.node__content > .paragraph:not(.paragraph--type--banner-featured-header):not(.paragraph--type--banner-simple) {
   max-width: $global-width;
   margin: 0 auto;
 }
 
+.paragraph--type--banner-simple,
 .paragraph--type--banner-featured-header {
   @include content-width(featured-header);
 }
