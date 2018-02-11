@@ -1,0 +1,138 @@
+.simple-heading {
+  color: #f17b39;
+  font-family: $font-arvo;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 20px;
+  text-align: center;
+}
+
+.paragraph--type--reference-block {
+  position: relative;
+  z-index: 1;
+}
+
+.view-id-sponsor_listings.view-display-id-block_1 {
+  background-color: #fff;
+  padding-top: 3rem;
+
+  .simple-heading:after {
+    content: " Sponsors";
+  }
+
+  .views-rows {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 2rem 0 3rem;
+    max-width: 600px;
+
+    .views-row {
+      .node--type-sponsor.node--view-mode-teaser {
+        text-align: center;
+      }
+    }
+  }
+
+  @include breakpoint(medium) {
+    .views-rows {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      max-width: 600px;
+
+      .views-row {
+        width: 33.333%;
+      }
+    }
+  }
+}
+
+.block-views-blocksponsor-tier-list-block-1 {
+  padding: 3rem 0;
+
+  > h2 {
+    color: #f17b39;
+    font-family: $font-arvo;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
+    margin: 0 0 2rem;
+  }
+
+  .view-id-sponsor_tier_list .view-content {
+    .views-row {
+      padding: 1rem;
+    }
+
+    @include breakpoint(medium) {
+      align-items: flex-start;
+      display: flex;
+      justify-content: space-evenly;
+
+      .views-row {
+        flex: 1;
+        padding: 0 .5rem;
+      }
+    }
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -200%;
+    width: 500%;
+    height: 100%;
+    background: $tan;
+    z-index: z(behind);
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: url(../images/map-texture.png);
+    z-index: z(behind);
+    opacity: 0.15;
+  }
+}
+
+.sponsor-tier {
+  text-align: center;
+
+  .field--name-field-sponsor-tiers-price {
+    color: $green;
+    font-size: 42px;
+    font-family: $font-arvo;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+
+  .field--name-field-sponsor-tier-spots {
+    font-size: 14px;
+    margin-bottom: 1rem;
+  }
+
+  .field--name-field-sponsor-tiers-features {
+    text-align: left;
+
+    .field__item {
+      margin-bottom: .5rem;
+    }
+  }
+}
+
+.sponsor-tier__title {
+  font-size: 22px;
+  font-family: $font-arvo;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: normal;
+}

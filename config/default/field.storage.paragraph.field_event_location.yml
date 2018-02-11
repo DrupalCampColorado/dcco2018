@@ -1,16 +1,16 @@
-uuid: 20c2c1b8-2c50-449a-a623-5540fffa5303
+uuid: ceff288e-9b6b-42e3-aa04-eb87353d993a
 langcode: en
 status: true
 dependencies:
   module:
-    - address
+    - link
     - paragraphs
 id: paragraph.field_event_location
 field_name: field_event_location
 entity_type: paragraph
-type: address
+type: link
 settings: {  }
-module: address
+module: link
 locked: false
 cardinality: 1
 translatable: true

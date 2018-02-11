@@ -22,13 +22,13 @@
 
 @import "regions/header";
 @import "regions/footer";
-@import "regions/page";
 
 @import "components/drupal";
 @import "components/accessibility";
 @import "components/forms";
 @import "components/blocks";
 @import "components/navigation";
+@import "components/sponsorship-tiers";
 
 @import "paragraphs/all-components";
 @import "paragraphs/simple";
@@ -38,3 +38,4 @@
 // @TODO: Choose one format and remove the other from the project
 @import "content/page";
 @import "content/teaser";
+@import "content/full";

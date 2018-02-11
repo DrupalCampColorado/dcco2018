@@ -1,0 +1,25 @@
+////
+/// Full view mode styles
+/// View mode specific layout and styles
+////
+
+.node--view-mode-full {
+  &.node--type-blog {
+    .node__content {
+      position: relative;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: top;
+      flex-basis: auto;
+      max-width: $global-width;
+      margin: 0 auto;
+      .content {
+        width: 60%;
+      }
+      .sidebar {
+        width: 30%;
+      }
+    }
+  }
+}

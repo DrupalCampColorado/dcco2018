@@ -91,12 +91,20 @@ $layouts: (
     )
   ),
   header: (
-    width: 1005px,
+    width: 1360px,
     gutters: (
       small: 10px,
       medium: 20px,
       large: 70px
     )
+  ),
+  featured-header: (
+      width: 1360px,
+      gutters: (
+          small: 10px,
+          medium: 15px,
+          large: 20px
+      )
   )
 );
 

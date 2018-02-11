@@ -124,6 +124,28 @@ function themekit_preprocess_media__svg(&$variables) {
 //*********************************************
 
 /**
+ * Implements theme_theme_suggestions_views_view_alter().
+ */
+function themekit_theme_suggestions_views_view_alter(&$suggestions, $variables) {
+  $view = $variables['view'];
+  $display = $view->getDisplay();
+
+  $suggestions[] = "views_view__{$view->id()}";
+  $suggestions[] = "views_view__{$view->id()}__{$display->getPluginId()}";
+}
+
+/**
+ * Implements theme_theme_suggestions_views_view_unformatted_alter().
+ */
+function themekit_theme_suggestions_views_view_unformatted_alter(&$suggestions, $variables) {
+  $view = $variables['view'];
+  $display = $view->getDisplay();
+
+  $suggestions[] = "views_view_unformatted__{$view->id()}";
+  $suggestions[] = "views_view_unformatted__{$view->id()}__{$display->getPluginId()}";
+}
+
+/**
  * Implements template_theme_suggestions_HOOK_alter().
  */
 function themekit_theme_suggestions_field_alter(array &$suggestions, array $variables) {
