@@ -253,6 +253,11 @@
         }
       }
     }
+    > .field__item {
+      @include breakpoint(medium-large) {
+        width: 50%;
+      }
+    }
     .field--name-field-heading {
       position: relative;
       color: $white;
