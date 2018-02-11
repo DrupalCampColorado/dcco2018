@@ -28,7 +28,7 @@
   h2 {
     font-size: $font-size-small;
   }
-  .menu--social {
+  .menu--follow-us {
     display: flex;
     flex-flow: row nowrap;
     flex-basis: auto;
@@ -40,6 +40,7 @@
       color: transparent;
       display: inline-block;
       pointer-events: none;
+      transition: .4s ease transform;
       &:after {
         content: '';
         position: absolute;
@@ -52,8 +53,13 @@
         background-size: contain;
         pointer-events: initial;
       }
+      &:hover,
+      &:focus {
+        transform: translateY(-5px);
+      }
     }
   }
+
 
   [id="block-footerleftcopy"] {
     padding-left: rem-calc(25);
