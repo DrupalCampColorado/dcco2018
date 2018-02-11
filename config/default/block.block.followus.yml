@@ -1,0 +1,27 @@
+uuid: 719e891c-00e9-4bc7-afbd-b7d0ab1b659c
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.follow-us
+  module:
+    - menu_block
+  theme:
+    - themekit
+id: followus
+theme: themekit
+region: footer
+weight: 0
+provider: null
+plugin: 'menu_block:follow-us'
+settings:
+  id: 'menu_block:follow-us'
+  label: 'Follow us'
+  provider: menu_block
+  label_display: visible
+  level: 1
+  depth: 0
+  expand: 0
+  parent: 'follow-us:'
+  suggestion: follow_us
+visibility: {  }
