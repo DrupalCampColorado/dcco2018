@@ -325,13 +325,17 @@ display:
     display_options:
       display_extenders: {  }
       block_description: 'Sponsors List'
+      access:
+        type: none
+        options: {  }
+      defaults:
+        access: false
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - 'user.node_grants:view'
-        - user.permissions
       tags:
         - 'config:core.entity_view_display.node.blog.default'
         - 'config:core.entity_view_display.node.blog.full'

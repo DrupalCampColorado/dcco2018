@@ -39,6 +39,7 @@ module:
   inline_entity_form: 0
   layout_discovery: 0
   link: 0
+  link_attributes: 0
   mailchimp: 0
   mailchimp_signup: 0
   menu_block: 0
