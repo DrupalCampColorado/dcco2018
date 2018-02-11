@@ -56,6 +56,13 @@ function themekit_preprocess_node(&$variables) {
  */
 function themekit_preprocess_block(&$variables) {
   $id = $variables['plugin_id'];
+
+  // Get bundle for styling purposes
+  if (isset($variables['elements']['content']['#block_content'])) {
+    $bundle = $variables['elements']['content']['#block_content']->bundle();
+    $variables['attributes']['class'][] = $bundle;
+  }
+
   switch ($id) {
     case 'page_title_block':
       $node = \Drupal::request()->attributes->get('node');

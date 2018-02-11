@@ -20,6 +20,7 @@
       font-size: rem-calc(18px);
       font-family: $font-arvo;
       color: $dark-orange;
+      text-transform: uppercase;
     }
   }
 }
@@ -53,6 +54,77 @@
       &:after {
         content: '\00bb';
         margin-left: 10px;
+      }
+    }
+  }
+}
+
+// Promo Block
+.promo_block {
+  max-width: 400px;
+  margin-bottom: 45px;
+  padding: 25px 40px;
+  border: 1px solid $dark-gray;
+  .field--name-field-heading {
+    margin-bottom: 25px;
+    font-size: rem-calc(32px);
+    line-height: rem-calc(40px);
+    color: $font-gray;
+  }
+  h2 {
+    font-size: rem-calc(18px);
+    line-height: rem-calc(28px);
+    font-family: $font-arvo;
+    color: $dark-orange;
+    text-transform: uppercase;
+  }
+  form {
+    .mailchimp-newsletter-mergefields {
+      margin-bottom: -17px;
+    }
+    .form-item, .form-actions {
+      margin: 0;
+    }
+    input[type='submit'] {
+      @include btn(gray);
+      margin: 10px 0 0 0;
+      min-height: 38px;
+      text-transform: uppercase;
+    }
+    @include breakpoint(900px) {
+      display: flex;
+      align-items: flex-end;
+      input[type='submit'] {
+        margin: 0 0 0 10px;
+      }
+    }
+  }
+}
+
+// Promo Link
+.promo_link {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  .field--name-field-svg {
+    margin-right: 15px;
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  .field--name-field-link {
+    font-size: rem-calc(24px);
+    line-height: rem-calc(28px);
+    a {
+      color: $font-gray;
+      @include selectors(active) {
+        color: rgba($font-gray, 0.7);
+      }
+      &:after {
+        content: '\00bb';
+        margin-left: 10px;
+        color: $green;
       }
     }
   }

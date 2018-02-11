@@ -7,18 +7,27 @@
   &.node--type-blog {
     .node__content {
       position: relative;
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: space-between;
-      align-items: top;
-      flex-basis: auto;
       max-width: $global-width;
       margin: 0 auto;
+      padding: 0 1rem;
       .content {
-        width: 60%;
+        margin-bottom: 50px;
       }
-      .sidebar {
-        width: 30%;
+      @include breakpoint(large) {
+        padding: 0;
+      }
+      @include breakpoint(medium-large) {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: top;
+        flex-basis: auto;
+        .content {
+          width: 60%;
+        }
+        .sidebar {
+          width: 35%;
+        }
       }
     }
   }
