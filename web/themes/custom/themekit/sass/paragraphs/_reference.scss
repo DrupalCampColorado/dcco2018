@@ -3,6 +3,8 @@
 //*********************************************
 
 .paragraph--type--reference-block {
+  text-align: left;
+
   &[class^="color-scheme--"] {
     position: relative;
     z-index: 1;
