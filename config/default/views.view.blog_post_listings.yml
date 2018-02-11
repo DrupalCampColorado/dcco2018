@@ -223,6 +223,13 @@ display:
       allow:
         items_per_page: true
       display_description: ''
+      use_more: false
+      defaults:
+        use_more: false
+        use_more_always: false
+        use_more_text: false
+      use_more_always: true
+      use_more_text: 'View All'
     cache_metadata:
       max-age: -1
       contexts:
@@ -248,6 +255,10 @@ display:
           offset: 0
       defaults:
         pager: false
+        link_display: false
+        link_url: false
+      link_display: custom_url
+      link_url: news
     cache_metadata:
       max-age: -1
       contexts:
