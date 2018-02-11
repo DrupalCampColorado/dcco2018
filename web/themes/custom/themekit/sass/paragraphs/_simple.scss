@@ -278,7 +278,8 @@
     max-width: rem-calc(70);
     margin: 0 auto rem-calc(37);
   }
-  .field--name-field-heading {
+  h1 {
+    font-family: $font-arvo;
     font-size: rem-calc(42);
     line-height: rem-calc(40);
     text-transform: uppercase;
