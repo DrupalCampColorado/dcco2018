@@ -30,6 +30,7 @@
         "drupal/field_tools": "^1.0@alpha",
         "drupal/google_analytics": "^2.2",
         "drupal/inline_entity_form": "^1.0@beta",
+        "drupal/link_attributes": "^1.2",
         "drupal/linked_field": "^1.1",
         "drupal/mailchimp": "^1.5",
         "drupal/menu_block": "^1.4",
