@@ -90,13 +90,18 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 ]
 %}
 
-{% set rendered_content = content|without('') %}
+{% set rendered_content = content|without('field_p_promo_content') %}
 
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
 
   <div{{ content_attributes.addClass('node__content') }}>
-    {{ rendered_content }}
+    <div class="content">
+      {{ rendered_content }}
+    </div>
+    <aside class="sidebar">
+      {{ content.field_p_promo_content }}
+    </aside>
   </div>
 
 </article>

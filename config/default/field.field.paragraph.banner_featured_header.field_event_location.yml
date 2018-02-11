@@ -1,4 +1,4 @@
-uuid: 1f8625b7-b8fe-4452-89c0-3bca646f00bc
+uuid: a4eacce0-598a-42fe-a114-681941ca8e74
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     - field.storage.paragraph.field_event_location
     - paragraphs.paragraphs_type.banner_featured_header
   module:
-    - address
+    - link
 id: paragraph.banner_featured_header.field_event_location
 field_name: field_event_location
 entity_type: paragraph
@@ -18,19 +18,6 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  available_countries:
-    US: US
-  fields:
-    administrativeArea: administrativeArea
-    locality: locality
-    dependentLocality: dependentLocality
-    postalCode: postalCode
-    addressLine1: addressLine1
-    addressLine2: addressLine2
-    sortingCode: '0'
-    organization: '0'
-    givenName: '0'
-    additionalName: '0'
-    familyName: '0'
-  langcode_override: ''
-field_type: address
+  link_type: 17
+  title: 2
+field_type: link
