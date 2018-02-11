@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.banner_simple.field_background_color
     - field.field.paragraph.banner_simple.field_heading
     - field.field.paragraph.banner_simple.field_image
     - field.field.paragraph.banner_simple.field_svg
@@ -16,6 +17,12 @@ targetEntityType: paragraph
 bundle: banner_simple
 mode: default
 content:
+  field_background_color:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_heading:
     weight: 0
     settings:

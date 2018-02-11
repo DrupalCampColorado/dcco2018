@@ -69,6 +69,8 @@
 .promo_block {
   margin-bottom: 45px;
   border: 1px solid $dark-gray;
+  padding: 25px 40px;
+
   .field--name-field-heading {
     font-size: rem-calc(32px);
     line-height: rem-calc(40px);
@@ -80,20 +82,41 @@
     font-family: $font-arvo;
     color: $dark-orange;
     text-transform: uppercase;
+    margin-bottom: 0.5em;
   }
+
+  label {
+    position: absolute;
+  }
+
   form {
     .mailchimp-newsletter-mergefields {
-      margin-bottom: -17px;
+      margin-bottom: 0;
     }
     .form-item, .form-actions {
       margin: 0;
     }
+
+    [type="email"] {
+      color: $font-gray;
+      &:hover,
+      &:active {
+        border: 2px solid $dark-gray;
+      }
+
+      &:focus {
+        border: 2px solid $dark-gray;
+        box-shadow: none;
+      }
+    }
+
     input[type='submit'] {
       @include btn(gray);
       margin: 10px 0 0 0;
       min-height: 38px;
       text-transform: uppercase;
     }
+
     @include breakpoint(900px) {
       display: flex;
       align-items: flex-end;
