@@ -1,0 +1,67 @@
+//*********************************************
+// Reference - block
+//*********************************************
+
+.paragraph--type--reference-block {
+  text-align: left;
+
+  &[class^="color-scheme--"] {
+    position: relative;
+    z-index: 1;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 500%;
+      height: 100%;
+      z-index: -1;
+
+      .field__item:last-child & {
+        left: 0;
+      }
+    }
+  }
+
+  &.color-scheme--orange {
+    color: #fff;
+
+    &:after {
+      background: $dark-orange;
+    }
+
+    .heading {
+      color: #fff;
+    }
+  }
+
+  &.color-scheme--tan {
+    color: #fff;
+
+    &:after {
+      background: $tan;
+    }
+
+    .heading {
+      color: #fff;
+    }
+  }
+
+  &.color-scheme--green {
+    color: #fff;
+
+    &:after {
+      background: $green;
+    }
+
+    .heading {
+      color: #fff;
+    }
+  }
+
+  .field--name-field-block-reference {
+    padding: px-to-percent(80px, 600px) px-to-percent(115px, 600px);
+  }
+}

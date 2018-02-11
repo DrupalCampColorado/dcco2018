@@ -104,6 +104,42 @@ function themekit_preprocess_field(&$variables) {
 }
 
 /**
+ * Implements template_preprocess_paragraph().
+ */
+function themekit_preprocess_paragraph(&$variables) {
+  $paragraph = $variables['paragraph'];
+  $bundle = $paragraph->bundle();
+  
+  if (!isset($variables['attributes']['class'])) {
+    $variables['attributes']['class'] = [];
+  }
+
+  switch ($bundle) {
+    case 'reference_block':
+    case 'simple_content':
+      if (isset($paragraph->field_background_color) && $paragraph->field_background_color->getValue()) {
+        $color = $paragraph->field_background_color->entity->getName();
+        $variables['attributes']['class'][] = 'color-scheme--' . strtolower($color);
+      }
+      break;
+  }
+
+  if ($bundle == 'simple_content') {
+    $heading = isset($paragraph->field_heading) ? $paragraph->field_heading->getValue() : null;
+    $icon = isset($paragraph->field_icon) ? $paragraph->field_svg->getValue() : null;
+    $text = isset($paragraph->field_text_area) ? $paragraph->field_text_area->getValue() : null;
+    $link = isset($paragraph->field_cta) ? $paragraph->field_cta->getValue() : null;
+    $arrow = isset($paragraph->field_arrow_down) ? $paragraph->field_arrow_down->getValue() : null;
+
+    $variables['attributes']['class'] = array_merge($variables['attributes']['class'], [
+      !$heading && !$icon && $link && $text ? 'large-text' : '',
+      !$icon && !$link && $heading && $text ? 'medium-text'  : '',
+      $arrow && (Int)$arrow[0]['value'] ? 'arrow' : '',
+    ]);
+  }
+}
+
+/**
  * Implements template_preprocess_node_article().
  */
 function themekit_preprocess_node_article(&$variables) {

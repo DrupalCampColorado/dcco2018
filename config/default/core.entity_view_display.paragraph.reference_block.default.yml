@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.reference_block.field_background_color
     - field.field.paragraph.reference_block.field_block_reference
     - field.field.paragraph.reference_block.field_heading
     - paragraphs.paragraphs_type.reference_block
@@ -28,4 +29,5 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_background_color: true
