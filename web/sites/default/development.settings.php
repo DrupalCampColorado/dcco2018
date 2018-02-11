@@ -24,5 +24,6 @@ $config['mailchimp.settings']['api_key'] = getenv('AMAZEEIO_MAILCHIMP_API_KEY');
 $config['shield.settings']['user'] = 'dcco';
 $config['shield.settings']['pass'] = '3ditdcco';
 
-//$config['shield.settings']['user'] = '';
-//$config['shield.settings']['pass'] = '';
+// Configure private and temp directories
+$settings['file_private_path'] = "sites/default/files/private";
+$config['system.file']['path']['temporary'] = "sites/default/files/private/tmp";
