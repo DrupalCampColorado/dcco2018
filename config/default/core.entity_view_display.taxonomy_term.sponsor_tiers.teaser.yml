@@ -17,13 +17,6 @@ targetEntityType: taxonomy_term
 bundle: sponsor_tiers
 mode: teaser
 content:
-  description:
-    label: hidden
-    type: text_default
-    weight: 3
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_sponsor_tier_spots:
     weight: 1
     label: hidden
@@ -46,9 +39,10 @@ content:
     settings:
       thousand_separator: ','
       decimal_separator: .
-      scale: 2
+      scale: 0
       prefix_suffix: true
     third_party_settings: {  }
     type: number_decimal
     region: content
-hidden: {  }
+hidden:
+  description: true
