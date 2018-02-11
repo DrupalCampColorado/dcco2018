@@ -8,3 +8,56 @@ form {
     border-radius: 0;
   }
 }
+
+.block-mailchimp-signup {
+  h2 {
+    font-family: $font-arvo;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: .2rem;
+    font-size: $small-font-size;
+    @include breakpoint(medium) {
+      font-size: $medium-font-size;
+    }
+  }
+  label {
+    @extend .visually-hidden;
+  }
+
+  form {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  .form-item {
+    margin: 0;
+  }
+
+  [type="email"] {
+    color: $white;
+    border: 2px solid $white;
+    transition: 0.5s ease box-shadow , 0.25s ease border-color, .3s ease background;
+    margin-bottom: 0.675rem;
+    &:active,
+    &:focus {
+      color: $font-gray;
+      background: $white;
+      border: 2px solid $white;
+    }
+  }
+
+  [data-drupal-selector="edit-actions"] {
+    margin: 0;
+  }
+
+  [type="submit"] {
+    @include btn(ghost);
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: .3s ease background, .3s ease color, .3s ease transform;
+    &:active {
+      transform: scale(.9)
+    }
+  }
+}
