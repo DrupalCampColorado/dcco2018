@@ -33,6 +33,10 @@
       .sidebar {
         max-width: 350px;
         margin-bottom: 50px;
+
+        > .paragraph {
+          padding: 0;
+        }
       }
       @include breakpoint(large) {
         padding: 0;

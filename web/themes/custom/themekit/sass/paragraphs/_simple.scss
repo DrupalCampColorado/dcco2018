@@ -64,10 +64,13 @@
   text-align: left;
 
   .heading {
+    font-family: $font-arvo;
     color: $dark-orange;
     text-transform: uppercase;
-    font-weight: normal;
+    font-weight: bold;
     font-size: rem-calc(20);
+    line-height: 1.25;
+    margin-bottom: 1em;
   }
 
   .field--name-field-svg {
@@ -90,6 +93,7 @@
     .heading {
       font-size: rem-calc(32);
       text-transform: none;
+      font-family: $font-cabin;
     }
 
     .field--name-field-text-area {
@@ -98,6 +102,10 @@
   }
 
   &.large-text {
+    .heading {
+      font-family: $font-cabin;
+    }
+
     .field--name-field-text-area {
       font-size: rem-calc(32);
       font-weight: normal;
@@ -112,7 +120,7 @@
       height: 50px;
       position: absolute;
       bottom: 35px;
-      left: px-to-percent(75px, 600px);
+      left: 6.25%;
       background: url("../images/scroll-indicator-copy.png") 0 100% no-repeat;
     }
   }
@@ -134,6 +142,18 @@
       .field__item:last-child & {
         left: 0;
       }
+    }
+  }
+
+  &.color-scheme--yellow {
+    color: #fff;
+
+    &:after {
+      background: $light-orange;
+    }
+
+    .heading {
+      color: #fff;
     }
   }
 

@@ -87,7 +87,6 @@ function themekit_preprocess_field(&$variables) {
         $variables['svg_url'] = file_create_url($svg_file_entity->getFileUri());
       }
       break;
-
     case 'field_sponsor_tier_spots':
       $element = $variables['element'];
 
@@ -198,6 +197,7 @@ function themekit_theme_suggestions_field_alter(array &$suggestions, array $vari
   switch($field_name) {
     case 'field_p_content':
     case 'field_p_header':
+    case 'field_p_promo_content':
       // Remove all field markup so only the field value markup is output.
       array_unshift($suggestions, 'field__no_wrapper');
       break;

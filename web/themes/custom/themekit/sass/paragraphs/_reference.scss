@@ -4,6 +4,21 @@
 
 .paragraph--type--reference-block {
   text-align: left;
+  padding: px-to-percent(80px, 1000px) px-to-percent(115px, 1000px);
+
+  .field--name-field-heading {
+    font-size: rem-calc(32);
+    line-height: 1.25;
+    margin-bottom: rem-calc(40);
+  }
+
+  .field--name-field-p-columns > .field__item:last-child & {
+    padding: px-to-percent(80px, 600px) 30px px-to-percent(80px, 600px) px-to-percent(115px, 600px);
+  }
+
+  .field--name-field-p-columns > .field__item:first-child & {
+    padding: px-to-percent(80px, 600px) px-to-percent(115px, 600px) px-to-percent(80px, 600px) 30px;
+  }
 
   &[class^="color-scheme--"] {
     position: relative;
@@ -22,6 +37,18 @@
       .field__item:last-child & {
         left: 0;
       }
+    }
+  }
+
+  &.color-scheme--yellow {
+    color: #fff;
+
+    &:after {
+      background: $light-orange;
+    }
+
+    .heading {
+      color: #fff;
     }
   }
 
@@ -61,7 +88,29 @@
     }
   }
 
-  .field--name-field-block-reference {
-    padding: px-to-percent(80px, 600px) px-to-percent(115px, 600px);
+  .paragraph--type--layout-component-group & .block-mailchimp-signup-subscribe-blocksign-up-for-updates {
+    h2 {
+      margin-bottom: 0;
+      font-family: $body-font-family;
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: rem-calc(18);
+    }
+    
+    label {
+      position: absolute;
+    }
+
+    form {
+      display: flex;
+      flex-flow: row nowrap;
+    }
+
+    [data-drupal-selector="edit-actions"] {
+      margin: 5px 0 0 10px;
+      input {
+        padding: 10px 12px 9px 12px;
+      }
+    }
   }
 }
