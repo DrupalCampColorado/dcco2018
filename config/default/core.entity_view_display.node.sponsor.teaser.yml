@@ -13,7 +13,6 @@ dependencies:
     - node.type.sponsor
   module:
     - image
-    - linked_field
     - user
 _core:
   default_config_hash: v-6tKAEDgbIpCvblHi5bv4o2GmWFBGDl8glz5MOMqpc
@@ -29,13 +28,8 @@ content:
     label: hidden
     settings:
       image_style: sponsor_logos
-      image_link: ''
-    third_party_settings:
-      linked_field:
-        linked: '1'
-        type: field
-        destination: field_sponsor_url
-        advanced: {  }
+      image_link: content
+    third_party_settings: {  }
 hidden:
   body: true
   field_metatags: true
