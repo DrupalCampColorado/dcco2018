@@ -116,6 +116,7 @@ function themekit_preprocess_paragraph(&$variables) {
   switch ($bundle) {
     case 'reference_block':
     case 'simple_content':
+    case 'simple_testimonial':
       if (isset($paragraph->field_background_color) && $paragraph->field_background_color->getValue()) {
         $color = $paragraph->field_background_color->entity->getName();
         $variables['attributes']['class'][] = 'color-scheme--' . strtolower($color);
