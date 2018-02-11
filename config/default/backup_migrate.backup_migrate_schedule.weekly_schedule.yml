@@ -1,0 +1,13 @@
+uuid: 654317c4-758e-4191-b310-027482785a83
+langcode: en
+status: true
+dependencies: {  }
+id: weekly_schedule
+label: 'Weekly Schedule'
+enabled: true
+keep: 4
+period: 604800
+cron: null
+source_id: default_db
+destination_id: private_files
+settings_profile_id: null

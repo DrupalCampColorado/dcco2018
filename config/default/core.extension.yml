@@ -4,6 +4,7 @@ module:
   admin_toolbar_tools: 0
   adminimal_admin_toolbar: 0
   automated_cron: 0
+  backup_migrate: 0
   block: 0
   block_content: 0
   block_field: 0
@@ -59,6 +60,7 @@ module:
   responsive_image: 0
   shield: 0
   shortcut: 0
+  simple_sitemap: 0
   syslog: 0
   system: 0
   taxonomy: 0
