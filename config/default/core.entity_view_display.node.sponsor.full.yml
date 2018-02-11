@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.full
     - field.field.node.sponsor.body
+    - field.field.node.sponsor.field_metatags
     - field.field.node.sponsor.field_sponsor_logo
     - field.field.node.sponsor.field_sponsor_tier
     - field.field.node.sponsor.field_sponsor_url
@@ -32,7 +33,7 @@ content:
     type: image
     weight: 2
     region: content
-    label: above
+    label: hidden
     settings:
       image_style: ''
       image_link: ''
@@ -58,4 +59,5 @@ content:
     type: link
     region: content
 hidden:
+  field_metatags: true
   links: true

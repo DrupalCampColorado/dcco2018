@@ -38,7 +38,7 @@ content:
     region: content
   field_sponsor_logo:
     weight: 104
-    label: above
+    label: hidden
     settings:
       image_style: ''
       image_link: ''

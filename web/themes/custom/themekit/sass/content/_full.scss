@@ -4,13 +4,25 @@
 ////
 
 .node--view-mode-full {
-  &.node--type-blog {
+  &.node--type-blog, &.node--type-sponsor {
     .node__content {
       position: relative;
       max-width: $global-width;
       margin: 0 auto;
       padding: 0 1rem;
       .content {
+        margin-bottom: 50px;
+        .field {
+          margin-bottom: 25px;
+          .field__label {
+            font-family: $font-arvo;
+            text-transform: uppercase;
+            color: $dark-orange;
+          }
+        }
+      }
+      .sidebar {
+        max-width: 350px;
         margin-bottom: 50px;
       }
       @include breakpoint(large) {
