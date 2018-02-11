@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.simple_content.field_arrow_down
     - field.field.paragraph.simple_content.field_background_color
     - field.field.paragraph.simple_content.field_cta
     - field.field.paragraph.simple_content.field_heading
@@ -53,4 +54,5 @@ content:
     type: text_default
     region: content
 hidden:
+  field_arrow_down: true
   field_background_color: true

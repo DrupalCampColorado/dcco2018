@@ -61,12 +61,13 @@
 /// ====================
 .paragraph--type--simple-content {
   color: $font-gray;
+  text-align: left;
 
   .heading {
     color: $dark-orange;
     text-transform: uppercase;
     font-weight: normal;
-    font-size: 20px;
+    font-size: rem-calc(20);
   }
 
   .field--name-field-svg {
@@ -79,10 +80,46 @@
     }
   }
 
+  .field--name-field-cta a {
+    @include btn(gray);
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  &.medium-text {
+    .heading {
+      font-size: rem-calc(32);
+      text-transform: none;
+    }
+
+    .field--name-field-text-area {
+      font-size: rem-calc(24);
+    }
+  }
+
+  &.large-text {
+    .field--name-field-text-area {
+      font-size: rem-calc(32);
+      font-weight: normal;
+    }
+  }
+
+  &.arrow {
+    &:before {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      bottom: 35px;
+      left: px-to-percent(75px, 600px);
+      background: url("../images/scroll-indicator-copy.png") 0 100% no-repeat;
+    }
+  }
+
   &[class^="color-scheme--"] {
     position: relative;
     z-index: 1;
-
 
     &:after {
       content: '';
@@ -112,6 +149,12 @@
     }
   }
 
+  &.color-scheme--tan {
+    &:after {
+      background: $tan;
+    }
+  }
+
   &.color-scheme--green {
     color: #fff;
 
@@ -122,16 +165,19 @@
     .heading {
       color: #fff;
     }
+
+    .field--name-field-cta a {
+      @include btn(white);
+    }
   }
 
   .paragraph--type--layout-component-group & {
-    $padding: px-to-percent(75px, 500px);
+    $padding: px-to-percent(75px, 600px);
     padding: $padding;
 
-    .field--name-field-cta a {
-      @include btn(gray);
-      font-size: 16px;
-      text-transform: uppercase;
+
+    &.arrow {
+      padding-bottom: 100px;
     }
   }
 }

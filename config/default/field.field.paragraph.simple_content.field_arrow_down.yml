@@ -1,0 +1,23 @@
+uuid: 10b53f43-34f2-4314-a6f0-daa3320b336f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_arrow_down
+    - paragraphs.paragraphs_type.simple_content
+id: paragraph.simple_content.field_arrow_down
+field_name: field_arrow_down
+entity_type: paragraph
+bundle: simple_content
+label: 'Arrow down'
+description: 'Adds a down arrow below the content.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
