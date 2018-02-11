@@ -41,6 +41,7 @@
         "drupal/pathauto": "^1.0",
         "drupal/redirect": "^1.0",
         "drupal/shield": "^1.1",
+        "drupal/simple_sitemap": "^2.11",
         "drupal/token": "^1.1",
         "drupal/twig_field_value": "^1.1",
         "drupal/video_embed_field": "^1.0",
