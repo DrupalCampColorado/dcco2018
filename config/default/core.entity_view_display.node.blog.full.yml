@@ -5,9 +5,12 @@ dependencies:
   config:
     - core.entity_view_mode.node.full
     - field.field.node.blog.body
+    - field.field.node.blog.field_metatags
+    - field.field.node.blog.field_p_promo_content
     - field.field.node.blog.field_tags
     - node.type.blog
   module:
+    - entity_reference_revisions
     - text
     - user
 id: node.blog.full
@@ -22,6 +25,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_p_promo_content:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
   field_tags:
     weight: 0
     label: hidden
@@ -31,4 +43,5 @@ content:
     type: entity_reference_label
     region: content
 hidden:
+  field_metatags: true
   links: true

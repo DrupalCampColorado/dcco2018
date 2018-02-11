@@ -1,0 +1,49 @@
+uuid: da170f29-7b0a-4af4-a051-183a583fc3fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_p_promo_content
+    - node.type.blog
+    - paragraphs.paragraphs_type.reference_block
+  module:
+    - entity_reference_revisions
+id: node.blog.field_p_promo_content
+field_name: field_p_promo_content
+entity_type: node
+bundle: blog
+label: 'Promo Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      reference_block: reference_block
+    target_bundles_drag_drop:
+      banner_featured_header:
+        weight: 8
+        enabled: false
+      banner_simple:
+        weight: 9
+        enabled: false
+      layout_component_group:
+        weight: 10
+        enabled: false
+      reference_block:
+        enabled: true
+        weight: 11
+      simple_content:
+        weight: 12
+        enabled: false
+      simple_teaser:
+        weight: 13
+        enabled: false
+      simple_testimonial:
+        weight: 14
+        enabled: false
+field_type: entity_reference_revisions
