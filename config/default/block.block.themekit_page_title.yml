@@ -2,8 +2,6 @@ uuid: 9064a2eb-b216-4a1a-8ef2-f13f529aac5c
 langcode: en
 status: true
 dependencies:
-  module:
-    - ctools
   theme:
     - themekit
 _core:
@@ -18,13 +16,5 @@ settings:
   id: page_title_block
   label: 'Page title'
   provider: core
-  label_display: visible
-visibility:
-  'entity_bundle:node':
-    id: 'entity_bundle:node'
-    bundles:
-      blog: blog
-      sponsor: sponsor
-    negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
+  label_display: '0'
+visibility: {  }

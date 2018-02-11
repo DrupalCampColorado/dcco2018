@@ -1,6 +1,6 @@
 uuid: 1fe58c0e-45d1-439c-ac83-dc5cb906820f
 langcode: en
-status: false
+status: true
 dependencies:
   content:
     - 'block_content:promo_link:410dca1c-5511-4424-a39c-f31ac441f560'
