@@ -5,43 +5,49 @@
 /// Simple - Testimonial
 /// ====================
 .paragraph--type--simple-testimonial {
-  background-color: $dark-orange;
   text-align: center;
   color: $white;
   position: relative;
   z-index: z(middle);
-  padding: $medium-large-margin $small-margin;
-
-  @include breakpoint(medium) {
-    padding: $medium-large-margin $xtra-large-margin;
-  }
   &:before {
     content: '';
     position: absolute;
     top: 0;
     left: -200%;
     width: 500%;
-    height: calc(100% + 40px);
+    height: 100%;
     background-color: $dark-orange;
     z-index: z(behind);
   }
-  &:after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 80%;
-    height: 150%;
-    background: url(../images/svg/MountainBadge.svg);
-    z-index: 0;
-    opacity: 0.2;
-    background-repeat: no-repeat;
-    background-position: center;
-    transform: translate(-50%, -50%);
+
+  .inner-wrapper {
+    overflow: hidden;
+    position: relative;
+    padding: $medium-large-margin $small-margin;
+
     @include breakpoint(medium) {
-      top: 43%;
+      padding: $medium-large-margin $xtra-large-margin;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 80%;
+      height: 150%;
+      background: url(../images/svg/MountainBadge.svg);
+      z-index: 0;
+      opacity: 0.2;
+      background-repeat: no-repeat;
+      background-position: center;
+      transform: translate(-50%, -50%);
+      @include breakpoint(medium) {
+        top: 43%;
+      }
     }
   }
+
   .field--name-field-quote {
     position: relative;
     font-size: $large-font-size;
@@ -54,6 +60,72 @@
     font-size: $main-font-size;
     font-family: $font-cabin;
     z-index: z(front);
+  }
+
+  &[class^="color-scheme--"] {
+    position: relative;
+    z-index: 1;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 500%;
+      height: 100%;
+      z-index: -1;
+
+      .field__item:last-child & {
+        left: 0;
+      }
+    }
+  }
+
+  &.color-scheme--yellow {
+    color: #fff;
+
+    &:before {
+      background: $light-orange;
+    }
+
+    .heading {
+      color: #fff;
+    }
+  }
+
+  &.color-scheme--orange {
+    color: #fff;
+
+    &:before {
+      background: $dark-orange;
+    }
+
+    .heading {
+      color: #fff;
+    }
+  }
+
+  &.color-scheme--tan {
+    &:before {
+      background: $tan;
+    }
+  }
+
+  &.color-scheme--green {
+    color: #fff;
+
+    &:before {
+      background: $green;
+    }
+
+    .heading {
+      color: #fff;
+    }
+
+    .field--name-field-cta a {
+      @include btn(white);
+    }
   }
 }
 
@@ -298,7 +370,8 @@
     max-width: rem-calc(70);
     margin: 0 auto rem-calc(37);
   }
-  .field--name-field-heading {
+  h1 {
+    font-family: $font-arvo;
     font-size: rem-calc(42);
     line-height: rem-calc(40);
     text-transform: uppercase;

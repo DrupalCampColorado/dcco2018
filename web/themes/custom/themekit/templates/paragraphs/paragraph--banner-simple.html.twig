@@ -63,7 +63,7 @@ content.field_background_color[0]['#plain_text']|lower
   <div class="content-wrap {{ rendered_content.field_background_color[0]['#plain_text']|lower }}" style="background-image: url('{{ file_url(content.field_image.0['#item'].entity.uri.value) }}');">
     <div class="banner-header">
       {{ rendered_content.field_svg }}
-      {{ rendered_content.field_heading }}
+      <h1>{{ rendered_content.field_heading[0] }}</h1>
     </div>
   </div>
 </div>
