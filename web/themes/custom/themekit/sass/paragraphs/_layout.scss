@@ -6,6 +6,7 @@
   text-align: center;
   color: $font-gray;
   max-width: 1200px;
+  @include left-right(margin, auto);
 
   &:before {
     content: '';

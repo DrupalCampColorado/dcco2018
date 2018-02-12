@@ -4,7 +4,6 @@
 
 .paragraph--type--reference-block {
   text-align: left;
-  padding: px-to-percent(80px, 1000px) px-to-percent(115px, 1000px);
 
   .field--name-field-heading {
     font-size: rem-calc(32);
@@ -29,8 +28,8 @@
       display: block;
       position: absolute;
       top: 0;
-      right: 0;
-      width: 500%;
+      left: -500%;
+      width: 1000%;
       height: 100%;
       z-index: -1;
 
@@ -65,14 +64,9 @@
   }
 
   &.color-scheme--tan {
-    color: #fff;
 
     &:after {
       background: $tan;
-    }
-
-    .heading {
-      color: #fff;
     }
   }
 
