@@ -264,9 +264,15 @@
   }
 
   .paragraph--type--layout-component-group & {
-    $padding: px-to-percent(75px, 600px);
-    padding: $padding;
+    padding: 25px;
 
+    @include breakpoint(medium) {
+      padding: 40px;
+    }
+
+    @include breakpoint(medium-large) {
+      padding: 75px;
+    }
 
     &.arrow {
       padding-bottom: 100px;
