@@ -64,14 +64,9 @@
   }
 
   &.color-scheme--tan {
-    color: #fff;
 
     &:after {
       background: $tan;
-    }
-
-    .heading {
-      color: #fff;
     }
   }
 

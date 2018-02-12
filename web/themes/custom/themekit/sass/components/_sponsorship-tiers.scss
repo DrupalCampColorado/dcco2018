@@ -136,6 +136,7 @@
 
   .field--name-field-sponsor-tiers-features {
     text-align: left;
+    color: $font-gray;
 
     .field__item {
       margin-bottom: .5rem;
@@ -146,6 +147,7 @@
 .sponsor-tier__title {
   font-size: 22px;
   font-family: $font-arvo;
+  color: $font-gray;
   margin: 0;
   text-transform: uppercase;
   font-weight: normal;
