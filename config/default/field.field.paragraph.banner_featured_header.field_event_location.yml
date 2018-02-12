@@ -1,0 +1,23 @@
+uuid: a4eacce0-598a-42fe-a114-681941ca8e74
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_event_location
+    - paragraphs.paragraphs_type.banner_featured_header
+  module:
+    - link
+id: paragraph.banner_featured_header.field_event_location
+field_name: field_event_location
+entity_type: paragraph
+bundle: banner_featured_header
+label: 'Event Location'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

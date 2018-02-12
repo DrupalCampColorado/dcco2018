@@ -1,0 +1,69 @@
+uuid: a2457992-e052-4a74-879c-07d7e29d4dc3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.simple_content.field_arrow_down
+    - field.field.paragraph.simple_content.field_background_color
+    - field.field.paragraph.simple_content.field_cta
+    - field.field.paragraph.simple_content.field_heading
+    - field.field.paragraph.simple_content.field_svg
+    - field.field.paragraph.simple_content.field_text_area
+    - paragraphs.paragraphs_type.simple_content
+  module:
+    - file
+    - link
+    - text
+id: paragraph.simple_content.default
+targetEntityType: paragraph
+bundle: simple_content
+mode: default
+content:
+  field_arrow_down:
+    weight: 5
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_background_color:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_cta:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_heading:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_svg:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_text_area:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

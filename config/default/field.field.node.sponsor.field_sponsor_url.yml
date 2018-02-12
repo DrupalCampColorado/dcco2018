@@ -1,0 +1,25 @@
+uuid: ebb42e9d-8eb3-4909-a751-e434f5b5f6a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sponsor_url
+    - node.type.sponsor
+  module:
+    - link
+_core:
+  default_config_hash: mZoNXZA5QDDt6lA5RfRgTomR_aIRFxv2WKS8UNWHMZo
+id: node.sponsor.field_sponsor_url
+field_name: field_sponsor_url
+entity_type: node
+bundle: sponsor
+label: 'Sponsor Website'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

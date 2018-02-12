@@ -9,6 +9,8 @@
 
 # Ignore sensitive information
 /web/sites/*/settings.local.php
+/web/sites/**/*/local.services.yml
+/web/sites/**/*/services.local.yml
 
 # Ignore Drupal's file directory
 /web/sites/*/files/
@@ -267,3 +269,6 @@ $RECYCLE.BIN/
 
 
 # End of https://www.gitignore.io/api/vim,osx,node,code,linux,windows,phpstorm,sublimetext
+
+# Custom Ignores
+*.sql

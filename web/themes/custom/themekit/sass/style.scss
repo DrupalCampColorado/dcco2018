@@ -26,12 +26,17 @@
 @import "components/drupal";
 @import "components/accessibility";
 @import "components/forms";
+@import "components/blocks";
+@import "components/navigation";
+@import "components/sponsorship-tiers";
 
 @import "paragraphs/all-components";
 @import "paragraphs/simple";
 @import "paragraphs/compound";
 @import "paragraphs/layout";
+@import "paragraphs/reference";
 
 // @TODO: Choose one format and remove the other from the project
 @import "content/page";
 @import "content/teaser";
+@import "content/full";

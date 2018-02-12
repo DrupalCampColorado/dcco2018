@@ -1,0 +1,7 @@
+name: 'Camp Global'
+description: 'Global functionality for the camp install.'
+type: module
+core: 8.x
+dependencies:
+  - taxonomy
+version: 8.x-1.0

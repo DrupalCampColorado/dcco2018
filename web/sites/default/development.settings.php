@@ -11,19 +11,19 @@
 // Show all error messages on the site
 $config['system.logging']['error_level'] = 'all';
 
- // Disable Google Analytics from sending dev GA data.
-$config['google_analytics.settings']['account'] = 'UA-XXXXXXXX-YY';
-
-// Expiration of cached pages to 0
-$config['system.performance']['cache']['page']['max_age'] = 0;
-
 // Aggregate CSS files off
-$config['system.performance']['css']['preprocess'] = 0;
+$config['system.performance']['css']['preprocess'] = 1;
 
 // Aggregate JavaScript files off
-$config['system.performance']['js']['preprocess'] = 0;
+$config['system.performance']['js']['preprocess'] = 1;
 
-// Stage file proxy URL from production URL
-if(getenv('AMAZEEIO_PRODUCTION_URL')){
-  $config['stage_file_proxy.settings']['origin'] = getenv('AMAZEEIO_PRODUCTION_URL');
-}
+// Sets Mailchimp API key
+$config['mailchimp.settings']['api_key'] = getenv('AMAZEEIO_MAILCHIMP_API_KEY');
+
+// Configure shield for dev environment.
+$config['shield.settings']['user'] = 'dcco';
+$config['shield.settings']['pass'] = '3ditdcco';
+
+// Configure private and temp directories
+$settings['file_private_path'] = "sites/default/files/private";
+$config['system.file']['path']['temporary'] = "sites/default/files/private/tmp";

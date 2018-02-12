@@ -1,0 +1,27 @@
+uuid: 91d61ec9-2668-4ad7-a3e0-cab7318ac3a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.promo_link
+    - field.storage.block_content.field_svg
+  module:
+    - file
+id: block_content.promo_link.field_svg
+field_name: field_svg
+entity_type: block_content
+bundle: promo_link
+label: Icon
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'svg/[date:custom:Y]-[date:custom:m]'
+  file_extensions: svg
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

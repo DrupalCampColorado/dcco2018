@@ -15,3 +15,33 @@
 
 /// Import Google Fonts
 @import url('https://fonts.googleapis.com/css?family=Arvo:700|Cabin:400,700|Special+Elite');
+
+$header-sizes: (
+  small: (
+    'h1': 28,
+    'h2': 23,
+    'h3': 20,
+    'h4': 18,
+    'h5': 17,
+    'h6': 16,
+  ),
+  medium: (
+    'h1': 44,
+    'h2': 36,
+    'h3': 24,
+    'h4': 21,
+    'h5': 18,
+    'h6': 16,
+  ),
+) !default;
+
+/// Apply the responsive font size of the specified heading level.
+@mixin apply-heading($hlevel: 3, $h-sizes: $header-sizes) {
+  // Heading sizes
+  @each $size, $headers in $h-sizes {
+    @include breakpoint($size) {
+      $font-size: key($h-sizes, $size, h#{$hlevel});
+      font-size: rem-calc($font-size);
+    }
+  }
+}

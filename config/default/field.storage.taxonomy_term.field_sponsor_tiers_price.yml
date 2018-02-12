@@ -1,0 +1,22 @@
+uuid: 7d99e825-808b-4381-b20a-e6959122e5b5
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+_core:
+  default_config_hash: NUh8TUyXghyPp3lu6u5YrCp-jGQkjd6e63B0rLTpZRc
+id: taxonomy_term.field_sponsor_tiers_price
+field_name: field_sponsor_tiers_price
+entity_type: taxonomy_term
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

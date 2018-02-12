@@ -151,3 +151,6 @@ if (PHP_SAPI !== 'cli') {
   }
 }
 
+if (file_exists(DRUPAL_ROOT . '/sites/local.services.yml')) {
+  $settings['container_yamls'][] = DRUPAL_ROOT . '/sites/local.services.yml';
+}

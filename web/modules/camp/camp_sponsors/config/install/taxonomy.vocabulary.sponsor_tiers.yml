@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Sponsorship Tiers'
+vid: sponsor_tiers
+description: 'Levels of sponsorship available for purchase.'
+hierarchy: 0
+weight: 0

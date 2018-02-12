@@ -113,4 +113,3 @@ if (file_exists(__DIR__ . '/services.local.yml')) {
   $settings['container_yamls'][] = __DIR__ . '/services.local.yml';
 }
 $settings['install_profile'] = 'camp';
-$config_directories['sync'] = '../config/default';

@@ -1,0 +1,61 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.sponsor_tiers.field_sponsor_tier_spots
+    - field.field.taxonomy_term.sponsor_tiers.field_sponsor_tiers_features
+    - field.field.taxonomy_term.sponsor_tiers.field_sponsor_tiers_price
+    - taxonomy.vocabulary.sponsor_tiers
+  module:
+    - path
+    - text
+id: taxonomy_term.sponsor_tiers.default
+targetEntityType: taxonomy_term
+bundle: sponsor_tiers
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 4
+    region: content
+    settings:
+      placeholder: ''
+      rows: 5
+    third_party_settings: {  }
+  field_sponsor_tier_spots:
+    weight: 2
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_sponsor_tiers_features:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_sponsor_tiers_price:
+    weight: 1
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

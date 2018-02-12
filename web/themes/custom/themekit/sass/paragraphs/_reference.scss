@@ -1,0 +1,126 @@
+//*********************************************
+// Reference - block
+//*********************************************
+
+.paragraph--type--reference-block {
+  text-align: left;
+
+  .field--name-field-heading {
+    font-size: rem-calc(32);
+    line-height: 1.25;
+    margin-bottom: rem-calc(40);
+  }
+
+  .field--name-field-p-columns > .field__item:last-child & {
+    padding: 25px;
+
+    @include breakpoint(medium) {
+      padding: 40px;
+    }
+
+    @include breakpoint(medium-large) {
+      padding: 80px 30px 80px 115px;
+    }
+  }
+
+  .field--name-field-p-columns > .field__item:first-child & {
+    padding: 25px;
+
+    @include breakpoint(medium) {
+      padding: 40px;
+    }
+
+    @include breakpoint(medium-large) {
+      padding: 80px 115px 80px 30px;
+    }
+  }
+
+  &[class^="color-scheme--"] {
+    position: relative;
+    z-index: 1;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -500%;
+      width: 1000%;
+      height: 100%;
+      z-index: -1;
+
+      .field__item:last-child & {
+        left: 0;
+      }
+    }
+  }
+
+  &.color-scheme--yellow {
+    color: #fff;
+
+    &:after {
+      background: $light-orange;
+    }
+
+    .heading {
+      color: #fff;
+    }
+  }
+
+  &.color-scheme--orange {
+    color: #fff;
+
+    &:after {
+      background: $dark-orange;
+    }
+
+    .heading {
+      color: #fff;
+    }
+  }
+
+  &.color-scheme--tan {
+
+    &:after {
+      background: $tan;
+    }
+  }
+
+  &.color-scheme--green {
+    color: #fff;
+
+    &:after {
+      background: $green;
+    }
+
+    .heading {
+      color: #fff;
+    }
+  }
+
+  .paragraph--type--layout-component-group & .block-mailchimp-signup-subscribe-blocksign-up-for-updates {
+    h2 {
+      margin-bottom: 0;
+      font-family: $body-font-family;
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: rem-calc(18);
+    }
+    
+    label {
+      position: absolute;
+    }
+
+    form {
+      display: flex;
+      flex-flow: row nowrap;
+    }
+
+    [data-drupal-selector="edit-actions"] {
+      margin: 5px 0 0 10px;
+      input {
+        padding: 10px 12px 9px 12px;
+      }
+    }
+  }
+}

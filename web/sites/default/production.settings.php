@@ -20,5 +20,12 @@ $config['system.performance']['css']['preprocess'] = 1;
 // Aggregate JavaScript files on
 $config['system.performance']['js']['preprocess'] = 1;
 
-// Disabling stage file proxy on production, with that the module can be enabled even on production
-$config['stage_file_proxy.settings']['origin'] = false;
+// Sets Mailchimp API key
+$config['mailchimp.settings']['api_key'] = getenv('AMAZEEIO_MAILCHIMP_API_KEY');
+
+// Enable Tag Manager
+ $config['e3_google_tag.settings']['gtm_code'] = 'GTM-PQPMKR5';
+
+// Configure private and temp directories
+$settings['file_private_path'] = "sites/default/files/private";
+$config['system.file']['path']['temporary'] = "sites/default/files/private/tmp";

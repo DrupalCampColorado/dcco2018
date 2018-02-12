@@ -27,6 +27,10 @@ function themekit_preprocess_page(&$variables) {
  * Implements template_preprocess_node().
  */
 function themekit_preprocess_node(&$variables) {
+  $node = $variables['node'];
+  $type = $node->getType();
+  $view_mode = $variables['view_mode'];
+
   // Set our own node type preprocess, drupal creates them by default, but seems to only run hook_preprocess_node__event
   // on event full pages, not event teasers as well
   if (!empty($variables['node']) && is_object($variables['node']) && method_exists($variables['node'], 'getType')) {
@@ -37,13 +41,102 @@ function themekit_preprocess_node(&$variables) {
     }
   }
 
+  switch ($type) {
+    case 'blog':
+      $created = $node->getCreatedTime();
+      $variables['day'] = date('d', $created);
+      $variables['month'] = date('M', $created);
+      $variables['year'] = date('Y', $created);
+      break;
+  }
+}
+
+/**
+ * Implements template_preprocess_block().
+ */
+function themekit_preprocess_block(&$variables) {
+  $id = $variables['plugin_id'];
+
+  // Get bundle for styling purposes
+  if (isset($variables['elements']['content']['#block_content'])) {
+    $bundle = $variables['elements']['content']['#block_content']->bundle();
+    $variables['attributes']['class'][] = $bundle;
+  }
+
+  switch ($id) {
+    case 'page_title_block':
+      $node = \Drupal::request()->attributes->get('node');
+      // Get date for blog post display.
+      if ($node->getType() == 'blog') {
+        $variables['date'] = date('M d, Y', $node->getCreatedTime());
+      }
+      break;
+  }
 }
 
 /**
  * Implements template_preprocess_field().
  */
 function themekit_preprocess_field(&$variables) {
+  switch ($variables['field_name']) {
+    case 'field_svg':
+      $variables['svg_url'] = null;
+      $svg_file_entity = $variables['element'][0]['#file'];
 
+      if (is_object($svg_file_entity) && method_exists($svg_file_entity, 'getFileUri')) {
+        $variables['svg_url'] = file_create_url($svg_file_entity->getFileUri());
+      }
+      break;
+    case 'field_sponsor_tier_spots':
+      $element = $variables['element'];
+
+      // Override -1 values to be unlimited.
+      foreach ($element['#items']->getValue() as $key => $value) {
+        if ($value['value'] < 0) {
+          $variables['items'][$key]['content'] = [
+            '#markup' => t('Unlimited'),
+          ];
+        }
+      }
+      break;
+  }
+}
+
+/**
+ * Implements template_preprocess_paragraph().
+ */
+function themekit_preprocess_paragraph(&$variables) {
+  $paragraph = $variables['paragraph'];
+  $bundle = $paragraph->bundle();
+  
+  if (!isset($variables['attributes']['class'])) {
+    $variables['attributes']['class'] = [];
+  }
+
+  switch ($bundle) {
+    case 'reference_block':
+    case 'simple_content':
+    case 'simple_testimonial':
+      if (isset($paragraph->field_background_color) && $paragraph->field_background_color->getValue()) {
+        $color = $paragraph->field_background_color->entity->getName();
+        $variables['attributes']['class'][] = 'color-scheme--' . strtolower($color);
+      }
+      break;
+  }
+
+  if ($bundle == 'simple_content') {
+    $heading = isset($paragraph->field_heading) ? $paragraph->field_heading->getValue() : null;
+    $icon = isset($paragraph->field_icon) ? $paragraph->field_svg->getValue() : null;
+    $text = isset($paragraph->field_text_area) ? $paragraph->field_text_area->getValue() : null;
+    $link = isset($paragraph->field_cta) ? $paragraph->field_cta->getValue() : null;
+    $arrow = isset($paragraph->field_arrow_down) ? $paragraph->field_arrow_down->getValue() : null;
+
+    $variables['attributes']['class'] = array_merge($variables['attributes']['class'], [
+      !$heading && !$icon && $link && $text ? 'large-text' : '',
+      !$icon && !$link && $heading && $text ? 'medium-text'  : '',
+      $arrow && (Int)$arrow[0]['value'] ? 'arrow' : '',
+    ]);
+  }
 }
 
 /**
@@ -71,6 +164,28 @@ function themekit_preprocess_media__svg(&$variables) {
 //*********************************************
 
 /**
+ * Implements theme_theme_suggestions_views_view_alter().
+ */
+function themekit_theme_suggestions_views_view_alter(&$suggestions, $variables) {
+  $view = $variables['view'];
+  $display = $view->getDisplay();
+
+  $suggestions[] = "views_view__{$view->id()}";
+  $suggestions[] = "views_view__{$view->id()}__{$display->getPluginId()}";
+}
+
+/**
+ * Implements theme_theme_suggestions_views_view_unformatted_alter().
+ */
+function themekit_theme_suggestions_views_view_unformatted_alter(&$suggestions, $variables) {
+  $view = $variables['view'];
+  $display = $view->getDisplay();
+
+  $suggestions[] = "views_view_unformatted__{$view->id()}";
+  $suggestions[] = "views_view_unformatted__{$view->id()}__{$display->getPluginId()}";
+}
+
+/**
  * Implements template_theme_suggestions_HOOK_alter().
  */
 function themekit_theme_suggestions_field_alter(array &$suggestions, array $variables) {
@@ -83,6 +198,7 @@ function themekit_theme_suggestions_field_alter(array &$suggestions, array $vari
   switch($field_name) {
     case 'field_p_content':
     case 'field_p_header':
+    case 'field_p_promo_content':
       // Remove all field markup so only the field value markup is output.
       array_unshift($suggestions, 'field__no_wrapper');
       break;
@@ -95,8 +211,12 @@ function themekit_theme_suggestions_field_alter(array &$suggestions, array $vari
   // Apply theme suggestions for "field_heading" based on paragraph bundle.
   if ($field_name == 'field_heading' && $is_paragraph) {
     switch($bundle) {
+      case 'layout_component_group':
+        array_unshift($suggestions, 'field__heading_2');
+        break;
       case 'banner_standard':
       case 'single_heading':
+      case 'simple_content':
         array_unshift($suggestions, 'field__heading_3');
         break;
     }

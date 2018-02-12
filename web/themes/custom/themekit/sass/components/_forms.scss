@@ -8,3 +8,146 @@ form {
     border-radius: 0;
   }
 }
+
+//*********************************************
+// General mailchimp form styles
+//*********************************************
+
+.block-mailchimp-signup {
+  .mailchimp-newsletter-mergefields {
+    margin-bottom: $small-margin;
+  }
+  h2,
+  legend {
+    font-family: $font-arvo;
+    text-transform: uppercase;
+    margin-bottom: $xtra-small-margin;
+    font-weight: 300;
+    font-size: rem-calc(18);
+  }
+  label {
+    line-height: 1.6;
+    display: inline-block;
+    position: relative;
+    color: #fff;
+  }
+  .form-required {
+    &:after {
+      content: '*';
+      color: #fff;
+      background: none;
+      font-size: 1.075rem;
+      position: absolute;
+      top: -0.275rem;
+      right: -.875rem;
+    }
+  }
+  input {
+    margin-bottom: 0;
+    color: #fff;
+    transition: 0.2s border-color, 0.2s background, 0.2s color;
+
+    &:hover,
+    &:active {
+      border: 2px solid #fff;
+    }
+
+    &:focus {
+      border: 2px solid $gray;
+      color: $font-gray;
+    }
+  }
+  .form-type-email,
+  .form-type-textfield {
+    margin: .3rem 0;
+  }
+
+  .fieldgroup {
+    legend {
+      margin-bottom: .575rem;
+    }
+  }
+  .form-type-checkbox {
+    font-size: 1rem;
+    margin: .2rem 0;
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .form-type-checkbox {
+    .form-checkbox {
+      position: absolute;
+      opacity: 0;
+      & + label {
+        position: relative;
+        cursor: pointer;
+        padding: 0;
+        margin-left: 3px;
+        &:before {
+          content: '';
+          margin-right: 10px;
+          display: inline-block;
+          vertical-align: middle;
+          width: 13px;
+          height: 13px;
+          box-shadow: 0 0 0 3px $gray;
+        }
+      }
+      &:hover + label:before,
+      &:focus + label:before {
+        box-shadow: 0 0 0 3px $white;
+      }
+
+      &:checked + label:before {
+        background: $white;
+      }
+      &:checked + label:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 5px;
+        background: url(../images/check-symbol.png);
+        width: 65%;
+        height: 65%;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+
+  [data-drupal-selector="edit-actions"] {
+    margin-top: 2em;
+  }
+
+  .button {
+    @include btn(white);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: $main-font-size;
+    transition: .3s ease background, .3s ease color, .3s ease transform;
+    &:active {
+      transform: scale(.9)
+    }
+  }
+}
+
+//*********************************************
+// Header signup form
+//*********************************************
+
+.block-mailchimp-signup-subscribe-blocksign-up-for-updates {
+  h2 {
+    font-family: $font-arvo;
+    font-weight: bold;
+  }
+  label {
+    @extend .visually-hidden;
+  }
+
+  [data-drupal-selector="edit-actions"] {
+    margin-top: 2em;
+  }
+}

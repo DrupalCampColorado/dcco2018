@@ -1,0 +1,25 @@
+uuid: 0074e8aa-ba3a-4aba-bc43-182ae43ab5b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_block_reference
+    - paragraphs.paragraphs_type.banner_featured_header
+  module:
+    - block_field
+id: paragraph.banner_featured_header.field_block_reference
+field_name: field_block_reference
+entity_type: paragraph
+bundle: banner_featured_header
+label: 'Block Reference'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    plugin_id: 'mailchimp_signup_subscribe_block:sign_up_for_updates'
+    settings: {  }
+default_value_callback: ''
+settings:
+  plugin_ids: {  }
+field_type: block_field

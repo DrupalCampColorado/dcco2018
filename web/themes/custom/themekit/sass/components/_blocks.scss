@@ -1,0 +1,160 @@
+////
+/// Component - Blocks
+////
+
+// Page Title display
+#block-themekit-page-title {
+  .page-node-type-blog &, .page-node-type-sponsor & {
+    width: 100%;
+    margin: 25px 0 50px;
+    padding: 50px 0;
+    background: url(../images/mountain-banner.png);
+    color: $font-gray;
+    font-family: $font-cabin;
+    text-align: center;
+    @include breakpoint(medium) {
+      margin: 25px 0 100px;
+      padding: 135px 0;
+    }
+    .date {
+      font-size: rem-calc(18px);
+      font-family: $font-arvo;
+      color: $dark-orange;
+      text-transform: uppercase;
+    }
+  }
+}
+
+// Blog Post Listings
+.block-views-blockblog-post-listings-block-1,
+.block-views-blockblog-post-listings-block-2 {
+  background-color: $white;
+  position: relative;
+  @include top-bottom(padding, 80px);
+  @include content-width(content);
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background-color: $white;
+    z-index: -1;
+  }
+  > h2 {
+    margin-bottom: 35px;
+    font-family: $font-arvo;
+    font-size: rem-calc(20);
+    line-height: rem-calc(28);
+    text-transform: uppercase;
+    text-align: center;
+    color: $dark-orange;
+  }
+  .more-link {
+    text-align: center;
+    font-size: rem-calc(24px);
+    a {
+      color: $font-gray;
+      @include selectors(active) {
+        color: rgba($font-gray, 0.7);
+      }
+      &:after {
+        content: '\00bb';
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+// Promo Block
+.promo_block {
+  margin-bottom: 45px;
+  border: 1px solid $dark-gray;
+  padding: 25px 40px;
+
+  .field--name-field-heading {
+    font-size: rem-calc(32px);
+    line-height: rem-calc(40px);
+    color: $font-gray;
+  }
+  h2 {
+    font-size: rem-calc(18px);
+    line-height: rem-calc(28px);
+    font-family: $font-arvo;
+    color: $dark-orange;
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+  }
+
+  label {
+    position: absolute;
+  }
+
+  form {
+    .mailchimp-newsletter-mergefields {
+      margin-bottom: 0;
+    }
+    .form-item, .form-actions {
+      margin: 0;
+    }
+
+    [type="email"] {
+      color: $font-gray;
+      &:hover,
+      &:active {
+        border: 2px solid $dark-gray;
+      }
+
+      &:focus {
+        border: 2px solid $dark-gray;
+        box-shadow: none;
+      }
+    }
+
+    input[type='submit'] {
+      @include btn(gray);
+      margin: 10px 0 0 0;
+      min-height: 38px;
+      text-transform: uppercase;
+    }
+
+    @include breakpoint(900px) {
+      display: flex;
+      align-items: flex-end;
+      input[type='submit'] {
+        margin: 0 0 0 10px;
+      }
+    }
+  }
+}
+
+// Promo Link
+.promo_link {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  .field--name-field-svg {
+    margin-right: 15px;
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  .field--name-field-link {
+    font-size: rem-calc(24px);
+    line-height: rem-calc(28px);
+    a {
+      color: $font-gray;
+      @include selectors(active) {
+        color: rgba($font-gray, 0.7);
+      }
+      &:after {
+        content: '\00bb';
+        margin-left: 10px;
+        color: $green;
+      }
+    }
+  }
+}

@@ -4,23 +4,31 @@ module:
   admin_toolbar_tools: 0
   adminimal_admin_toolbar: 0
   automated_cron: 0
+  backup_migrate: 0
   block: 0
   block_content: 0
+  block_field: 0
   breakpoint: 0
   camp: 0
   camp_core: 0
+  camp_global: 0
+  camp_sponsors: 0
   ckeditor: 0
   config: 0
+  config_update: 0
   contextual: 0
   ctools: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
+  draggableviews: 0
   dynamic_page_cache: 0
   e3_google_tag: 0
   editor: 0
   entity_reference: 0
   entity_reference_revisions: 0
+  features: 0
+  features_ui: 0
   field: 0
   field_group: 0
   field_tools: 0
@@ -32,12 +40,16 @@ module:
   inline_entity_form: 0
   layout_discovery: 0
   link: 0
+  link_attributes: 0
+  mailchimp: 0
+  mailchimp_signup: 0
   menu_block: 0
   menu_ui: 0
   metatag: 0
   metatag_favicons: 0
   metatag_open_graph: 0
   metatag_twitter_cards: 0
+  metatag_verification: 0
   name: 0
   node: 0
   options: 0
@@ -46,7 +58,9 @@ module:
   quickedit: 0
   redirect: 0
   responsive_image: 0
+  shield: 0
   shortcut: 0
+  simple_sitemap: 0
   syslog: 0
   system: 0
   taxonomy: 0
@@ -57,11 +71,13 @@ module:
   twig_field_value: 0
   update: 0
   user: 0
+  video_embed_field: 0
   views_ui: 0
   menu_link_content: 1
   pathauto: 1
   views: 10
   paragraphs: 11
+  linked_field: 100
 theme:
   stable: 0
   classy: 0
@@ -69,6 +85,7 @@ theme:
   camp_bartik: 0
   adminimal_theme: 0
   themekit: 0
+  adminkit: 0
 profile: camp
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

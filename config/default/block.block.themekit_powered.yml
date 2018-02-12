@@ -10,8 +10,8 @@ _core:
   default_config_hash: _z12zrTcnqVF4BCl0Ec0f5snYU19AEKd17DVyn6bC5U
 id: themekit_powered
 theme: themekit
-region: header
-weight: 10
+region: footer
+weight: -4
 provider: null
 plugin: system_powered_by_block
 settings:

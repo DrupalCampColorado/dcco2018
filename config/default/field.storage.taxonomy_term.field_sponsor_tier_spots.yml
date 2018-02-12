@@ -1,0 +1,22 @@
+uuid: 838c180e-b2a7-4783-994a-301c2b1840d2
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+_core:
+  default_config_hash: NOMq9nFrsZmBFsykmQ7sa-bUk228iqJWE0lqcyXktY8
+id: taxonomy_term.field_sponsor_tier_spots
+field_name: field_sponsor_tier_spots
+entity_type: taxonomy_term
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

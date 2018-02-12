@@ -1,0 +1,63 @@
+uuid: 53bb6e27-c70f-4165-ab4d-a3181df1f7e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.sponsor.body
+    - field.field.node.sponsor.field_metatags
+    - field.field.node.sponsor.field_sponsor_logo
+    - field.field.node.sponsor.field_sponsor_tier
+    - field.field.node.sponsor.field_sponsor_url
+    - node.type.sponsor
+  module:
+    - image
+    - link
+    - text
+    - user
+_core:
+  default_config_hash: NRigbmDpSWIjtnEcBM_Wz1bf1lH2BE7NX0CCG6Hnbbw
+id: node.sponsor.full
+targetEntityType: node
+bundle: sponsor
+mode: full
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_sponsor_logo:
+    type: image
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  field_sponsor_tier:
+    weight: 0
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_sponsor_url:
+    weight: 1
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  field_metatags: true
+  links: true

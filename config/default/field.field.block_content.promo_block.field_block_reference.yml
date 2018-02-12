@@ -1,0 +1,22 @@
+uuid: c7db7955-183d-4b0a-bf1d-63ffcf2d21d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.promo_block
+    - field.storage.block_content.field_block_reference
+  module:
+    - block_field
+id: block_content.promo_block.field_block_reference
+field_name: field_block_reference
+entity_type: block_content
+bundle: promo_block
+label: 'Block Reference'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  plugin_ids: {  }
+field_type: block_field

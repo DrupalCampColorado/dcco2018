@@ -1,0 +1,42 @@
+uuid: eab3a49d-1409-4335-a3e4-498128e65f28
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.reference_block.field_background_color
+    - field.field.paragraph.reference_block.field_block_reference
+    - field.field.paragraph.reference_block.field_heading
+    - paragraphs.paragraphs_type.reference_block
+  module:
+    - block_field
+id: paragraph.reference_block.default
+targetEntityType: paragraph
+bundle: reference_block
+mode: default
+content:
+  field_background_color:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_block_reference:
+    weight: 1
+    settings:
+      plugin_id: ''
+      settings: {  }
+    third_party_settings: {  }
+    type: block_field_default
+    region: content
+  field_heading:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

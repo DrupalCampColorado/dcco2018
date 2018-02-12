@@ -1,0 +1,40 @@
+uuid: e0c2ac0b-8299-4c78-baed-2bb455a03f75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.simple_testimonial.field_background_color
+    - field.field.paragraph.simple_testimonial.field_credit
+    - field.field.paragraph.simple_testimonial.field_quote
+    - paragraphs.paragraphs_type.simple_testimonial
+id: paragraph.simple_testimonial.default
+targetEntityType: paragraph
+bundle: simple_testimonial
+mode: default
+content:
+  field_background_color:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_credit:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_quote:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

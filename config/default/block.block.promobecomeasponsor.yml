@@ -1,0 +1,33 @@
+uuid: 1fe58c0e-45d1-439c-ac83-dc5cb906820f
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:promo_link:410dca1c-5511-4424-a39c-f31ac441f560'
+  module:
+    - block_content
+    - node
+  theme:
+    - themekit
+id: promobecomeasponsor
+theme: themekit
+region: sidebar_second
+weight: -4
+provider: null
+plugin: 'block_content:410dca1c-5511-4424-a39c-f31ac441f560'
+settings:
+  id: 'block_content:410dca1c-5511-4424-a39c-f31ac441f560'
+  label: 'Promo: Become a sponsor'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      blog: blog
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

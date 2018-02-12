@@ -1,0 +1,33 @@
+uuid: f12027d4-b716-47d6-b0aa-6d3ac456f43b
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:promo_block:b21ce51e-4b4a-4014-9ad5-b87ae9111f7b'
+  module:
+    - block_content
+    - node
+  theme:
+    - themekit
+id: promosignupforupdates
+theme: themekit
+region: sidebar_second
+weight: -5
+provider: null
+plugin: 'block_content:b21ce51e-4b4a-4014-9ad5-b87ae9111f7b'
+settings:
+  id: 'block_content:b21ce51e-4b4a-4014-9ad5-b87ae9111f7b'
+  label: 'Promo: Sign up for updates'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      blog: blog
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

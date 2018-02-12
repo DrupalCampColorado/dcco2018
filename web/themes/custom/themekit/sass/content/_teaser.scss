@@ -1,13 +1,54 @@
 ////
 /// Teaser view mode styles
-/// TODO: Example Partial (View Mode) - Choose either to break up content styles by content type or view mode
 /// View mode specific layout and styles
 ////
 
-.node--type-page.node--view-mode-teaser {
-
-}
-
-.node--type-article.node--view-mode-teaser {
-
+.node--view-mode-teaser {
+  &.node--type-blog {
+    margin-bottom: 35px;
+    .node__content {
+      position: relative;
+      padding-left: 85px;
+      h2 {
+        font-size: rem-calc(24px);
+        line-height: rem-calc(40px);
+        font-weight: bold;
+        a {
+          color: $green;
+          @include selectors(active) {
+            color: rgba($green, 0.7);
+          }
+        }
+      }
+      p {
+        font-size: rem-calc(16px);
+        line-height: rem-calc(24px);
+      }
+      .date {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 15px 15px 30px 15px;
+        text-align: center;
+        color: $white;
+        font-family: 'arvo', serif;
+        background: url(../images/svg/ribbon.svg) no-repeat;
+        background-position: 50% 50%;
+        span {
+          display: block;
+          line-height: rem-calc(18px);
+          &.month {
+            font-size: rem-calc(16px);
+            text-transform: uppercase;
+          }
+          &.day {
+            font-size: rem-calc(22px);
+          }
+          &.year {
+            font-size: rem-calc(14px);
+          }
+        }
+      }
+    }
+  }
 }

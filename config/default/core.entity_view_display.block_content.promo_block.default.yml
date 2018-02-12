@@ -1,0 +1,31 @@
+uuid: 1e3f024e-e5bf-49b1-8769-7dbd97e0e748
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.promo_block
+    - field.field.block_content.promo_block.field_block_reference
+    - field.field.block_content.promo_block.field_heading
+  module:
+    - block_field
+id: block_content.promo_block.default
+targetEntityType: block_content
+bundle: promo_block
+mode: default
+content:
+  field_block_reference:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: block_field
+    region: content
+  field_heading:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

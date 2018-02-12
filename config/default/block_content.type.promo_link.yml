@@ -1,0 +1,8 @@
+uuid: 783a0ddb-93f3-47ed-ba01-169b436219bd
+langcode: en
+status: true
+dependencies: {  }
+id: promo_link
+label: 'Promo - Link'
+revision: 0
+description: ''

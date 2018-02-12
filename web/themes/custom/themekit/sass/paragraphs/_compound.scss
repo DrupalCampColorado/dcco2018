@@ -9,10 +9,22 @@
   max-width: none;
 }
 
-.paragraph--type--compound-banner {
-  background: $light-orange;
+.paragraph--type--banner-featured-header {
+  position: relative;
+  padding-top: 1.25rem;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: $light-orange;
+    z-index: -1;
+  }
 
   .content-wrap {
+    @include content-width(header);
     color: $white;
     padding: rem-calc(40 60);
     position: relative;
@@ -20,7 +32,17 @@
     margin: 0 auto;
     z-index: z(banner, default);
     background-color: $burnt-orange;
-    @include content-width(header);
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url(../images/halftone.png) rgba(#ff9000, 0.6);
+      background-size: contain;
+      z-index: -1;
+    }
 
     @include breakpoint(medium-large) {
       min-height: 530px;
@@ -29,10 +51,17 @@
 
   .banner-header {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     flex-basis: auto;
     justify-content: space-between;
+    align-items: center;
+    text-align: center;
     margin-bottom: rem-calc(20px);
+    @include breakpoint(medium) {
+      flex-flow: row nowrap;
+      align-items: initial;
+      text-align: initial;
+    }
   }
 
   .site-logo {
@@ -46,6 +75,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       max-width: rem-calc(350px);
+      width: 100%;
     }
   }
 
@@ -60,14 +90,17 @@
       display: block;
     }
 
-    &:before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0; right: 0; bottom: 0; left: 0;
-      background: url(../images/halftone.png) rgba(#ff9000, 0.5);
-      z-index: 1;
-    }
+    //&:before {
+    //  content: '';
+    //  display: block;
+    //  position: absolute;
+    //  top: 0;
+    //  right: 0;
+    //  bottom: 0;
+    //  left: 0;
+    //  background: url(../images/halftone.png) rgba(#ff9000, 0.5);
+    //  z-index: 1;
+    //}
 
     &.loaded {
       opacity: 1;
@@ -79,14 +112,18 @@
   }
 
   .location-wrapper {
+    align-self: flex-start;
     font-family: $font-arvo;
-    text-align: right;
+    text-align: center;
     text-transform: uppercase;
     line-height: 1.6;
-    max-width: 45%;
+    margin: 0 auto;
 
     @include breakpoint(medium) {
       line-height: rem-calc(28);
+      max-width: 45%;
+      text-align: right;
+      margin: 0;
     }
 
     .field--name-field-event-date {
@@ -161,6 +198,8 @@
       position: relative;
       display: flex;
       flex-flow: column nowrap;
+      flex-basis: auto;
+      align-items: flex-start;
     }
     
     .form-item {
@@ -180,6 +219,10 @@
       }
     }
 
+    .mailchimp-newsletter-mergefields {
+      margin-bottom: 0;
+    }
+
     [data-drupal-selector="edit-actions"] {
       margin: 0;
     }
@@ -192,6 +235,70 @@
       &:active {
         transform: scale(.9)
       }
+    }
+  }
+
+  .featured-teasers {
+    //margin: 0 calc(50% - 50vw);
+  }
+  .field--name-field-p-featured-teasers {
+    display: flex;
+    flex-flow: column nowrap;
+    flex-basis: auto;
+    padding: rem-calc(20);
+    @include breakpoint(medium-large) {
+      flex-flow: row nowrap;
+    }
+    @include breakpoint(large) {
+      padding: rem-calc(20) 0;
+    }
+    .field__item {
+      + .field__item {
+        margin-top: 1rem;
+        @include breakpoint(medium-large) {
+          margin-top: 0;
+        }
+      }
+    }
+    > .field__item {
+      @include breakpoint(medium-large) {
+        width: 50%;
+      }
+    }
+    .field--name-field-heading {
+      position: relative;
+      color: $white;
+      font-size: rem-calc(24);
+      line-height: rem-calc(30);
+      letter-spacing: 0.6px;
+      padding-left: 2rem;
+      padding-right: rem-calc(46);
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: rem-calc(22);
+        height: rem-calc(34);
+        background: url(../images/svg/ribbon-orange.png) no-repeat;
+        background-position: 50% 50%;
+        background-size: contain;
+      }
+    }
+    .field--name-field-text-area {
+      color: $white;
+      font-size: 1rem;
+      line-height: rem-calc(24);
+      letter-spacing: 0.4px;
+      padding-left: 2rem;
+      padding-right: rem-calc(46);
+      p {
+        margin: 0;
+      }
+    }
+    a {
+      color: $white;
+      text-decoration: underline;
     }
   }
 }

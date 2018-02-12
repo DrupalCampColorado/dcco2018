@@ -1,0 +1,48 @@
+uuid: 3ba9d91c-6d8f-4977-a9aa-026fa595919d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_p_header
+    - node.type.landing_page
+    - paragraphs.paragraphs_type.banner_featured_header
+    - paragraphs.paragraphs_type.banner_simple
+  module:
+    - entity_reference_revisions
+id: node.landing_page.field_p_header
+field_name: field_p_header
+entity_type: node
+bundle: landing_page
+label: Header
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      banner_featured_header: banner_featured_header
+      banner_simple: banner_simple
+    target_bundles_drag_drop:
+      banner_featured_header:
+        enabled: true
+        weight: 7
+      banner_simple:
+        enabled: true
+        weight: 8
+      layout_component_group:
+        weight: 9
+        enabled: false
+      reference_block:
+        weight: 10
+        enabled: false
+      simple_content:
+        weight: 11
+        enabled: false
+      simple_teaser:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

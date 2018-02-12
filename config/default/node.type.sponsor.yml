@@ -1,0 +1,19 @@
+uuid: b87f750e-0e64-499c-86b8-dae2ab463052
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: sTrdmndd7cspoxTTWhe8GWGY-njCc4aggvgUJ72dt6Q
+name: Sponsor
+type: sponsor
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

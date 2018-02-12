@@ -5,12 +5,14 @@ deploy_tasks:
     before_deploy:
       - composer install
     after_deploy:
+      - cd web && drush cim -y
       - cd web && drush -y updb --cache-clear=0
       - cd web && drush -y cr
   production:
     before_deploy:
       - composer install
     after_deploy:
+      - cd web && drush cim -y
       - cd web && drush -y updb --cache-clear=0
       - cd web && drush -y cr
 

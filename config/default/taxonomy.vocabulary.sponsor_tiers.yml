@@ -1,0 +1,11 @@
+uuid: 008dccd4-3f45-4086-8f17-1cb1779cee55
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ItKj4ZxugCmtBo5ySQ2LX4AYcjt0pF2MVS9PPd3zyh4
+name: 'Sponsorship Tiers'
+vid: sponsor_tiers
+description: 'Levels of sponsorship available for purchase.'
+hierarchy: 0
+weight: 0

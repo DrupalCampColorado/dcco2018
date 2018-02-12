@@ -1,0 +1,38 @@
+uuid: 1c961337-1c68-456b-b1eb-1d15c7fb9404
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.sponsor.body
+    - field.field.node.sponsor.field_metatags
+    - field.field.node.sponsor.field_sponsor_logo
+    - field.field.node.sponsor.field_sponsor_tier
+    - field.field.node.sponsor.field_sponsor_url
+    - image.style.sponsor_logos
+    - node.type.sponsor
+  module:
+    - image
+    - user
+_core:
+  default_config_hash: v-6tKAEDgbIpCvblHi5bv4o2GmWFBGDl8glz5MOMqpc
+id: node.sponsor.teaser
+targetEntityType: node
+bundle: sponsor
+mode: teaser
+content:
+  field_sponsor_logo:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: sponsor_logos
+      image_link: content
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_metatags: true
+  field_sponsor_tier: true
+  field_sponsor_url: true
+  links: true
