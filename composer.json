@@ -40,6 +40,7 @@
         "drupal/paragraphs": "^1.2",
         "drupal/pathauto": "^1.0",
         "drupal/redirect": "^1.0",
+        "drupal/seckit": "^1.0@alpha",
         "drupal/shield": "^1.1",
         "drupal/simple_sitemap": "^2.11",
         "drupal/token": "^1.1",
