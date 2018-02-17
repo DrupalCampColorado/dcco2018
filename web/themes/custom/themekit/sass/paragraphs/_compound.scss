@@ -26,12 +26,15 @@
   .content-wrap {
     @include content-width(header);
     color: $white;
-    padding: rem-calc(40 60);
+    padding: rem-calc(40);
     position: relative;
     overflow: hidden;
     margin: 0 auto;
     z-index: z(banner, default);
     background-color: $burnt-orange;
+    @include breakpoint(medium) {
+      padding: rem-calc(40 60);
+    }
     &:before {
       content: '';
       position: absolute;
@@ -65,9 +68,12 @@
   }
 
   .site-logo {
-    max-width: 55%;
     margin: 0 auto;
     display: block;
+    max-width: rem-calc(200);
+    @include breakpoint(medium) {
+      max-width: 55%;
+    }
     
     @include breakpoint(medium-large) {
       position: absolute;
@@ -199,7 +205,12 @@
       display: flex;
       flex-flow: column nowrap;
       flex-basis: auto;
-      align-items: flex-start;
+      align-items: center;
+      margin-top:  1rem;
+      @include breakpoint(medium) {
+        align-items: flex-start;
+        margin-top:  0;
+      }
     }
     
     .form-item {
