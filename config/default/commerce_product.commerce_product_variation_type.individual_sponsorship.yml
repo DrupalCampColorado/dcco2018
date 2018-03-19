@@ -1,0 +1,10 @@
+uuid: 008ea51d-c40a-4e05-91c3-e1c9778aa771
+langcode: en
+status: true
+dependencies: {  }
+id: individual_sponsorship
+label: 'Individual Sponsorship'
+orderItemType: default
+generateTitle: true
+traits: {  }
+locked: false

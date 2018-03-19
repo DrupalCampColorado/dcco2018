@@ -1,0 +1,24 @@
+uuid: df720fc7-a894-46ba-9a13-6248c8fd9782
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.individual_sponsorship
+    - commerce_product.commerce_product_variation_type.individual_sponsorship
+    - field.storage.commerce_product.variations
+id: commerce_product.individual_sponsorship.variations
+field_name: variations
+entity_type: commerce_product
+bundle: individual_sponsorship
+label: Variations
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings:
+  handler: 'default:commerce_product_variation'
+  handler_settings:
+    target_bundles:
+      - individual_sponsorship
+field_type: entity_reference

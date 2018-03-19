@@ -1,0 +1,7 @@
+uuid: 4382efdf-fe33-4d89-bec7-6a7cca31c2f8
+langcode: en
+status: true
+dependencies: {  }
+id: t_shirt_size
+label: 'T-Shirt Size'
+elementType: select

@@ -1,0 +1,10 @@
+uuid: e2e3e378-cb23-4b20-b5cf-a0de80e1feae
+langcode: en
+status: true
+dependencies: {  }
+id: camp_registration
+label: 'Camp Registration'
+orderItemType: default
+generateTitle: true
+traits: {  }
+locked: false
