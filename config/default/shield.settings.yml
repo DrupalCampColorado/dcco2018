@@ -5,5 +5,5 @@ _core:
 credential_provider: shield
 credentials:
   shield:
-    user: ''
-    pass: ''
+    user: null
+    pass: null

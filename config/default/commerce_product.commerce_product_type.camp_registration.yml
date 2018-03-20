@@ -1,0 +1,11 @@
+uuid: f4f0beaa-0d06-4dea-904c-1297dae4dff1
+langcode: en
+status: true
+dependencies: {  }
+id: camp_registration
+label: 'Camp Registration'
+description: ''
+variationType: camp_registration
+injectVariationFields: true
+traits: {  }
+locked: false

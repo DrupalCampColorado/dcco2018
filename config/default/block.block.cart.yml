@@ -1,0 +1,21 @@
+uuid: d39ec6b6-244b-45b8-b3a7-b0d75ab5ee17
+langcode: en
+status: false
+dependencies:
+  module:
+    - commerce_cart
+  theme:
+    - themekit
+id: cart
+theme: themekit
+region: header
+weight: 0
+provider: null
+plugin: commerce_cart
+settings:
+  id: commerce_cart
+  label: Cart
+  provider: commerce_cart
+  label_display: '0'
+  dropdown: true
+visibility: {  }

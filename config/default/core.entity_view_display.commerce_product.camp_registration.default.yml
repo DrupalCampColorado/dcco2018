@@ -1,0 +1,44 @@
+uuid: a4d49c78-b6f6-45ec-b507-37d72d47986c
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.camp_registration
+    - field.field.commerce_product.camp_registration.body
+    - field.field.commerce_product.camp_registration.stores
+    - field.field.commerce_product.camp_registration.variations
+  module:
+    - commerce_product
+    - text
+id: commerce_product.camp_registration.default
+targetEntityType: commerce_product
+bundle: camp_registration
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: -4
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  variations:
+    type: commerce_add_to_cart
+    weight: 10
+    label: hidden
+    settings:
+      combine: true
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  stores: true
+  uid: true
