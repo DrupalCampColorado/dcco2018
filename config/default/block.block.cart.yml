@@ -1,6 +1,6 @@
 uuid: d39ec6b6-244b-45b8-b3a7-b0d75ab5ee17
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - commerce_cart
