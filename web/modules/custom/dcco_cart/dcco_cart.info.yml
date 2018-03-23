@@ -1,0 +1,8 @@
+name: DCCO Cart
+description: Site cart overrides.
+type: module
+core: 8.x
+package: DCCO
+
+dependencies:
+  - commerce_cart
