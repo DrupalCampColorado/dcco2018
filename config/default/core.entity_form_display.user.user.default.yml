@@ -1,0 +1,141 @@
+uuid: 2c34e720-4211-40c2-ac28-64f09e247d5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.commerce_remote_id
+    - field.field.user.user.field_profile_bio
+    - field.field.user.user.field_profile_headshot
+    - field.field.user.user.field_profile_job
+    - field.field.user.user.field_profile_name
+    - field.field.user.user.field_profile_org
+    - field.field.user.user.field_profile_org_website
+    - field.field.user.user.field_profile_social_links
+    - image.style.thumbnail
+  module:
+    - field_group
+    - image
+    - link
+    - name
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_user_tabs:
+      children:
+        - group_profile_information
+        - group_account_settings
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: 'User Tabs'
+    group_account_settings:
+      children:
+        - account
+        - timezone
+      parent_name: group_user_tabs
+      weight: 6
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Account Settings'
+    group_profile_information:
+      children:
+        - field_profile_name
+        - field_profile_headshot
+        - field_profile_job
+        - field_profile_org
+        - field_profile_org_website
+        - field_profile_bio
+        - field_profile_social_links
+      parent_name: group_user_tabs
+      weight: 5
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Profile Information'
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  account:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_profile_bio:
+    weight: 7
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_profile_headshot:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_profile_job:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_profile_name:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: name_default
+    region: content
+  field_profile_org:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_profile_org_website:
+    weight: 6
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_profile_social_links:
+    weight: 8
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  timezone:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  commerce_remote_id: true
+  language: true
+  path: true
