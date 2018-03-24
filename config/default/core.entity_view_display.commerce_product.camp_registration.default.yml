@@ -36,6 +36,7 @@ content:
     label: hidden
     settings:
       combine: true
+      skip_cart: true
     third_party_settings: {  }
     region: content
 hidden:
