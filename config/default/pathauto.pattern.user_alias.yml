@@ -1,0 +1,14 @@
+uuid: 8e27f1f5-6cff-4ec5-b697-fa700b4200a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user_alias
+label: 'User Alias'
+type: 'canonical_entities:user'
+pattern: 'community/[user:name]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }
