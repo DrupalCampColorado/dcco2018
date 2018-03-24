@@ -1,0 +1,213 @@
+.view-commerce-cart-form.view-display-id-default,
+.commerce-checkout-flow-multistep-default {
+  @include content-width(page);
+  @include top-bottom(padding, 40px);
+  color: $font-gray;
+  position: relative;
+  margin-top: 15px;
+
+  &:before {
+    content: '';
+    display: block;
+    height: 1px;
+    background: $gray;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: calc(100% - 40px);
+
+    @include breakpoint(large) {
+      left: 40px;
+      width: calc(100% - 80px);
+    }
+  }
+
+  @include selectors(form-inputs) {
+    border: 2px solid $light-gray;
+    transition: 0.2s background-color;
+
+    &:focus {
+      border: 2px solid $dark-gray;
+      box-shadow: none;
+    }
+  }
+
+  select {
+    color: $font-gray;
+    border: 2px solid $light-gray;
+    background-color: transparent;
+
+    &:focus {
+      box-shadow: none;
+      border: 2px solid $dark-gray;
+    }
+  }
+}
+
+//*********************************************
+// Cart full page form
+//*********************************************
+
+.view-commerce-cart-form.view-display-id-default {
+  @include content-width(content);
+  @include top-bottom(padding, 80px);
+
+  .views-field-remove-button .button {
+    @include btn(blue, large);
+  }
+
+  [data-drupal-selector="edit-submit"] {
+    @include btn(gray, large);
+  }
+
+  [data-drupal-selector="edit-checkout"] {
+    @include btn(dark-orange, large);
+  }
+}
+
+//*********************************************
+// Login/signup page
+//*********************************************
+
+.commerce-checkout-flow-multistep-default {
+  color: $font-gray;
+
+  .fieldset-legend {
+    @include apply-heading(3);
+  }
+
+  .fieldset-wrapper > :first-child {
+    margin-top: 0;
+  }
+
+  [data-drupal-selector="edit-login-returning-customer-submit"] {
+    @include btn(dark-orange, large);
+
+    + a {
+      margin-left: 15px;
+      @include link(base);
+    }
+  }
+
+  [data-drupal-selector="edit-login-register-name"] {
+    margin-bottom: 0.4em;
+  }
+
+  [data-drupal-selector="edit-login-register-register"] {
+    @include btn(dark-orange, large);
+  }
+
+  .form-item-login-register-password-pass1 {
+    margin-bottom: 1rem;
+  }
+
+  .password-confirm,
+  .password-field {
+    margin-bottom: 0;
+  }
+}
+
+//*********************************************
+// Checkout page
+//*********************************************
+
+.layout-checkout-form {
+  .layout-region-checkout-main {
+    @include breakpoint(commerce-md) {
+      padding-right: rem-calc(60);
+    }
+  }
+
+  [data-drupal-selector="edit-actions-next"] {
+    @include btn(dark-orange, large);
+  }
+
+  .layout-region-checkout-secondary {
+    padding: 20px;
+    border: 1px solid $light-gray;
+
+    h3 {
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    table {
+      @include top-bottom(margin, 20px);
+    }
+
+    table tbody {
+      border: 0 none;
+      background: transparent;
+
+      tr {
+        @include top-bottom(border, 1px, solid, $light-gray);
+        background: transparent;
+      }
+
+      td {
+        border-right: 0 none;
+
+        &:last-child {
+          border-right: 0 none;
+        }
+      }
+
+      .field__label {
+        font-size: 15px;
+        font-weight: normal;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .checkout-pane-payment-information {
+    @include breakpoint(commerce-md) {
+      margin-top: 0;
+    }
+
+    .form-item {
+      @include top-bottom(margin, 0);
+    }
+  }
+}
+
+
+//*********************************************
+// Checkout review
+//*********************************************
+
+.checkout-pane-review {
+  legend {
+    float: left;
+    display: block;
+    width: 100%;
+    clear: both;
+  }
+
+  [data-drupal-selector="edit-review-payment-information"],
+  [data-drupal-selector="edit-review-contact-information"] {
+    margin: 0 0 20px 0;
+    padding: 40px;
+    border: 1px solid $light-gray;
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.layout-region-checkout-footer {
+  [data-drupal-selector="edit-actions-next"] + a{
+    margin-left: 15px;
+    @include link(base);
+  }
+}
+
+.checkout-complete {
+  margin: 0 0 20px 0;
+  padding: 40px;
+  border: 1px solid $light-gray;
+  @include content-width(content);
+  font-size: 18px;
+}

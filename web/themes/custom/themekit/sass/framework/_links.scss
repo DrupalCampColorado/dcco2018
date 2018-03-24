@@ -6,7 +6,6 @@
 $links: (
   default: (
     color: navy,
-    font-weight: 400,
     active-color: skyblue
   )
 ) !default;
@@ -19,10 +18,29 @@ $links: (
   $link-conf: extend-in-map($links, $link-key);
 
   color: key($link-conf, color);
-  font-weight: key($link-conf, font-weight);
+
+  line-height: 1.1em;
+  position: relative;
+  transition: .3s ease-out transform, .4s ease color;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -0.3em;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: key($link-conf, color);
+    transform: scaleX(0);
+    transition: .2s ease-out transform;
+  }
+  @include selectors(active) {
+    &:after {
+      transform: scaleX(1);
+    }
+  }
 
   @include selectors(active) {
-    color: key($link-conf, active-color);
-    text-decoration: underline;
+    text-decoration: none;
   }
 }

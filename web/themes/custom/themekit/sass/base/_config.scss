@@ -80,6 +80,20 @@ $buttons: (
       active-background: $white,
       active-color: $font-gray,
       active-border: $white
+  ),
+  dark-orange: (
+    extend: _base,
+    background: $dark-orange,
+    border: $dark-orange,
+    active-background: darken($dark-orange, 10%),
+    active-border: darken($dark-orange, 10%)
+  )
+);
+
+$links: (
+  base: (
+    color: $font-gray,
+    active-color: $font-gray
   )
 );
 
