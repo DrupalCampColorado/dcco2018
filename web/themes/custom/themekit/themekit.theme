@@ -108,7 +108,7 @@ function themekit_preprocess_field(&$variables) {
 function themekit_preprocess_paragraph(&$variables) {
   $paragraph = $variables['paragraph'];
   $bundle = $paragraph->bundle();
-  
+
   if (!isset($variables['attributes']['class'])) {
     $variables['attributes']['class'] = [];
   }
@@ -156,6 +156,16 @@ function themekit_preprocess_media__svg(&$variables) {
     if (is_object($svg_file_entity) && method_exists($svg_file_entity, 'getFileUri')) {
       $variables['svg_url'] = file_create_url($svg_file_entity->getFileUri());
     }
+  }
+}
+
+/**
+ * Implements template_preprocess_commerce_checkout_completion_message().
+ */
+function themekit_preprocess_commerce_checkout_completion_message(&$variables) {
+  // Add the current user data to template if we're logged in.
+  if ($variables['logged_in']) {
+    $variables['current_user'] = \Drupal::currentUser();
   }
 }
 

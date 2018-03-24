@@ -1,0 +1,36 @@
+{#
+/**
+ * @file
+ * Default theme implementation for the completion message.
+ *
+ * Available variables:
+ * - order_entity: The order entity.
+ * - payment_instructions: The payment instructions, if provided.
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="checkout-complete">
+  <p>
+    {{ 'Thank you for coming, your order number is @number.'|t({
+      '@number': order_entity.getOrderNumber
+    }) }}
+  </p>
+
+  <p>
+    {% if logged_in %}
+      <a href="{{ url('entity.user.edit_form', {
+        user: current_user.id
+      }) }}">{{ 'Update your camp profile!'|t }}</a>
+    {% else %}
+      {{ 'You can view your order on your account page when logged in.'|t }} <br>
+    {% endif %}
+  </p>
+
+  {% if payment_instructions %}
+    <div class="checkout-complete__payment-instructions">
+      <h2>{{ 'Payment instructions'|t }}</h2>
+      {{ payment_instructions }}
+    </div>
+  {% endif %}
+</div>
