@@ -12,7 +12,7 @@ bundle: camp_registration
 mode: default
 content:
   price:
-    label: hidden
+    label: above
     type: commerce_price_default
     weight: 0
     region: content
