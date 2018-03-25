@@ -135,6 +135,12 @@
   color: $font-gray;
   text-align: left;
 
+  .node__content > & {
+    @include content-width(content);
+    @include top-bottom(padding, 60px);
+    font-size: rem-calc(18);
+  }
+
   .heading {
     font-family: $font-arvo;
     color: $dark-orange;
