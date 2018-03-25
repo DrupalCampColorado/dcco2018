@@ -1,0 +1,26 @@
+uuid: 83e0ec92-0e37-42c8-921d-277a2ed9bc04
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.camp_registration
+  module:
+    - commerce_price
+id: commerce_product_variation.camp_registration.default
+targetEntityType: commerce_product_variation
+bundle: camp_registration
+mode: default
+content:
+  price:
+    label: hidden
+    type: commerce_price_default
+    weight: 0
+    region: content
+    settings:
+      strip_trailing_zeroes: false
+      display_currency_code: false
+    third_party_settings: {  }
+hidden:
+  product_id: true
+  sku: true
+  title: true
