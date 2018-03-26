@@ -13,4 +13,3 @@ permissions:
   - 'access checkout'
   - 'access content'
   - 'view commerce_product'
-  - 'view the administration theme'
