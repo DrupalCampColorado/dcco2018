@@ -1,0 +1,27 @@
+uuid: 4efdf573-82cb-41a4-94e4-b92d709f725b
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - menu_block
+  theme:
+    - themekit
+id: useraccountmenu
+theme: themekit
+region: header
+weight: -5
+provider: null
+plugin: 'menu_block:account'
+settings:
+  id: 'menu_block:account'
+  label: 'User account menu'
+  provider: menu_block
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand: 0
+  parent: 'account:'
+  suggestion: account
+visibility: {  }
