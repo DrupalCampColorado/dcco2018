@@ -8,6 +8,8 @@
  * 3. Utility functions
  */
 
+use Drupal\Core\Link;
+use Drupal\Core\Url;
 use Drupal\file\Entity\File;
 use Drupal\image\Entity\ImageStyle;
 use Drupal\block\Entity\Block;
@@ -78,6 +80,8 @@ function themekit_preprocess_block(&$variables) {
  * Implements template_preprocess_field().
  */
 function themekit_preprocess_field(&$variables) {
+  $element = $variables['element'];
+
   switch ($variables['field_name']) {
     case 'field_svg':
       $variables['svg_url'] = null;
@@ -88,13 +92,28 @@ function themekit_preprocess_field(&$variables) {
       }
       break;
     case 'field_sponsor_tier_spots':
-      $element = $variables['element'];
-
       // Override -1 values to be unlimited.
       foreach ($element['#items']->getValue() as $key => $value) {
         if ($value['value'] < 0) {
           $variables['items'][$key]['content'] = [
             '#markup' => t('Unlimited'),
+          ];
+        }
+      }
+      break;
+    case 'field_profile_org':
+      $user = $element['#object'];
+
+      // Wrap the company name in a link if the field has a value.
+      $org_link = reset($user->get('field_profile_org_website')->getValue());
+
+      if (!empty($org_link) && $element['#view_mode'] == 'full') {
+        foreach ($variables['items'] as &$item) {
+          $item['content'] = [
+            '#markup' => Link::fromTextAndUrl(
+              $item['content']['#context']['value'],
+              Url::fromUri($org_link['uri'])
+            )->toString(),
           ];
         }
       }
