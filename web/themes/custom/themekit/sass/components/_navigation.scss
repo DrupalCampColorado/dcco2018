@@ -60,8 +60,22 @@
   }
   li {
     padding: 0;
+
     @include breakpoint(medium) {
       display: inline-block;
+
+      &:last-child {
+        a {
+          @include btn(dark-orange);
+          text-transform: uppercase;
+          
+          @include selectors(active) {
+            &:after {
+              display: none;
+            }
+          }
+        }
+      }
     }
     + li {
       @include breakpoint(medium) {
