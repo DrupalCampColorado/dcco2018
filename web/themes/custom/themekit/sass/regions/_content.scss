@@ -1,0 +1,19 @@
+.region-content {
+
+  .path-user & {
+    @include content-width(page);
+
+    input {
+      max-width: 500px;
+
+      @include selectors(active) {
+        border: 2px solid #8a8a8a;
+      }
+    }
+
+    .form-submit {
+      @include btn(gray);
+      text-transform: uppercase;
+    }
+  }
+}
