@@ -190,9 +190,27 @@
 /// User Utility Menu
 /// =================
 #block-useraccountmenu {
+  display: none;
   position: absolute;
-  top: 5px;
-  right: 1rem;
+  
+  &.cloned {
+    display: block;
+    bottom: 75px;
+    left: 50%;
+    width: 200px;
+    text-align: center;
+    margin-left: -100px;
+  }
+  
+  @include breakpoint(medium) {
+    display: block;
+    top: 5px;
+    right: 1rem;
+    
+    &.cloned {
+      display: none;
+    }
+  }
 
   @include breakpoint(large) {
     right: 5px;
