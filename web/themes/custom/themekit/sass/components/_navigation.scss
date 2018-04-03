@@ -5,7 +5,6 @@
 /// Main Menu
 /// =========
 .menu--main {
-  padding-left: 100px;
   position: absolute;
   top: 20px;
   left: 0;
@@ -79,18 +78,28 @@
     }
     + li {
       @include breakpoint(medium) {
+        padding-left: rem-calc(12);
+      }
+      @include breakpoint(medium-large) {
         padding-left: rem-calc(28);
       }
     }
     a {
       color: transparent;
-      font-size: rem-calc(18);
-      line-height: rem-calc(28);
+      font-size: rem-calc(15);
+      line-height: rem-calc(24);
       position: relative;
       transition: .3s ease-out transform, .4s ease color;
+
       @include breakpoint(medium) {
         color: $font-gray;
       }
+
+      @include breakpoint(medium-large) {
+        font-size: rem-calc(18);
+        line-height: rem-calc(28);
+      }
+
       &:after {
         content: '';
         position: absolute;
@@ -174,6 +183,39 @@
       top: 0;
       transform: rotate(45deg);
       transition: top .3s cubic-bezier(0.23, 1, 0.32, 1), transform .3s .3s cubic-bezier(0.23, 1, 0.32, 1);;
+    }
+  }
+}
+
+/// User Utility Menu
+/// =================
+#block-useraccountmenu {
+  position: absolute;
+  top: 5px;
+  right: 1rem;
+
+  @include breakpoint(large) {
+    right: 5px;
+  }
+
+  .menu {
+    margin: 0;
+    padding: 0;
+
+    .menu-item {
+      display: inline-block;
+      padding: 0;
+
+      a {
+        font-size: rem-calc(13px);
+        color: $black;
+      }
+
+      & + .menu-item {
+        margin-left: 8px;
+        padding-left: 10px;
+        border-left: 1px solid $medium-gray;
+      }
     }
   }
 }

@@ -16,8 +16,12 @@ header {
   max-width: $global-width;
   margin: 0 auto;
   padding: 0 1rem;
+
+  @include breakpoint(medium) {
+    padding: 1rem 1rem 0;
+  }
   @include breakpoint(large) {
-    padding: 0;
+    padding: 1rem 0 0;
   }
 }
 
@@ -25,6 +29,11 @@ header {
   max-width: rem-calc(227);
   min-width: rem-calc(227);
   margin: rem-calc(22 0);
+
+  @include breakpoint(medium) {
+    margin: rem-calc(10 0 22);
+  }
+
   a {
     display: block;
     //background-image: url(img-get('wcet-san-logo-black.png'));
