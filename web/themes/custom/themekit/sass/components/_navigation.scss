@@ -50,9 +50,6 @@
     }
   }
   ul.menu {
-    //display: none;
-    //position: absolute;
-    //margin:;
     @include breakpoint(medium) {
       margin: 0;
     }
@@ -62,20 +59,8 @@
 
     @include breakpoint(medium) {
       display: inline-block;
-
-      &:last-child {
-        a {
-          @include btn(dark-orange);
-          text-transform: uppercase;
-          
-          @include selectors(active) {
-            &:after {
-              display: none;
-            }
-          }
-        }
-      }
     }
+
     + li {
       @include breakpoint(medium) {
         padding-left: rem-calc(12);
@@ -114,6 +99,17 @@
       @include selectors(active) {
         &:after {
           transform: scaleX(1);
+        }
+      }
+
+      &[href="/register"] {
+        @include btn(dark-orange);
+        text-transform: uppercase;
+
+        @include selectors(active) {
+          &:after {
+            display: none;
+          }
         }
       }
     }
