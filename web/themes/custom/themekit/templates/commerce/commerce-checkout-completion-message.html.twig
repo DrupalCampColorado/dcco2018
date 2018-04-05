@@ -11,11 +11,9 @@
  */
 #}
 <div class="checkout-complete">
-  <p>
-    {{ 'Thank you for coming, your order number is @number.'|t({
-      '@number': order_entity.getOrderNumber
-    }) }}
-  </p>
+  <h2>{{ 'Order Summray'|t }}</h2>
+
+  {{ order_summary}}
 
   <p>
     {% if logged_in %}
