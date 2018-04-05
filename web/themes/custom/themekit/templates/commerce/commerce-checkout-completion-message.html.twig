@@ -11,7 +11,11 @@
  */
 #}
 <div class="checkout-complete">
-  <h2>{{ 'Order Summray'|t }}</h2>
+  <h2>
+    {% trans %}
+      Order #{{ order_entity.id }} Summary
+    {% endtrans %}
+  </h2>
 
   {{ order_summary}}
 

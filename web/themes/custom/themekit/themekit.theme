@@ -182,8 +182,6 @@ function themekit_preprocess_media__svg(&$variables) {
  * Implements template_preprocess_commerce_checkout_completion_message().
  */
 function themekit_preprocess_commerce_checkout_completion_message(&$variables) {
-  $order = $variables['order_entity'];
-
   // Add the current user data to template if we're logged in.
   if ($variables['logged_in']) {
     $variables['current_user'] = \Drupal::currentUser();
@@ -193,7 +191,7 @@ function themekit_preprocess_commerce_checkout_completion_message(&$variables) {
   $variables['order_summary'] = [
     '#type' => 'view',
     '#name' => 'commerce_checkout_order_summary',
-    '#arguments' => [$order->id()],
+    '#arguments' => [$variables['order_entity']->id()],
     '#embed' => TRUE,
   ];
 
