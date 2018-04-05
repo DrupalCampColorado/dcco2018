@@ -105,7 +105,8 @@ function themekit_preprocess_field(&$variables) {
       $user = $element['#object'];
 
       // Wrap the company name in a link if the field has a value.
-      $org_link = reset($user->get('field_profile_org_website')->getValue());
+      $org_link_items = $user->get('field_profile_org_website')->getValue();
+      $org_link = reset($org_link_items);
 
       if (!empty($org_link) && $element['#view_mode'] == 'full') {
         foreach ($variables['items'] as &$item) {
