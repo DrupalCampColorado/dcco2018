@@ -57,13 +57,3 @@
     }
   }
 }
-
-.field--name-body {
-  a {
-    color: $dark-orange;
-    &:hover,
-    &:focus {
-      text-decoration: underline;
-    }
-  }
-}
