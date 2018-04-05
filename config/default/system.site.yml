@@ -3,8 +3,8 @@ name: 'DrupalCamp Colorado 2018'
 mail: info@drupalcampcolorado.org
 slogan: ''
 page:
-  403: ''
-  404: ''
+  403: /node/14
+  404: /node/13
   front: /node/1
 admin_compact_mode: false
 weight_select_max: 100
