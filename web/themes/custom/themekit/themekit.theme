@@ -10,6 +10,7 @@
 
 use Drupal\Core\Link;
 use Drupal\Core\Url;
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\file\Entity\File;
 use Drupal\image\Entity\ImageStyle;
 use Drupal\block\Entity\Block;
@@ -67,10 +68,28 @@ function themekit_preprocess_block(&$variables) {
 
   switch ($id) {
     case 'page_title_block':
-      $node = \Drupal::request()->attributes->get('node');
-      // Get date for blog post display.
-      if ($node->getType() == 'blog') {
-        $variables['date'] = date('M d, Y', $node->getCreatedTime());
+      // Get an array of any passed in parameter objects.
+      $route_parameters = \Drupal::routeMatch()->getParameters();
+      $parameters = reset($route_parameters);
+
+      foreach ($parameters as $name => $parameter) {
+        // Skip non entity parameters.
+        if (!$parameter instanceof EntityInterface) { continue; }
+
+        $entity_id = $parameter->getEntityTypeId();
+
+        if ($entity_id == 'node' && $parameter->getType() == 'blog') {
+          $variables['date'] = date('M d, Y', $parameter->getCreatedTime());
+        }
+
+        if ($entity_id == 'user' && $parameter->hasField('field_profile_name')) {
+          // Use the real name as the block title if it's filled out. If not
+          // leave it as the user name.
+          $profile_name = $parameter->get('field_profile_name')->getValue();
+          if (!empty($profile_name)) {
+            $variables['content']['#title'] = $parameter->field_profile_name->view('default');
+          }
+        }
       }
       break;
   }

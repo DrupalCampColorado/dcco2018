@@ -23,14 +23,14 @@ bundle: user
 mode: default
 content:
   field_profile_bio:
-    weight: 4
+    weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_profile_headshot:
-    weight: 1
+    weight: 0
     label: hidden
     settings:
       image_style: ''
@@ -39,7 +39,7 @@ content:
     type: image
     region: content
   field_profile_job:
-    weight: 2
+    weight: 1
     label: hidden
     settings:
       link_to_entity: false
@@ -47,11 +47,12 @@ content:
     type: string
     region: content
   field_profile_name:
-    weight: 0
+    type: name_default
+    weight: 5
+    region: content
     label: hidden
     settings:
       format: default
-      markup: false
       output: default
       multiple: default
       multiple_delimiter: ', '
@@ -59,11 +60,10 @@ content:
       multiple_delimiter_precedes_last: never
       multiple_el_al_min: '3'
       multiple_el_al_first: '1'
+      markup: false
     third_party_settings: {  }
-    type: name_default
-    region: content
   field_profile_org:
-    weight: 3
+    weight: 2
     label: hidden
     settings:
       link_to_entity: false
@@ -71,7 +71,7 @@ content:
     type: string
     region: content
   field_profile_social_links:
-    weight: 5
+    weight: 4
     label: hidden
     settings:
       trim_length: 80
