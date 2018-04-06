@@ -27,6 +27,13 @@ function themekit_preprocess_page(&$variables) {
 }
 
 /**
+ * Implements template_preprocess_user().
+ */
+function themekit_preprocess_user(&$variables) {
+  $variables['current_user'] = \Drupal::currentUser();
+}
+
+/**
  * Implements template_preprocess_node().
  */
 function themekit_preprocess_node(&$variables) {

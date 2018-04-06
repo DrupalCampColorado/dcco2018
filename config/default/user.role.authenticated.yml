@@ -12,5 +12,6 @@ permissions:
   - 'access cart'
   - 'access checkout'
   - 'access content'
+  - 'access user profiles'
   - 'view commerce_product'
   - 'view own commerce_order'
