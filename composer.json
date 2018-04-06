@@ -26,6 +26,7 @@
         "drupal/backup_migrate": "^4.0@beta",
         "drupal/block_field": "^1.0@alpha",
         "drupal/commerce": "2.x-dev",
+        "drupal/commerce_stripe": "^1.0@beta",
         "drupal/draggableviews": "^1.0",
         "drupal/features": "^3.5",
         "drupal/field_group": "^1.0",

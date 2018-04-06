@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2fdd624b457aa15cc872e607d4b2bc27",
+    "content-hash": "d57d6372c42f2c131c56fc9a16117436",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1503,7 +1503,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -1515,6 +1515,7 @@
                     "homepage": "https://www.drupal.org/user/139189"
                 }
             ],
+            "description": "Drupal administration theme with modern minimalist design.",
             "homepage": "https://www.drupal.org/project/adminimal_theme",
             "support": {
                 "source": "http://cgit.drupalcode.org/adminimal_theme"
@@ -1618,7 +1619,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -1720,6 +1721,324 @@
             "time": "2018-03-22T22:47:54+00:00"
         },
         {
+            "name": "drupal/commerce_order",
+            "version": "dev-2.x",
+            "require": {
+                "drupal/commerce": "self.version",
+                "drupal/commerce_price": "*",
+                "drupal/commerce_store": "*",
+                "drupal/core": "*",
+                "drupal/entity_reference_revisions": "*",
+                "drupal/profile": "*",
+                "drupal/state_machine": "*"
+            },
+            "type": "metapackage",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.5+31-dev",
+                    "datestamp": "1522835885",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Damien Tournoud",
+                    "homepage": "https://www.drupal.org/user/22211"
+                },
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "jsacksick",
+                    "homepage": "https://www.drupal.org/user/972218"
+                },
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                },
+                {
+                    "name": "rszrama",
+                    "homepage": "https://www.drupal.org/user/49344"
+                }
+            ],
+            "description": "Defines the Order entity and associated features.",
+            "homepage": "https://www.drupal.org/project/commerce",
+            "support": {
+                "source": "http://cgit.drupalcode.org/commerce"
+            }
+        },
+        {
+            "name": "drupal/commerce_payment",
+            "version": "dev-2.x",
+            "require": {
+                "drupal/commerce": "self.version",
+                "drupal/commerce_order": "*",
+                "drupal/core": "*",
+                "drupal/entity_reference_revisions": "*"
+            },
+            "type": "metapackage",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.5+31-dev",
+                    "datestamp": "1522835885",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Damien Tournoud",
+                    "homepage": "https://www.drupal.org/user/22211"
+                },
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "jsacksick",
+                    "homepage": "https://www.drupal.org/user/972218"
+                },
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                },
+                {
+                    "name": "rszrama",
+                    "homepage": "https://www.drupal.org/user/49344"
+                }
+            ],
+            "description": "Provides payment functionality.",
+            "homepage": "https://www.drupal.org/project/commerce",
+            "support": {
+                "source": "http://cgit.drupalcode.org/commerce"
+            }
+        },
+        {
+            "name": "drupal/commerce_price",
+            "version": "dev-2.x",
+            "require": {
+                "drupal/commerce": "self.version",
+                "drupal/core": "~8.0"
+            },
+            "type": "metapackage",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.5+31-dev",
+                    "datestamp": "1522835885",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Damien Tournoud",
+                    "homepage": "https://www.drupal.org/user/22211"
+                },
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "jsacksick",
+                    "homepage": "https://www.drupal.org/user/972218"
+                },
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                },
+                {
+                    "name": "rszrama",
+                    "homepage": "https://www.drupal.org/user/49344"
+                }
+            ],
+            "description": "Defines the Currency entity.",
+            "homepage": "https://www.drupal.org/project/commerce",
+            "support": {
+                "source": "http://cgit.drupalcode.org/commerce"
+            }
+        },
+        {
+            "name": "drupal/commerce_store",
+            "version": "dev-2.x",
+            "require": {
+                "drupal/commerce": "self.version",
+                "drupal/commerce_price": "*",
+                "drupal/core": "*"
+            },
+            "type": "metapackage",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.5+31-dev",
+                    "datestamp": "1522835885",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Damien Tournoud",
+                    "homepage": "https://www.drupal.org/user/22211"
+                },
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "jsacksick",
+                    "homepage": "https://www.drupal.org/user/972218"
+                },
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                },
+                {
+                    "name": "rszrama",
+                    "homepage": "https://www.drupal.org/user/49344"
+                }
+            ],
+            "description": "Defines the Store entity and associated features.",
+            "homepage": "https://www.drupal.org/project/commerce",
+            "support": {
+                "source": "http://cgit.drupalcode.org/commerce"
+            }
+        },
+        {
+            "name": "drupal/commerce_stripe",
+            "version": "1.0.0-beta2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/commerce_stripe",
+                "reference": "8.x-1.0-beta2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/commerce_stripe-8.x-1.0-beta2.zip",
+                "reference": "8.x-1.0-beta2",
+                "shasum": "5bf2bffb65ceceb7f1652786385435ad2a7c2c8e"
+            },
+            "require": {
+                "drupal/commerce": "~2.0",
+                "drupal/commerce_payment": "*",
+                "drupal/core": "~8.0",
+                "stripe/stripe-php": "~5.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta2",
+                    "datestamp": "1512667685",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Damien Tournoud",
+                    "homepage": "https://www.drupal.org/user/22211"
+                },
+                {
+                    "name": "GuGuss",
+                    "homepage": "https://www.drupal.org/user/1237516"
+                },
+                {
+                    "name": "Kazanir",
+                    "homepage": "https://www.drupal.org/user/2279698"
+                },
+                {
+                    "name": "aviindub",
+                    "homepage": "https://www.drupal.org/user/2565920"
+                },
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "corbacho",
+                    "homepage": "https://www.drupal.org/user/420096"
+                },
+                {
+                    "name": "iMiksu",
+                    "homepage": "https://www.drupal.org/user/581242"
+                },
+                {
+                    "name": "iSampo",
+                    "homepage": "https://www.drupal.org/user/669530"
+                },
+                {
+                    "name": "iler",
+                    "homepage": "https://www.drupal.org/user/726092"
+                },
+                {
+                    "name": "janip",
+                    "homepage": "https://www.drupal.org/user/1356218"
+                },
+                {
+                    "name": "scotthooker",
+                    "homepage": "https://www.drupal.org/user/1347442"
+                },
+                {
+                    "name": "torgosPizza",
+                    "homepage": "https://www.drupal.org/user/151333"
+                },
+                {
+                    "name": "vasike",
+                    "homepage": "https://www.drupal.org/user/156237"
+                }
+            ],
+            "description": "Provides Commerce integration for Stripe Payments.",
+            "homepage": "http://drupal.org/project/commerce_stripe",
+            "support": {
+                "source": "http://cgit.drupalcode.org/commerce_stripe"
+            }
+        },
+        {
             "name": "drupal/config_update",
             "version": "1.5.0",
             "source": {
@@ -1752,7 +2071,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -2361,6 +2680,10 @@
                     "role": "Maintainer"
                 },
                 {
+                    "name": "joelpittet",
+                    "homepage": "https://www.drupal.org/user/160302"
+                },
+                {
                     "name": "merlinofchaos",
                     "homepage": "https://www.drupal.org/user/26979"
                 },
@@ -2421,7 +2744,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -2554,7 +2877,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -2735,7 +3058,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-alpha4",
-                    "datestamp": "1507897745",
+                    "datestamp": "1507897766",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -2744,7 +3067,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -2964,7 +3287,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -3107,7 +3430,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -3825,7 +4148,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -3892,7 +4215,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -5165,6 +5488,61 @@
             ],
             "description": "Automatic BASH completion for Symfony Console Component based applications.",
             "time": "2016-02-24T05:08:54+00:00"
+        },
+        {
+            "name": "stripe/stripe-php",
+            "version": "v5.9.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stripe/stripe-php.git",
+                "reference": "026191d12241a76c957884dff75e4f3721b0e77f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/026191d12241a76c957884dff75e4f3721b0e77f",
+                "reference": "026191d12241a76c957884dff75e4f3721b0e77f",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0",
+                "satooshi/php-coveralls": "~0.6.1",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Stripe\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stripe and contributors",
+                    "homepage": "https://github.com/stripe/stripe-php/contributors"
+                }
+            ],
+            "description": "Stripe PHP Library",
+            "homepage": "https://stripe.com/",
+            "keywords": [
+                "api",
+                "payment processing",
+                "stripe"
+            ],
+            "time": "2018-02-07T18:36:55+00:00"
         },
         {
             "name": "symfony-cmf/routing",
@@ -9205,6 +9583,7 @@
         "drupal/backup_migrate": 10,
         "drupal/block_field": 15,
         "drupal/commerce": 20,
+        "drupal/commerce_stripe": 10,
         "drupal/field_tools": 15,
         "drupal/inline_entity_form": 10,
         "drupal/name": 10,

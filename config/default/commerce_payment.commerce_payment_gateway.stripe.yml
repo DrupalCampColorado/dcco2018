@@ -1,0 +1,19 @@
+uuid: fa4d0a19-8e60-439a-8c9c-f92d9a2130a4
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_stripe
+id: stripe
+label: Stripe
+weight: null
+plugin: stripe
+configuration:
+  publishable_key: pk_test_sHAq2LJpe5CKaQJPDNzKtUmW
+  secret_key: sk_test_TM0lWyH12ykafrFNbnOS0YPP
+  display_label: Stripe
+  mode: test
+  payment_method_types:
+    - credit_card
+conditions: {  }
+conditionOperator: AND
