@@ -223,6 +223,15 @@ function themekit_preprocess_commerce_checkout_completion_message(&$variables) {
 //*********************************************
 
 /**
+ * Implements template_theme_suggestions_HOOK_alter().
+ */
+function themekit_theme_suggestions_user_alter(&$suggestions, $variables) {
+  $element = $variables['elements'];
+
+  $suggestions[] = "user__{$element['#view_mode']}";
+}
+
+/**
  * Implements theme_theme_suggestions_views_view_alter().
  */
 function themekit_theme_suggestions_views_view_alter(&$suggestions, $variables) {
