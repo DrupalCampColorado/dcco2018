@@ -20,6 +20,8 @@
   {% if content|render is not empty %}
     {{- content -}}
   {% else %}
-    {{ "Please tell us a little about yourself - update your profile now!"|t }}
+    {% if user.id is same as(current_user.id) %}
+      {{ "Please tell us a little about yourself - update your profile now!"|t }}
+    {% endif %}
   {% endif %}
 </article>
