@@ -21,9 +21,11 @@
 
   <p>
     {% if logged_in %}
-      <a href="{{ url('entity.user.edit_form', {
+      Thanks for your order! We're excited to see you in August. Don't forget
+      to take a minute to <a href="{{
+    url('entity.user.edit_form', {
         user: current_user.id
-      }) }}">{{ 'Update your camp profile!'|t }}</a>
+      }) }}">{{ 'update your camp profile!'|t }}</a>
     {% else %}
       {{ 'You can view your order on your account page when logged in.'|t }} <br>
     {% endif %}
