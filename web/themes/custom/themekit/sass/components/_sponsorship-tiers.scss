@@ -35,6 +35,18 @@
     }
   }
 
+
+  .field--name-field-sponsor-logo {
+    a {
+      display: block;
+    }
+    img {
+      max-height: 90px;
+      max-width: 200px;
+      width: auto;
+      height: auto;
+    }
+  }
   @include breakpoint(medium) {
     .views-rows {
       align-items: center;
