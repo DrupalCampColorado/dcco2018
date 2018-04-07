@@ -16,6 +16,7 @@ mc_lists:
   7513542776: 0
   0dfa07a2b2: 0
   3f43033511: 0
+  487a50a950: 0
   2fa31828d7: 0
   69cfea9ec4: 0
   ede30ca762: 0
@@ -25,7 +26,7 @@ mergefields:
   FNAME: 0
   LNAME: 0
 description: ''
-doublein: false
+doublein: true
 send_welcome: null
 include_interest_groups: false
 settings:
@@ -38,6 +39,6 @@ settings:
     FNAME: 0
     LNAME: 0
   description: ''
-  doublein: 0
+  doublein: 1
   include_interest_groups: 0
   safe_interest_groups: 0
