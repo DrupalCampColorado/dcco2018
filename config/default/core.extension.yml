@@ -23,6 +23,7 @@ module:
   commerce_price: 0
   commerce_product: 0
   commerce_store: 0
+  commerce_stripe: 0
   config: 0
   config_update: 0
   contextual: 0
@@ -30,6 +31,7 @@ module:
   datetime: 0
   datetime_range: 0
   dblog: 0
+  dcco_cart: 0
   draggableviews: 0
   dynamic_page_cache: 0
   e3_google_tag: 0

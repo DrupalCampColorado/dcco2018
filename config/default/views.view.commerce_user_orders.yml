@@ -2,6 +2,8 @@ uuid: e172beef-f672-4588-8dd6-1cd88af39eac
 langcode: en
 status: true
 dependencies:
+  config:
+    - field.storage.commerce_order.order_items
   module:
     - commerce_order
     - commerce_price
@@ -194,20 +196,20 @@ display:
           entity_type: commerce_order
           entity_field: order_id
           plugin_id: field
-        order_number:
-          id: order_number
-          table: commerce_order
-          field: order_number
+        order_items:
+          id: order_items
+          table: commerce_order__order_items
+          field: order_items
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Order number'
+          label: 'Order items'
           exclude: false
           alter:
             alter_text: false
             text: ''
-            make_link: true
-            path: 'user/{{ arguments.uid }}/orders/{{ order_id }}'
+            make_link: false
+            path: ''
             absolute: false
             external: false
             replace_spaces: false
@@ -242,11 +244,11 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: string
+          click_sort_column: target_id
+          type: entity_reference_label
           settings:
-            link_to_entity: false
-          group_column: value
+            link: false
+          group_column: target_id
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -256,8 +258,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: null
-          entity_field: order_number
           plugin_id: field
         placed:
           id: placed
@@ -310,8 +310,8 @@ display:
           click_sort_column: value
           type: timestamp
           settings:
-            date_format: short
-            custom_date_format: ''
+            date_format: custom
+            custom_date_format: 'n/j/Y - g:i a'
             timezone: ''
           group_column: value
           group_columns: {  }
@@ -565,7 +565,8 @@ display:
         - url.query_args
         - user
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.commerce_order.order_items'
   order_page:
     display_plugin: page
     id: order_page
@@ -593,4 +594,5 @@ display:
         - url.query_args
         - user
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.commerce_order.order_items'

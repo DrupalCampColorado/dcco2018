@@ -29,3 +29,6 @@ $config['mailchimp.settings']['api_key'] = getenv('AMAZEEIO_MAILCHIMP_API_KEY');
 // Configure private and temp directories
 $settings['file_private_path'] = "sites/default/files/private";
 $config['system.file']['path']['temporary'] = "sites/default/files/private/tmp";
+
+// Set stripe to live mode on prod
+$config['commerce_payment.commerce_payment_gateway.stripe']['configuration']['mode'] = 'live';

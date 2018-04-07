@@ -8,6 +8,9 @@
  * 3. Utility functions
  */
 
+use Drupal\Core\Link;
+use Drupal\Core\Url;
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\file\Entity\File;
 use Drupal\image\Entity\ImageStyle;
 use Drupal\block\Entity\Block;
@@ -21,6 +24,13 @@ use Drupal\views\Views;
  * Implements template_preprocess_page().
  */
 function themekit_preprocess_page(&$variables) {
+}
+
+/**
+ * Implements template_preprocess_user().
+ */
+function themekit_preprocess_user(&$variables) {
+  $variables['current_user'] = \Drupal::currentUser();
 }
 
 /**
@@ -65,10 +75,28 @@ function themekit_preprocess_block(&$variables) {
 
   switch ($id) {
     case 'page_title_block':
-      $node = \Drupal::request()->attributes->get('node');
-      // Get date for blog post display.
-      if ($node->getType() == 'blog') {
-        $variables['date'] = date('M d, Y', $node->getCreatedTime());
+      // Get an array of any passed in parameter objects.
+      $route_parameters = \Drupal::routeMatch()->getParameters();
+      $parameters = reset($route_parameters);
+
+      foreach ($parameters as $name => $parameter) {
+        // Skip non entity parameters.
+        if (!$parameter instanceof EntityInterface) { continue; }
+
+        $entity_id = $parameter->getEntityTypeId();
+
+        if ($entity_id == 'node' && $parameter->getType() == 'blog') {
+          $variables['date'] = date('M d, Y', $parameter->getCreatedTime());
+        }
+
+        if ($entity_id == 'user' && $parameter->hasField('field_profile_name')) {
+          // Use the real name as the block title if it's filled out. If not
+          // leave it as the user name.
+          $profile_name = $parameter->get('field_profile_name')->getValue();
+          if (!empty($profile_name)) {
+            $variables['content']['#title'] = $parameter->field_profile_name->view('default');
+          }
+        }
       }
       break;
   }
@@ -78,6 +106,8 @@ function themekit_preprocess_block(&$variables) {
  * Implements template_preprocess_field().
  */
 function themekit_preprocess_field(&$variables) {
+  $element = $variables['element'];
+
   switch ($variables['field_name']) {
     case 'field_svg':
       $variables['svg_url'] = null;
@@ -88,13 +118,29 @@ function themekit_preprocess_field(&$variables) {
       }
       break;
     case 'field_sponsor_tier_spots':
-      $element = $variables['element'];
-
       // Override -1 values to be unlimited.
       foreach ($element['#items']->getValue() as $key => $value) {
         if ($value['value'] < 0) {
           $variables['items'][$key]['content'] = [
             '#markup' => t('Unlimited'),
+          ];
+        }
+      }
+      break;
+    case 'field_profile_org':
+      $user = $element['#object'];
+
+      // Wrap the company name in a link if the field has a value.
+      $org_link_items = $user->get('field_profile_org_website')->getValue();
+      $org_link = reset($org_link_items);
+
+      if (!empty($org_link) && $element['#view_mode'] == 'full') {
+        foreach ($variables['items'] as &$item) {
+          $item['content'] = [
+            '#markup' => Link::fromTextAndUrl(
+              $item['content']['#context']['value'],
+              Url::fromUri($org_link['uri'])
+            )->toString(),
           ];
         }
       }
@@ -108,7 +154,7 @@ function themekit_preprocess_field(&$variables) {
 function themekit_preprocess_paragraph(&$variables) {
   $paragraph = $variables['paragraph'];
   $bundle = $paragraph->bundle();
-  
+
   if (!isset($variables['attributes']['class'])) {
     $variables['attributes']['class'] = [];
   }
@@ -159,9 +205,38 @@ function themekit_preprocess_media__svg(&$variables) {
   }
 }
 
+/**
+ * Implements template_preprocess_commerce_checkout_completion_message().
+ */
+function themekit_preprocess_commerce_checkout_completion_message(&$variables) {
+  // Add the current user data to template if we're logged in.
+  if ($variables['logged_in']) {
+    $variables['current_user'] = \Drupal::currentUser();
+  }
+
+  // Add order information to the order summary.
+  $variables['order_summary'] = [
+    '#type' => 'view',
+    '#name' => 'commerce_checkout_order_summary',
+    '#arguments' => [$variables['order_entity']->id()],
+    '#embed' => TRUE,
+  ];
+
+  // $variables['order_price'] = $order->getTotalPrice();
+}
+
 //*********************************************
 // 2. Theme suggestions
 //*********************************************
+
+/**
+ * Implements template_theme_suggestions_HOOK_alter().
+ */
+function themekit_theme_suggestions_user_alter(&$suggestions, $variables) {
+  $element = $variables['elements'];
+
+  $suggestions[] = "user__{$element['#view_mode']}";
+}
 
 /**
  * Implements theme_theme_suggestions_views_view_alter().

@@ -12,4 +12,7 @@ permissions:
   - 'access cart'
   - 'access checkout'
   - 'access content'
+  - 'access user profiles'
+  - 'use text format basic_html'
   - 'view commerce_product'
+  - 'view own commerce_order'

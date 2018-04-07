@@ -1,0 +1,23 @@
+uuid: 324b83ae-8d8e-4cae-8b3c-4f86888fda72
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_profile_social_links
+  module:
+    - link
+    - user
+id: user.user.field_profile_social_links
+field_name: field_profile_social_links
+entity_type: user
+bundle: user
+label: 'Social Media'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

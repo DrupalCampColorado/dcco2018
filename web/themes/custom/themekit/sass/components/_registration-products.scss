@@ -1,0 +1,106 @@
+.view-registration-products.view-id-registration_products {
+  @include top-bottom(padding, 60px);
+
+  .view-content {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .views-row {
+    text-align: center;
+    flex: 1;
+    padding: 20px;
+    position: relative;
+    margin-bottom: rem-calc(40);
+    width: 100%;
+    flex-basis: 100%;
+
+    @include breakpoint(medium) {
+      width: 50%;
+      flex-basis: 50%;
+    }
+
+    @include breakpoint(medium-large) {
+      width: 25%;
+      flex-basis: 25%;
+      padding: 15px;
+      margin-bottom: 0;
+    }
+
+    > article {
+      display: flex;
+      flex-flow: column nowrap;
+    }
+  }
+
+  .field--name-title {
+    @include apply-heading(5);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: $font-arvo;
+    margin-bottom: 1rem;
+    order: -3;
+  }
+
+  .form-item {
+    margin-bottom: 0;
+
+    label {
+      color: #fff;
+      font-size: rem-calc(16);
+    }
+  }
+
+  .field--name-price {
+    margin-bottom: 1rem;
+    order: -1;
+
+    .field__label {
+      text-transform: uppercase;
+      display: none;
+    }
+
+    .field__item {
+      font-size: 40px;
+      font-family: $font-arvo;
+      color: $green;
+      line-height: 1;
+    }
+  }
+
+  select {
+    width: auto;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    min-width: 120px;
+    margin: 0;
+  }
+
+  .form-actions {
+    margin: 1rem 0 0;
+  }
+
+  .button--primary {
+    @include btn(ghost);
+    font-size: 19px;
+  }
+
+
+  .color-scheme--tan & {
+    color: $font-gray;
+
+    select {
+      border: 2px solid $font-gray;
+      color: $font-gray;
+    }
+
+    label {
+      color: $font-gray;
+    }
+
+    .button--primary {
+      @include btn(gray)
+    }
+  }
+}

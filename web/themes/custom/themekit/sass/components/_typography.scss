@@ -1,0 +1,7 @@
+a {
+  @include link(orange);
+
+  .region-content & {
+    @include link(orange, underline);
+  }
+}

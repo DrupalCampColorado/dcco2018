@@ -1,6 +1,7 @@
 .node__content > .paragraph:not(
 .paragraph--type--banner-featured-header,
 .paragraph--type--banner-simple,
+.paragraph--type--simple-content,
 .paragraph--type--layout-component-group
 ) {
   max-width: $global-width;

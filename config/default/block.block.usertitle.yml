@@ -1,0 +1,25 @@
+uuid: 26c686e5-a8bf-45df-874f-87e721257a70
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - themekit
+id: usertitle
+theme: themekit
+region: content
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'User Title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '/community/*'
+    negate: false
+    context_mapping: {  }

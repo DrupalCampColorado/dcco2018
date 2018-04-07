@@ -460,6 +460,8 @@
 	  (0, _jquery2.default)('.layout-container').toggleClass('fixed');
 	});
 
+	(0, _jquery2.default)('#block-useraccountmenu').clone().addClass('cloned').appendTo('#block-themekit-main-menu');
+
 /***/ })
 /******/ ]);
 //# sourceMappingURL=themekit.js.map
