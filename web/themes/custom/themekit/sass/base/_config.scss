@@ -6,8 +6,8 @@
 /// Configuration for Drupal Admin tabs.
 $drupal-tabs: (
   wrap: (
-    background: #fafafa,
-    border: #efefef
+    background: #f9f9f9,
+    border: #f7f7f7
   ),
   link: (
     color: #251923,
@@ -15,7 +15,7 @@ $drupal-tabs: (
     hover-color: #ffffff,
     hover-background: #251923
   ),
-  alt-colors: #b6c4c5 #575642 #4c4650 #251923
+  alt-colors: $light-orange $dark-orange darken($burnt-orange, 10%)
 );
 
 /// z-index organization.

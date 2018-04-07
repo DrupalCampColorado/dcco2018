@@ -7,6 +7,18 @@ form {
     background: transparent;
     border-radius: 0;
   }
+
+  [type='file'] {
+    @include selectors(active) {
+      border: 0 none;
+    }
+  }
+
+  .form-type-name {
+    input {
+      margin-bottom: 0;
+    }
+  }
 }
 
 //*********************************************
@@ -42,7 +54,7 @@ form {
       right: -.875rem;
     }
   }
-  input {
+  @include selectors(form-inputs) {
     margin-bottom: 0;
     color: #fff;
     transition: 0.2s border-color, 0.2s background, 0.2s color;
@@ -149,5 +161,28 @@ form {
 
   [data-drupal-selector="edit-actions"] {
     margin-top: 2em;
+  }
+}
+
+//*********************************************
+// User form
+//*********************************************
+
+[data-drupal-selector="user-form"] {
+  @include content-width(780px);
+  @include top-bottom(padding, 60px);
+
+  input[type="file"] {
+    @include selectors(active) {
+      border: 0 none;
+    }
+  }
+
+  .form-item {
+    margin-top: 0;
+  }
+
+  label {
+    font-weight: bold;
   }
 }
