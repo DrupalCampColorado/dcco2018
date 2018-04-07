@@ -22,6 +22,36 @@ form {
 }
 
 //*********************************************
+// Stripe
+//*********************************************
+
+form .stripe-form {
+  .form-item {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .form-item-payment-information-add-payment-method-payment-details-card-number {
+    width: 100%;
+  }
+
+  .form-text {
+    box-shadow: none;
+    border: 2px solid $gray;
+    background: transparent;
+    border-radius: 0;
+    padding: 10px 10px 9px 10px;
+    margin-bottom: 1rem;
+    display: inline-block;
+    box-sizing: content-box;
+  }
+
+  .StripeElement--focus {
+    border: 2px solid $dark-gray;
+  }
+}
+
+//*********************************************
 // General mailchimp form styles
 //*********************************************
 
