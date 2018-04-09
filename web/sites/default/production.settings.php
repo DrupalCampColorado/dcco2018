@@ -31,6 +31,6 @@ $settings['file_private_path'] = "sites/default/files/private";
 $config['system.file']['path']['temporary'] = "sites/default/files/private/tmp";
 
 // Stripe production API config
-$config['commerce_payment.commerce_payment_gateway']['configuration']['mode'] = 'live';
-$config['commerce_payment.commerce_payment_gateway']['configuration']['publishable_key'] = getenv('AMAZEEIO_STRIPE_PK');
-$config['commerce_payment.commerce_payment_gateway']['configuration']['secret_key'] = getenv('AMAZEEIO_STRIPE_SK');
+$config['commerce_payment.commerce_payment_gateway.stripe']['configuration']['mode'] = 'live';
+$config['commerce_payment.commerce_payment_gateway.stripe']['configuration']['publishable_key'] = getenv('AMAZEEIO_STRIPE_PK');
+$config['commerce_payment.commerce_payment_gateway.stripe']['configuration']['secret_key'] = getenv('AMAZEEIO_STRIPE_SK');
