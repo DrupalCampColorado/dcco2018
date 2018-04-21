@@ -61,6 +61,7 @@ function themekit_preprocess_node(&$variables) {
   }
 }
 
+
 /**
  * Implements template_preprocess_block().
  */
@@ -142,6 +143,19 @@ function themekit_preprocess_field(&$variables) {
               Url::fromUri($org_link['uri'])
             )->toString(),
           ];
+        }
+      }
+      break;
+
+    case 'field_sponsor_logo':
+      $node = $element['#object'];
+      $sponsor_ids = array_map(function ($item) {
+        return $item['target_id'];
+      }, $node->get('field_sponsor_tier')->getValue());
+
+      if (in_array('3', $sponsor_ids)) {
+        foreach ($variables['items'] as &$item) {
+          unset($item['content']['#url']);
         }
       }
       break;
@@ -228,6 +242,15 @@ function themekit_preprocess_commerce_checkout_completion_message(&$variables) {
 //*********************************************
 // 2. Theme suggestions
 //*********************************************
+
+/**
+ * Implements template_theme_suggestions_taxonomy_term_alter().
+ */
+function themekit_theme_suggestions_taxonomy_term_alter(&$suggestions, $variables) {
+  $element = $variables['elements'];
+  $entity = $element['#taxonomy_term'];
+  $suggestions[] = "taxonomy_term__{$entity->bundle()}__{$element['#view_mode']}";
+}
 
 /**
  * Implements template_theme_suggestions_HOOK_alter().

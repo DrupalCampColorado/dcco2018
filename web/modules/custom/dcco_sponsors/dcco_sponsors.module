@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Main module file.
+ */
+
+/**
+ * Implements hook_preprocess_taxonomy_term().
+ */
+function dcco_sponsors_preprocess_taxonomy_term(&$variables) {
+  $element = $variables['elements'];
+  $entity = $element['#taxonomy_term'];
+
+  // Taxonomy terms don't pull in tagged content by default. Add that here for
+  // sponsorship level terms.
+  if ($entity->bundle() == 'sponsor_tiers') {
+    $sponsors = Drupal::service('entity.query')
+      ->get('node')
+      ->condition('type', 'sponsor')
+      ->condition('field_sponsor_tier', $entity->id())
+      ->condition('status', 1)
+      ->execute();
+
+    if (!empty($sponsors)) {
+      $variables['sponsors'] = [
+        '#type' => 'view',
+        '#name' => 'sponsor_listings',
+        '#display_id' => 'embed_1',
+        '#arguments' => [$entity->id()],
+        '#embed' => TRUE,
+      ];
+    }
+  }
+}

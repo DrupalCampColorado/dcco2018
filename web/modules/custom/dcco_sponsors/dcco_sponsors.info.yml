@@ -1,0 +1,6 @@
+name: DCCO Sponsors
+description: Overrides for site sponsors.
+core: 8.x
+type: module
+dependencies:
+  - taxonomy

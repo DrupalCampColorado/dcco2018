@@ -1,0 +1,22 @@
+uuid: 9895f584-2467-4f95-b14d-daa181602d1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.table
+    - field.field.taxonomy_term.sponsor_tiers.field_sponsor_tier_spots
+    - field.field.taxonomy_term.sponsor_tiers.field_sponsor_tiers_features
+    - field.field.taxonomy_term.sponsor_tiers.field_sponsor_tiers_price
+    - taxonomy.vocabulary.sponsor_tiers
+_core:
+  default_config_hash: sobZHunDSVTcDptGiBSd_LFTepygk0AqCLfC0TAtLQo
+id: taxonomy_term.sponsor_tiers.table
+targetEntityType: taxonomy_term
+bundle: sponsor_tiers
+mode: table
+content: {  }
+hidden:
+  description: true
+  field_sponsor_tier_spots: true
+  field_sponsor_tiers_features: true
+  field_sponsor_tiers_price: true
