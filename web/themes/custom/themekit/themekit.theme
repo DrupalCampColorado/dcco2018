@@ -146,6 +146,19 @@ function themekit_preprocess_field(&$variables) {
         }
       }
       break;
+
+    case 'field_sponsor_logo':
+      $node = $element['#object'];
+      $sponsor_ids = array_map(function ($item) {
+        return $item['target_id'];
+      }, $node->get('field_sponsor_tier')->getValue());
+
+      if (in_array('3', $sponsor_ids)) {
+        foreach ($variables['items'] as &$item) {
+          unset($item['content']['#url']);
+        }
+      }
+      break;
   }
 }
 
