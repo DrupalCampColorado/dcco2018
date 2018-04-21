@@ -23,19 +23,21 @@
  * @see template_preprocess_taxonomy_term()
  */
 #}
-{%
-  set classes = [
-    'taxonomy-term',
-    'vocabulary-' ~ term.bundle|clean_class,
-    'sponsor-tier',
-  ]
-%}
-<div{{ attributes.setAttribute('id', 'taxonomy-term-' ~ term.id).addClass(classes) }}>
-  {{ title_prefix }}
-    <h3 class="simple-heading">{{ name|field_value }}</h3>
-  {{ title_suffix }}
+{% if sponsors is defined %}
+  {%
+    set classes = [
+      'taxonomy-term',
+      'vocabulary-' ~ term.bundle|clean_class,
+      'sponsor-tier',
+    ]
+  %}
+  <div{{ attributes.setAttribute('id', 'taxonomy-term-' ~ term.id).addClass(classes) }}>
+    {{ title_prefix }}
+      <h3 class="simple-heading">{{ name|field_value }}</h3>
+    {{ title_suffix }}
 
-  <div class="tier-sponsor-list">
-    {{ sponsors }}
+    <div class="tier-sponsor-list">
+      {{ sponsors }}
+    </div>
   </div>
-</div>
+{% endif %}
