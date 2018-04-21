@@ -32,12 +32,10 @@
 %}
 <div{{ attributes.setAttribute('id', 'taxonomy-term-' ~ term.id).addClass(classes) }}>
   {{ title_prefix }}
-    <h3 class="simple-heading">{{ name }}</h3>
+    <h3 class="simple-heading">{{ name|field_value }}</h3>
   {{ title_suffix }}
 
-  <div class="content">
-    {{ content }}
-
+  <div class="tier-sponsor-list">
     {{ sponsors }}
   </div>
 </div>

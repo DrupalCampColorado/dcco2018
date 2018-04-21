@@ -12,7 +12,8 @@
   z-index: 1;
 }
 
-.view-id-sponsor_listings.view-display-id-block_1 {
+.view-id-sponsor_listings.view-display-id-block_1,
+.view-sponsorship-listings.view-display-id-block_1 {
   background-color: #fff;
   padding-top: 3rem;
 
@@ -20,7 +21,8 @@
     content: " Sponsors";
   }
 
-  .views-rows {
+  .views-rows,
+  .view-sponsor-listings.view-display-id-embed_1 .view-content {
     align-items: center;
     display: flex;
     justify-content: center;
