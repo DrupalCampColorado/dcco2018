@@ -5,6 +5,12 @@
  * Main module file.
  */
 
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\node\NodeInterface;
+
 /**
  * Implements hook_preprocess_taxonomy_term().
  */
@@ -30,6 +36,34 @@ function dcco_sponsors_preprocess_taxonomy_term(&$variables) {
         '#arguments' => [$entity->id()],
         '#embed' => TRUE,
       ];
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function dcco_sponsors_preprocess_node(&$variables) {
+  $node = $variables['node'];
+  $view_mode = $variables['elements']['#view_mode'];
+  $current_user = \Drupal::currentUser();
+
+  if (
+    $node->bundle() == 'sponsor' &&
+    $view_mode == 'full' &&
+    $node->hasField('field_sponsor_tier') &&
+    !$current_user->hasPermission('bypass node access')
+  ) {
+    // Get sponsor levels, see if sponsor is of Bronze level.
+    $sponsor_ids = array_map(function ($item) {
+      return $item['target_id'];
+    }, $node->get('field_sponsor_tier')->getValue());
+
+    if (in_array('3', $sponsor_ids)) {
+      $redirect = new RedirectResponse(\Drupal::url('entity.node.canonical', [
+        'node' => 2,
+      ]));
+      $redirect->setStatusCode(403)->send();
     }
   }
 }
