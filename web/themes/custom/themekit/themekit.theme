@@ -154,8 +154,14 @@ function themekit_preprocess_field(&$variables) {
       }, $node->get('field_sponsor_tier')->getValue());
 
       if (in_array('3', $sponsor_ids)) {
-        foreach ($variables['items'] as &$item) {
-          unset($item['content']['#url']);
+        $sponsor_link = $node->get('field_sponsor_url')->getValue();
+
+        if (!empty($sponsor_link)) {
+          $sponsor_link = reset($sponsor_link);
+
+          foreach ($variables['items'] as &$item) {
+            $item['content']['#url'] = Url::fromUri($sponsor_link['uri']);
+          }
         }
       }
       break;
