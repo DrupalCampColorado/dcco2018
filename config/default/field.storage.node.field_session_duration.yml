@@ -1,0 +1,27 @@
+uuid: 17d0d7ea-5116-4d72-97ce-6a8d0c96bdbd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_session_duration
+field_name: field_session_duration
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '30'
+      label: '30 Minute'
+    -
+      value: '60'
+      label: '60 Minute'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

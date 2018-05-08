@@ -1,0 +1,22 @@
+uuid: 87f76122-6af3-46bb-bd3b-5927b3b3e8c2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: session_path_alias
+label: 'Session Path Alias'
+type: 'canonical_entities:node'
+pattern: 'session/[node:title]'
+selection_criteria:
+  87a01f76-eca3-4a7e-8cbe-0751d1da8020:
+    id: node_type
+    bundles:
+      session: session
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 87a01f76-eca3-4a7e-8cbe-0751d1da8020
+selection_logic: and
+weight: -5
+relationships: {  }
