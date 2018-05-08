@@ -13,6 +13,8 @@ permissions:
   - 'access checkout'
   - 'access content'
   - 'access user profiles'
+  - 'create session content'
+  - 'edit own session content'
   - 'use text format basic_html'
   - 'view commerce_product'
   - 'view own commerce_order'
