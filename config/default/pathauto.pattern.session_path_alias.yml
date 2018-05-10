@@ -7,16 +7,16 @@ dependencies:
 id: session_path_alias
 label: 'Session Path Alias'
 type: 'canonical_entities:node'
-pattern: 'session/[node:title]'
+pattern: 'sessions/[node:title]'
 selection_criteria:
-  87a01f76-eca3-4a7e-8cbe-0751d1da8020:
+  04220e8f-b379-4334-bf68-39806f932bba:
     id: node_type
     bundles:
       session: session
     negate: false
     context_mapping:
       node: node
-    uuid: 87a01f76-eca3-4a7e-8cbe-0751d1da8020
+    uuid: 04220e8f-b379-4334-bf68-39806f932bba
 selection_logic: and
 weight: -5
 relationships: {  }

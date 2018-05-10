@@ -24,6 +24,7 @@ visibility:
     id: 'entity_bundle:node'
     bundles:
       blog: blog
+      session: session
       sponsor: sponsor
     negate: false
     context_mapping:
