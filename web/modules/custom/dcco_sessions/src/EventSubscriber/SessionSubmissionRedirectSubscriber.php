@@ -4,7 +4,6 @@ namespace Drupal\dcco_sessions\EventSubscriber;
 
 use Drupal\Core\Session\AccountProxy;
 use Drupal\Core\State\StateInterface;
-use Drupal\Core\Url;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpKernel\KernelEvents;
@@ -47,7 +46,6 @@ class SessionSubmissionRedirectSubscriber implements EventSubscriberInterface {
   ) {
     $this->state = $state;
     $this->currentUser = $current_user;
-    $this->pathValidator = $path_validator;
   }
 
   /**
