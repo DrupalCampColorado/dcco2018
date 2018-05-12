@@ -11,7 +11,6 @@ services:
   dcco_sessions.redirect:
     class: Drupal\dcco_sessions\EventSubscriber\SessionSubmissionRedirectSubscriber
     arguments:
-      - '@config.factory'
       - '@state'
       - '@current_user'
       - '@path.matcher'

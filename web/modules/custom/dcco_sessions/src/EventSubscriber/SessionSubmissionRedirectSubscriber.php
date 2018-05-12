@@ -25,13 +25,6 @@ use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 class SessionSubmissionRedirectSubscriber implements EventSubscriberInterface {
 
   /**
-   * The configuration object factory.
-   *
-   * @var \Drupal\Core\Config\ConfigFactory
-   */
-  protected $configFactory;
-
-  /**
    * The state system.
    *
    * @var \Drupal\Core\State\StateInterface
@@ -74,17 +67,8 @@ class SessionSubmissionRedirectSubscriber implements EventSubscriberInterface {
   protected $pathValidator;
 
   /**
-   * Paths textarea line break.
-   *
-   * @var string
-   */
-  protected $pathsLineBreak = "\n";
-
-  /**
    * Constructor of a new SessionSubmissionRedirectSubscriber.
    *
-   * @param \Drupal\Core\Config\ConfigFactory $config_factory
-   *   The configuration object factory.
    * @param \Drupal\Core\State\StateInterface $state
    *   The state system.
    * @param \Drupal\Core\Session\AccountProxy $current_user
@@ -99,7 +83,6 @@ class SessionSubmissionRedirectSubscriber implements EventSubscriberInterface {
    *   The path validator service.
    */
   public function __construct(
-    ConfigFactory $config_factory,
     StateInterface $state,
     AccountProxy $current_user,
     PathMatcher $path_matcher,
@@ -107,7 +90,6 @@ class SessionSubmissionRedirectSubscriber implements EventSubscriberInterface {
     ModuleHandlerInterface $module_handler,
     PathValidatorInterface $path_validator
   ) {
-    $this->configFactory = $config_factory;
     $this->state = $state;
     $this->currentUser = $current_user;
     $this->pathMatcher = $path_matcher;
