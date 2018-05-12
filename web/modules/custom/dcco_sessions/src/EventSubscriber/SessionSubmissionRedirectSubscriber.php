@@ -41,8 +41,8 @@ class SessionSubmissionRedirectSubscriber implements EventSubscriberInterface {
    *   The instantiated account.
    */
   public function __construct(
-    AccountProxy $current_user,
-    StateInterface $state
+    StateInterface $state,
+    AccountProxy $current_user
   ) {
     $this->state = $state;
     $this->currentUser = $current_user;
