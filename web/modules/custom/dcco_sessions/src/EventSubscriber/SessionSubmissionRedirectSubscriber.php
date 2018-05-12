@@ -2,12 +2,7 @@
 
 namespace Drupal\dcco_sessions\EventSubscriber;
 
-use Drupal\Core\Config\ConfigFactory;
-use Drupal\Core\Path\AliasManagerInterface;
-use Drupal\Core\Path\PathMatcher;
-use Drupal\Core\Path\PathValidatorInterface;
 use Drupal\Core\Session\AccountProxy;
-use Drupal\Core\Extension\ModuleHandlerInterface;
 use Drupal\Core\State\StateInterface;
 use Drupal\Core\Url;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
@@ -39,62 +34,19 @@ class SessionSubmissionRedirectSubscriber implements EventSubscriberInterface {
   protected $currentUser;
 
   /**
-   * The path matcher.
-   *
-   * @var \Drupal\Core\Path\PathMatcher
-   */
-  protected $pathMatcher;
-
-  /**
-   * The path alias manager.
-   *
-   * @var \Drupal\Core\Path\AliasManagerInterface
-   */
-  protected $aliasManager;
-
-  /**
-   * The module handler.
-   *
-   * @var \Drupal\Core\Extension\ModuleHandlerInterface
-   */
-  protected $moduleHandler;
-
-  /**
-   * The path validator service.
-   *
-   * @var \Drupal\Core\Path\PathValidatorInterface
-   */
-  protected $pathValidator;
-
-  /**
    * Constructor of a new SessionSubmissionRedirectSubscriber.
    *
    * @param \Drupal\Core\State\StateInterface $state
    *   The state system.
    * @param \Drupal\Core\Session\AccountProxy $current_user
    *   The instantiated account.
-   * @param \Drupal\Core\Path\PathMatcher $path_matcher
-   *   The path matcher.
-   * @param \Drupal\Core\Path\AliasManagerInterface $alias_manager
-   *   The path alias manager.
-   * @param \Drupal\Core\Extension\ModuleHandlerInterface $module_handler
-   *   The module handler.
-   * @param \Drupal\Core\Path\PathValidatorInterface $path_validator
-   *   The path validator service.
    */
   public function __construct(
     StateInterface $state,
-    AccountProxy $current_user,
-    PathMatcher $path_matcher,
-    AliasManagerInterface $alias_manager,
-    ModuleHandlerInterface $module_handler,
-    PathValidatorInterface $path_validator
+    AccountProxy $current_user
   ) {
     $this->state = $state;
     $this->currentUser = $current_user;
-    $this->pathMatcher = $path_matcher;
-    $this->aliasManager = $alias_manager;
-    $this->moduleHandler = $module_handler;
     $this->pathValidator = $path_validator;
   }
 
