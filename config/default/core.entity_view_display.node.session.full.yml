@@ -1,8 +1,9 @@
-uuid: e13f4ef2-9d74-47ca-a34f-08c5e1a7a1fc
+uuid: 0495b279-b283-4a5f-8255-273cf9a3f039
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.full
     - field.field.node.session.body
     - field.field.node.session.field_session_duration
     - field.field.node.session.field_session_level
@@ -10,38 +11,30 @@ dependencies:
     - field.field.node.session.field_session_track
     - node.type.session
   module:
-    - options
     - text
     - user
-id: node.session.default
+id: node.session.full
 targetEntityType: node
 bundle: session
-mode: default
+mode: full
 content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 0
     settings: {  }
     third_party_settings: {  }
-    region: content
-  field_session_duration:
-    weight: 105
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
     region: content
   field_session_level:
-    weight: 104
+    weight: 3
     label: above
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   field_session_speakers:
-    weight: 102
+    weight: 1
     label: above
     settings:
       link: true
@@ -49,16 +42,13 @@ content:
     type: entity_reference_label
     region: content
   field_session_track:
-    weight: 103
+    weight: 2
     label: above
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  links:
-    weight: 100
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_session_duration: true
+  links: true
