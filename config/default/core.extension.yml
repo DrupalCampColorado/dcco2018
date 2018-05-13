@@ -3,6 +3,7 @@ module:
   admin_toolbar: 0
   admin_toolbar_tools: 0
   adminimal_admin_toolbar: 0
+  anonymous_login: 0
   automated_cron: 0
   backup_migrate: 0
   block: 0
@@ -32,7 +33,6 @@ module:
   datetime_range: 0
   dblog: 0
   dcco_cart: 0
-  dcco_sessions: 0
   dcco_sponsors: 0
   draggableviews: 0
   dynamic_page_cache: 0
