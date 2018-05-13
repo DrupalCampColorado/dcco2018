@@ -40,10 +40,7 @@ class SessionSubmissionRedirectSubscriber implements EventSubscriberInterface {
    * @param \Drupal\Core\Session\AccountProxy $current_user
    *   The instantiated account.
    */
-  public function __construct(
-    StateInterface $state,
-    AccountProxy $current_user
-  ) {
+  public function __construct(StateInterface $state, AccountProxy $current_user) {
     $this->state = $state;
     $this->currentUser = $current_user;
   }
