@@ -2,6 +2,7 @@
 
 namespace Drupal\dcco_sessions\EventSubscriber;
 
+use Drupal\Core\Url;
 use Drupal\Core\Session\AccountProxy;
 use Drupal\Core\State\StateInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
@@ -79,7 +80,11 @@ class SessionSubmissionRedirectSubscriber implements EventSubscriberInterface {
       $current_path == '/node/add/session' &&
       $this->currentUser->isAnonymous()
     ) {
-      drupal_set_message('Please register before submitting your session.');
+      $login_route = Url::fromRoute('user.login');
+      drupal_set_message('Please register for the camp below or <a href="@login_path">login</a> to submit your session.', [
+        '@login_path' => '/' . $login_route->getInternalPath(),
+      ]);
+
       $response = new RedirectResponse('/register', 301);
       $event->setResponse($response);
       $event->stopPropagation();
