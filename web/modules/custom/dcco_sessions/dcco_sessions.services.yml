@@ -1,13 +1,4 @@
 services:
-  dcco_sessions.event_subscriber:
-    class: Drupal\dcco_sessions\EventSubscriber\SessionSubmissionRedirectSubscriber
-    arguments:
-      - '@current_user'
-      - '@current_route_match'
-    tags:
-      - { name: event_subscriber }
-
-services:
   dcco_sessions.redirect:
     class: Drupal\dcco_sessions\EventSubscriber\SessionSubmissionRedirectSubscriber
     arguments: ['@state', '@current_user']
