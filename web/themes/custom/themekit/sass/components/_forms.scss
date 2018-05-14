@@ -208,6 +208,11 @@ form .stripe-form {
     }
   }
 
+  input[type="submit"] {
+    @include btn(gray);
+    text-transform: uppercase;
+  }
+
   .form-item {
     margin-top: 0;
   }
