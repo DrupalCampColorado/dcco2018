@@ -81,9 +81,9 @@ class SessionSubmissionRedirectSubscriber implements EventSubscriberInterface {
       $this->currentUser->isAnonymous()
     ) {
       $login_route = Url::fromRoute('user.login');
-      drupal_set_message('Please register for the camp below or <a href="@login_path">login</a> to submit your session.', [
+      drupal_set_message(t('Please register for the camp below or <a href="@login_path">login</a> to submit your session.', [
         '@login_path' => '/' . $login_route->getInternalPath(),
-      ]);
+      ]));
 
       $response = new RedirectResponse('/register', 301);
       $event->setResponse($response);
