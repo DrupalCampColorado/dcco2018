@@ -99,7 +99,7 @@ ul.tabs.primary {
   border-color: lighten($statusokbg, 50%);
 
   a {
-    color: lighten($statusokbg, 50%);
+    color: darken($statusokbg, 5%);
   }
 }
 

@@ -197,7 +197,7 @@ form .stripe-form {
 //*********************************************
 // User form
 //*********************************************
-
+[data-drupal-selector="node-session-form"],
 [data-drupal-selector="user-form"] {
   @include content-width(780px);
   @include top-bottom(padding, 60px);
@@ -206,6 +206,11 @@ form .stripe-form {
     @include selectors(active) {
       border: 0 none;
     }
+  }
+
+  input[type="submit"] {
+    @include btn(gray);
+    text-transform: uppercase;
   }
 
   .form-item {

@@ -1,0 +1,6 @@
+services:
+  dcco_sessions.redirect:
+    class: Drupal\dcco_sessions\EventSubscriber\SessionSubmissionRedirectSubscriber
+    arguments: ['@state', '@current_user']
+    tags:
+      - { name: event_subscriber }

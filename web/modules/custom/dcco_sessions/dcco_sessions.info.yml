@@ -1,0 +1,4 @@
+name: DCCO Sessions
+description: Custom overrides for camp sessions.
+core: 8.x
+type: module

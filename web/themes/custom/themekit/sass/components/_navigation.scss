@@ -71,7 +71,7 @@
     }
     a {
       color: transparent;
-      font-size: rem-calc(15);
+      font-size: rem-calc(13);
       line-height: rem-calc(24);
       position: relative;
       transition: .3s ease-out transform, .4s ease color;
@@ -110,6 +110,15 @@
           &:after {
             display: none;
           }
+        }
+      }
+
+      &[href="/submit-session"] {
+        color: $dark-orange;
+        font-weight: bold;
+
+        &:after {
+          background: $dark-orange;
         }
       }
     }
