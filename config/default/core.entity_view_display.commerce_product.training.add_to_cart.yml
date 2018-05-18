@@ -1,0 +1,36 @@
+uuid: 78ef065e-73c9-4b54-834c-b51e9b3d1f53
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.training
+    - core.entity_view_mode.commerce_product.add_to_cart
+    - field.field.commerce_product.training.body
+    - field.field.commerce_product.training.field_date_time
+    - field.field.commerce_product.training.field_trainers
+    - field.field.commerce_product.training.stores
+    - field.field.commerce_product.training.variations
+  module:
+    - commerce_product
+id: commerce_product.training.add_to_cart
+targetEntityType: commerce_product
+bundle: training
+mode: add_to_cart
+content:
+  variations:
+    type: commerce_add_to_cart
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      combine: true
+      skip_cart: false
+    third_party_settings: {  }
+hidden:
+  body: true
+  created: true
+  field_date_time: true
+  field_trainers: true
+  stores: true
+  title: true
+  uid: true

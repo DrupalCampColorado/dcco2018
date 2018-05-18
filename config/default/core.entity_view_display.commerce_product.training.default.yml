@@ -10,7 +10,6 @@ dependencies:
     - field.field.commerce_product.training.stores
     - field.field.commerce_product.training.variations
   module:
-    - commerce_product
     - datetime_range
     - text
 id: commerce_product.training.default
@@ -26,7 +25,7 @@ content:
     third_party_settings: {  }
     region: content
   field_date_time:
-    weight: 3
+    weight: 2
     label: above
     settings:
       separator: '-'
@@ -36,7 +35,7 @@ content:
     type: daterange_default
     region: content
   field_trainers:
-    weight: 4
+    weight: 3
     label: above
     settings:
       view_mode: teaser
@@ -53,13 +52,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
   variations:
-    type: commerce_add_to_cart
-    weight: 2
+    type: entity_reference_entity_view
+    weight: 4
     region: content
     label: hidden
     settings:
-      combine: true
-      skip_cart: false
+      view_mode: summary
+      link: false
     third_party_settings: {  }
 hidden:
   created: true
