@@ -1,0 +1,67 @@
+uuid: f0abd27c-dcea-4c28-92d0-6cb668d03075
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.training
+    - field.field.commerce_product.training.body
+    - field.field.commerce_product.training.field_date_time
+    - field.field.commerce_product.training.field_trainers
+    - field.field.commerce_product.training.stores
+    - field.field.commerce_product.training.variations
+  module:
+    - commerce_product
+    - datetime_range
+    - text
+id: commerce_product.training.default
+targetEntityType: commerce_product
+bundle: training
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_date_time:
+    weight: 3
+    label: above
+    settings:
+      separator: '-'
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_trainers:
+    weight: 4
+    label: above
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  variations:
+    type: commerce_add_to_cart
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      combine: true
+      skip_cart: false
+    third_party_settings: {  }
+hidden:
+  created: true
+  stores: true
+  uid: true

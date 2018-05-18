@@ -1,0 +1,11 @@
+uuid: 5c2c3f5f-7053-47bb-9827-9aa9b47f474d
+langcode: en
+status: true
+dependencies: {  }
+id: training
+label: Training
+description: ''
+variationType: training
+injectVariationFields: true
+traits: {  }
+locked: false

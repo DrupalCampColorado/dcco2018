@@ -14,24 +14,16 @@ dependencies:
     - field.field.user.user.field_profile_social_links
   module:
     - image
-    - link
+    - linked_field
     - name
-    - text
     - user
 id: user.user.teaser
 targetEntityType: user
 bundle: user
 mode: teaser
 content:
-  field_profile_bio:
-    weight: 4
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
   field_profile_headshot:
-    weight: 1
+    weight: 0
     label: hidden
     settings:
       image_style: ''
@@ -39,20 +31,11 @@ content:
     third_party_settings: {  }
     type: image
     region: content
-  field_profile_job:
-    weight: 2
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_profile_name:
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       format: default
-      markup: false
       output: default
       multiple: default
       multiple_delimiter: ', '
@@ -60,31 +43,21 @@ content:
       multiple_delimiter_precedes_last: never
       multiple_el_al_min: '3'
       multiple_el_al_first: '1'
-    third_party_settings: {  }
+      markup: false
+    third_party_settings:
+      linked_field:
+        linked: '1'
+        type: custom
+        destination: '[user:url]'
+        advanced: {  }
     type: name_default
-    region: content
-  field_profile_org:
-    weight: 3
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_profile_social_links:
-    weight: 5
-    label: hidden
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
     region: content
 hidden:
   commerce_remote_id: true
+  field_profile_bio: true
+  field_profile_job: true
+  field_profile_org: true
   field_profile_org_website: true
+  field_profile_social_links: true
   member_for: true
   profile_customer: true

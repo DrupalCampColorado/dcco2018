@@ -1,0 +1,20 @@
+uuid: 98afbc3c-b7be-46e2-bd51-cbeec5ef79da
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - user
+id: commerce_product.field_trainers
+field_name: field_trainers
+entity_type: commerce_product
+type: entity_reference
+settings:
+  target_type: user
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

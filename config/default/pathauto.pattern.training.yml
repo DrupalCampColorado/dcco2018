@@ -1,0 +1,23 @@
+uuid: 7bb9ee5d-0ae4-4dcd-8d4b-c46a64c310ec
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - ctools
+id: training
+label: Training
+type: 'canonical_entities:commerce_product'
+pattern: 'trainings/[commerce_product:title]'
+selection_criteria:
+  12603fc3-103f-40c7-a6ab-09a527d3ccfd:
+    id: 'entity_bundle:commerce_product'
+    bundles:
+      training: training
+    negate: false
+    context_mapping:
+      commerce_product: commerce_product
+    uuid: 12603fc3-103f-40c7-a6ab-09a527d3ccfd
+selection_logic: and
+weight: -5
+relationships: {  }
