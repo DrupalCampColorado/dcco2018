@@ -1,0 +1,50 @@
+.block-views-blocktrainings-block-1 {
+  padding: 3rem 0;
+
+  .view-id-trainings .view-content {
+    .views-row {
+      padding: 1rem;
+    }
+
+    .field--name-title {
+      color: $green;
+      font-size: 18px;
+      line-height: 1.2;
+      font-family: $font-arvo;
+      margin: 0 0 10px 0;
+      text-transform: uppercase;
+      font-weight: normal;
+    }
+
+    .field--name-variations {
+      a {
+        @include btn(dark-orange);
+        margin-top: 15px;
+      }
+    }
+
+    @include breakpoint(medium) {
+      align-items: flex-start;
+      display: flex;
+      flex-flow: wrap;
+      justify-content: center;
+
+      .views-row {
+        max-width: 33.333%;
+        padding: 0 1.5rem;
+        width: 50%;
+      }
+    }
+
+    @include breakpoint(xlarge) {
+      flex-flow: nowrap;
+      justify-content: space-evenly;
+      max-width: none;
+      width: 100%;
+
+      .views-row {
+        flex: 1;
+      }
+    }
+  }
+}
