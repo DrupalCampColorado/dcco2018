@@ -6,6 +6,7 @@ dependencies:
     - commerce_product.commerce_product_type.training
     - field.field.commerce_product.training.body
     - field.field.commerce_product.training.field_date_time
+    - field.field.commerce_product.training.field_location
     - field.field.commerce_product.training.field_trainers
     - field.field.commerce_product.training.stores
     - field.field.commerce_product.training.variations
@@ -40,6 +41,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: daterange_default
+    region: content
+  field_location:
+    weight: 93
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_trainers:
     weight: 92
