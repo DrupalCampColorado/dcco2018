@@ -245,6 +245,19 @@ function themekit_preprocess_commerce_checkout_completion_message(&$variables) {
   // $variables['order_price'] = $order->getTotalPrice();
 }
 
+
+/**
+ * Implements template_preprocess_commerce_product().
+ */
+function themekit_preprocess_commerce_product(&$variables) {
+  $product = $variables['elements']['#commerce_product'];
+  $start_time = strtotime($product->get('field_date_time')->first()->getValue()['value']);
+  $end_time = strtotime($product->get('field_date_time')->first()->getValue()['end_value']);
+  $variables['date'] = date('n/d/y', $start_time);
+  $variables['time'] = date('g:iA', $start_time) . ' - ' . date('g:iA', $end_time);
+}
+
+
 //*********************************************
 // 2. Theme suggestions
 //*********************************************

@@ -6,7 +6,8 @@
 .node--view-mode-full {
   &.node--type-blog,
   &.node--type-sponsor,
-  &.node--type-session {
+  &.node--type-session,
+  &.node--type-training {
     .node__content {
       position: relative;
       max-width: $global-width;
@@ -59,7 +60,13 @@
     }
   }
 
-  &.node--type-session {
+  &.node--type-session,
+  &.node--type-training {
+
+    .button {
+      @include btn(dark-orange);
+    }
+
     .sidebar {
       .field:not(:last-child) {
         margin-bottom: 1rem;
@@ -71,10 +78,18 @@
         text-transform: uppercase;
         color: $dark-orange;
       }
+
+      .date-time {
+        margin-bottom: 1rem;
+      }
+
+      article.profile {
+        padding: 0;
+      }
+
     }
   }
 }
-
 
 article.profile {
   @include content-width(780px);
