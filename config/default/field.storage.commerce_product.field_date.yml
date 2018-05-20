@@ -1,17 +1,18 @@
-uuid: 254fe98a-a475-4f95-826b-c407c4d08bf4
+uuid: d61e4e12-7e01-42dd-b952-823e76ce33ee
 langcode: en
 status: true
 dependencies:
   module:
     - commerce_product
-    - datetime_range
-id: commerce_product.field_date_time
-field_name: field_date_time
+id: commerce_product.field_date
+field_name: field_date
 entity_type: commerce_product
-type: daterange
+type: string
 settings:
-  datetime_type: datetime
-module: datetime_range
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
 locked: false
 cardinality: 1
 translatable: true
