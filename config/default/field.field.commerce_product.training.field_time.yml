@@ -1,21 +1,19 @@
-uuid: 3e763f50-69ae-47af-b061-84c312155859
+uuid: aaf84b47-7df6-4e61-948d-5a480f480292
 langcode: en
 status: true
 dependencies:
   config:
     - commerce_product.commerce_product_type.training
-    - field.storage.commerce_product.field_date_time
-  module:
-    - datetime_range
-id: commerce_product.training.field_date_time
-field_name: field_date_time
+    - field.storage.commerce_product.field_time
+id: commerce_product.training.field_time
+field_name: field_time
 entity_type: commerce_product
 bundle: training
-label: 'Training Date and Time'
+label: Time
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: daterange
+field_type: string
