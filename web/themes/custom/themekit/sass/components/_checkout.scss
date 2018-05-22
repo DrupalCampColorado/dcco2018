@@ -48,6 +48,19 @@
 }
 
 //*********************************************
+// Cart empty page
+//*********************************************
+
+.cart-empty-page {
+  @include content-width(page);
+  @include top-bottom('margin', 50px);
+  @include top-bottom('padding', 25px);
+  font-size: 1.25rem;
+  color: $black;
+  text-align: center;
+}
+
+//*********************************************
 // Cart full page form
 //*********************************************
 
