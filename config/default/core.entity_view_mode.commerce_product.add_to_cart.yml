@@ -1,0 +1,10 @@
+uuid: fce191e2-0473-453d-9c8a-296a9b3fff59
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.add_to_cart
+label: 'Add to Cart'
+targetEntityType: commerce_product
+cache: true

@@ -6,4 +6,4 @@ $('.mobile-menu').click(function (e) {
   $('.layout-container').toggleClass('fixed');
 });
 
-$('#block-useraccountmenu').clone().addClass('cloned').appendTo('#block-themekit-main-menu');
+$('#block-useraccountmenu, #block-cart').clone().addClass('cloned').appendTo('#block-themekit-main-menu');

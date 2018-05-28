@@ -245,6 +245,7 @@ function themekit_preprocess_commerce_checkout_completion_message(&$variables) {
   // $variables['order_price'] = $order->getTotalPrice();
 }
 
+
 //*********************************************
 // 2. Theme suggestions
 //*********************************************

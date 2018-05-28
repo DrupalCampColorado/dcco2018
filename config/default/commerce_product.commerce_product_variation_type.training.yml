@@ -1,0 +1,10 @@
+uuid: 3c46a21a-062f-4f1e-8af6-da2f895d8860
+langcode: en
+status: true
+dependencies: {  }
+id: training
+label: Training
+orderItemType: default
+generateTitle: false
+traits: {  }
+locked: false

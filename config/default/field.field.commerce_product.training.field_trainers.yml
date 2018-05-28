@@ -1,0 +1,29 @@
+uuid: ea49c004-8ece-4e42-8d12-ffbe32f31ddd
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.training
+    - field.storage.commerce_product.field_trainers
+id: commerce_product.training.field_trainers
+field_name: field_trainers
+entity_type: commerce_product
+bundle: training
+label: Trainer(s)
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: name
+      direction: ASC
+    auto_create: false
+field_type: entity_reference

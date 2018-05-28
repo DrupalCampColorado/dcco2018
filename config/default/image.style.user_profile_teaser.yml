@@ -1,0 +1,14 @@
+uuid: 71c81774-fc40-4163-9481-7bc4691dd4a9
+langcode: en
+status: true
+dependencies: {  }
+name: user_profile_teaser
+label: 'User Profile Teaser (200x200)'
+effects:
+  dd509e01-9739-4b29-aaa9-ede066c87ad7:
+    uuid: dd509e01-9739-4b29-aaa9-ede066c87ad7
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 200
+      height: 200

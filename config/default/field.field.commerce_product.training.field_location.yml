@@ -1,0 +1,19 @@
+uuid: 0086cec8-5f90-46b5-b346-92bfcc534e96
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.training
+    - field.storage.commerce_product.field_location
+id: commerce_product.training.field_location
+field_name: field_location
+entity_type: commerce_product
+bundle: training
+label: Location
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

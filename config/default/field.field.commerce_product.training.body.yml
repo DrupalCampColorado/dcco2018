@@ -1,0 +1,22 @@
+uuid: cc23f0e0-19d0-4602-822a-6ff62c57795e
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.training
+    - field.storage.commerce_product.body
+  module:
+    - text
+id: commerce_product.training.body
+field_name: body
+entity_type: commerce_product
+bundle: training
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: null
+settings:
+  display_summary: true
+field_type: text_with_summary

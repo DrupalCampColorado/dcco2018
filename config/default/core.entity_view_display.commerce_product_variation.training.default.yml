@@ -1,0 +1,16 @@
+uuid: bfb7ba89-d862-4033-a63f-734b9d29ab0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.training
+id: commerce_product_variation.training.default
+targetEntityType: commerce_product_variation
+bundle: training
+mode: default
+content: {  }
+hidden:
+  price: true
+  product_id: true
+  sku: true
+  title: true

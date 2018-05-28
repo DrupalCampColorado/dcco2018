@@ -1,0 +1,54 @@
+{#
+/**
+ * @file
+ *
+ * Default product template.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper.
+ * - product: The rendered product fields.
+ *   Use 'product' to print them all, or print a subset such as
+ *   'product.title'. Use the following code to exclude the
+ *   printing of a given field:
+ *   @code
+ *   {{ product|without('title') }}
+ *   @endcode
+ * - product_entity: The product entity.
+ * - product_url: The product URL.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{%
+  set classes = [
+  'node--type-training',
+  'node--view-mode-full',
+]
+%}
+
+{% set rendered_product = product|without('variation_attributes','field_date','field_time','field_trainers','field_location') %}
+
+<div id="block-themekit-page-title">
+  <h1>{{ product.title }}</h1>
+</div>
+
+<article{{ attributes.addClass(classes) }}>
+
+  <div{{ content_attributes.addClass('node__content') }}>
+    <div class="content">
+      {{ rendered_product }}
+    </div>
+
+    <aside class="sidebar">
+      <div class="date-time">
+        <div class="field__label">Date & Time</div>
+        <div class="date">{{ product.field_date }}</div>
+        <div class="time">{{ product.field_time }}</div>
+      </div>
+      {{ product.field_location }}
+      {{ product.field_trainers }}
+    </aside>
+  </div>
+
+</article>
