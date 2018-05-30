@@ -51,6 +51,7 @@ content:
           text: 'Learn More'
 hidden:
   created: true
+  field_date: true
   field_location: true
   field_time: true
   field_trainers: true

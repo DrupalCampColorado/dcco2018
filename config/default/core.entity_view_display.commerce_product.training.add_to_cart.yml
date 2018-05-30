@@ -30,6 +30,7 @@ content:
 hidden:
   body: true
   created: true
+  field_date: true
   field_location: true
   field_time: true
   field_trainers: true
