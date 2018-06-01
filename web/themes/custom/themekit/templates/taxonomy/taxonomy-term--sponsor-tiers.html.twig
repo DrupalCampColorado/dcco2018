@@ -30,12 +30,14 @@
     'sponsor-tier',
   ]
 %}
-<div{{ attributes.setAttribute('id', 'taxonomy-term-' ~ term.id).addClass(classes) }}>
-  {{ title_prefix }}
-    <h2 class="sponsor-tier__title">{{ name }}</h2>
-  {{ title_suffix }}
+{% if content|render|striptags|trim %}
+  <div{{ attributes.setAttribute('id', 'taxonomy-term-' ~ term.id).addClass(classes) }}>
+    {{ title_prefix }}
+      <h2 class="sponsor-tier__title">{{ name }}</h2>
+    {{ title_suffix }}
 
-  <div class="content">
-    {{ content }}
+    <div class="content">
+      {{ content }}
+    </div>
   </div>
-</div>
+{% endif %}
