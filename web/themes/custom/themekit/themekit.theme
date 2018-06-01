@@ -153,7 +153,12 @@ function themekit_preprocess_field(&$variables) {
         return $item['target_id'];
       }, $node->get('field_sponsor_tier')->getValue());
 
-      if (in_array('3', $sponsor_ids)) {
+      // Array of sponsor IDs who's logos link to their website and not a bio
+      // page.
+      $bypass_page_sponsors = ['3', '22'];
+      $overriden_sponsors = array_intersect($bypass_page_sponsors, $sponsor_ids);
+
+      if (!empty($overriden_sponsors)) {
         $sponsor_link = $node->get('field_sponsor_url')->getValue();
 
         if (!empty($sponsor_link)) {
