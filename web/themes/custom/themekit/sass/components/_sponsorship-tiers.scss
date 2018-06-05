@@ -25,6 +25,7 @@
   .view-sponsor-listings.view-display-id-embed_1 .view-content {
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin: 0 auto;
     padding: 2rem 0 3rem;
@@ -32,6 +33,7 @@
 
     .views-row {
       .node--type-sponsor.node--view-mode-teaser {
+        padding: 1rem;
         text-align: center;
       }
     }
@@ -44,7 +46,7 @@
     }
     img {
       max-height: 90px;
-      max-width: 200px;
+      max-width: 100%;
       width: auto;
       height: auto;
     }
