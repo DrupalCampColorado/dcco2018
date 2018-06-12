@@ -27,7 +27,7 @@
 ]
 %}
 
-{% set rendered_product = product|without('variation_attributes','field_date','field_time','field_trainers','field_location') %}
+{% set rendered_product = product|without('variation_attributes','field_date','field_time','field_trainers','field_location','variations') %}
 
 <div id="block-themekit-page-title">
   <h1>{{ product.title }}</h1>
@@ -45,9 +45,11 @@
         <div class="field__label">Date & Time</div>
         <div class="date">{{ product.field_date }}</div>
         <div class="time">{{ product.field_time }}</div>
+
       </div>
       {{ product.field_location }}
       {{ product.field_trainers }}
+      {{ product.variations }}
     </aside>
   </div>
 
