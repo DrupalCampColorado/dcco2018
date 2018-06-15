@@ -71,7 +71,7 @@
       <div class="field__items">
     {% endif %}
     {% for item in items %}
-      <span {{ attributes.addClass(classes, 'field__item') }}>{{ (loop.last) ? ' & ' }}{{ item.content }}{{ ((loop.index + 1) < loop.length) ? ', ' }}</span>
+      <span {{ attributes.addClass(classes, 'field__item') }}>{{ (loop.last and not loop.first) ? ' & ' }}{{ item.content }}{{ ((loop.index + 1) < loop.length) ? ', ' }}</span>
     {% endfor %}
     {% if multiple %}
       </div>
