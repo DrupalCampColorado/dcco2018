@@ -13,10 +13,14 @@ dependencies:
     - taxonomy.vocabulary.session_tracks
     - user.role.administrator
   module:
+    - csv_serialization
     - node
     - options
+    - rest
+    - serialization
     - taxonomy
     - user
+    - views_data_export
 id: session_submission
 label: 'Session Submission'
 module: views
@@ -698,6 +702,61 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.roles
+      tags:
+        - 'config:field.storage.node.field_session_duration'
+        - 'config:field.storage.node.field_session_level'
+        - 'config:field.storage.node.field_session_speakers'
+        - 'config:field.storage.node.field_session_track'
+  data_export_1:
+    display_plugin: data_export
+    id: data_export_1
+    display_title: 'Data export'
+    position: 2
+    display_options:
+      display_extenders: {  }
+      style:
+        type: data_export
+        options:
+          formats:
+            csv: csv
+          csv_settings:
+            delimiter: ','
+            enclosure: '"'
+            escape_char: \
+            strip_tags: true
+            trim: true
+            encoding: utf8
+          xls_settings:
+            xls_format: Excel2007
+            metadata:
+              creator: ''
+              last_modified_by: ''
+              title: ''
+              description: ''
+              subject: ''
+              keywords: ''
+              category: ''
+              manager: ''
+              company: ''
+      path: admin/reports/dcco/session-submissions/export
+      filename: dcco_session_submissions.csv
+      displays:
+        page_1: page_1
+        default: '0'
+      pager:
+        type: none
+        options:
+          offset: 0
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - request_format
+        - url
         - user
         - 'user.node_grants:view'
         - user.roles
