@@ -27,6 +27,7 @@ module:
   config: 0
   config_update: 0
   contextual: 0
+  csv_serialization: 0
   ctools: 0
   datetime: 0
   datetime_range: 0
@@ -73,7 +74,9 @@ module:
   quickedit: 0
   redirect: 0
   responsive_image: 0
+  rest: 0
   seckit: 0
+  serialization: 0
   shield: 0
   shortcut: 0
   simple_sitemap: 0
@@ -89,6 +92,7 @@ module:
   update: 0
   user: 0
   video_embed_field: 0
+  views_data_export: 0
   views_ui: 0
   menu_link_content: 1
   pathauto: 1
