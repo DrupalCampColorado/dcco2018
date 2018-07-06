@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @file
+ * Main module file.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function dcco_sessions_module_implements_alter(&$implementations, $hook) {
+  // If this module exists for form alters, move it's execution to the end of
+  // the call stack.
+  if ($hook == 'form_alter' && isset($implementations['dcco_sessions'])) {
+    $group = $implementations['dcco_sessions'];
+    unset($implementations['dcco_sessions']);
+    $implementations['dcco_sessions'] = $group;
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function dcco_sessions_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'node_session_edit_form' || $form_id == 'node_session_add_form') {
+    // If we have a scheduling group, hide access to those fields except for
+    // admins.
+    if (isset($form['#fieldgroups']['group_session_schedule'])) {
+      $schedule_fields = $form['#fieldgroups']['group_session_schedule'];
+      $current_user = \Drupal::currentUser();
+      $user_roles = $current_user->getRoles();
+
+      if (!in_array('administrator', $user_roles)) {
+        foreach ($schedule_fields->children as $field_name) {
+          $form[$field_name]['#access'] = FALSE;
+        }
+      }
+    }
+  }
+}
