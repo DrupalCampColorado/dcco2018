@@ -1,0 +1,29 @@
+uuid: cfb908ab-fb47-4766-b655-ba7e5509cc37
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_session_room
+    - node.type.session
+    - taxonomy.vocabulary.venue_room
+id: node.session.field_session_room
+field_name: field_session_room
+entity_type: node
+bundle: session
+label: Room
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      venue_room: venue_room
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

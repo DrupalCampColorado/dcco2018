@@ -1,0 +1,9 @@
+uuid: 1b0fa03f-e6a4-445b-bc22-c18a7d581054
+langcode: en
+status: true
+dependencies: {  }
+name: 'Venue Room'
+vid: venue_room
+description: ''
+hierarchy: 0
+weight: 0

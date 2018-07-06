@@ -6,10 +6,13 @@ dependencies:
     - field.field.node.session.body
     - field.field.node.session.field_session_duration
     - field.field.node.session.field_session_level
+    - field.field.node.session.field_session_room
+    - field.field.node.session.field_session_schedule
     - field.field.node.session.field_session_speakers
     - field.field.node.session.field_session_track
     - node.type.session
   module:
+    - datetime_range
     - field_group
     - text
 third_party_settings:
@@ -17,6 +20,7 @@ third_party_settings:
     group_session_tab_group:
       children:
         - group_session_information
+        - group_session_schedule
       parent_name: ''
       weight: 0
       format_type: tabs
@@ -43,6 +47,20 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Session Information'
+    group_session_schedule:
+      children:
+        - field_session_schedule
+        - field_session_room
+      parent_name: group_session_tab_group
+      weight: 8
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Session Schedule'
 id: node.session.default
 targetEntityType: node
 bundle: session
@@ -68,6 +86,18 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_session_room:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_session_schedule:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: daterange_default
     region: content
   field_session_speakers:
     weight: 2
