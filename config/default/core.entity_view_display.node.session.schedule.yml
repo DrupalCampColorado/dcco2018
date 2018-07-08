@@ -1,0 +1,58 @@
+uuid: f6f2fd65-8923-43ae-882f-cee10a04bde5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.schedule
+    - field.field.node.session.body
+    - field.field.node.session.field_session_duration
+    - field.field.node.session.field_session_level
+    - field.field.node.session.field_session_room
+    - field.field.node.session.field_session_schedule
+    - field.field.node.session.field_session_speakers
+    - field.field.node.session.field_session_track
+    - node.type.session
+  module:
+    - user
+id: node.session.schedule
+targetEntityType: node
+bundle: session
+mode: schedule
+content:
+  field_session_level:
+    weight: 3
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_session_room:
+    weight: 1
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_session_speakers:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_session_track:
+    weight: 2
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  body: true
+  field_session_duration: true
+  field_session_schedule: true
+  links: true

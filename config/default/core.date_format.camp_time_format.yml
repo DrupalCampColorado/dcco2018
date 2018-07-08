@@ -1,0 +1,8 @@
+uuid: 971a7cd4-08f3-4dbd-919e-a1ed34154ab8
+langcode: en
+status: true
+dependencies: {  }
+id: camp_time_format
+label: 'Camp Time Format'
+locked: false
+pattern: 'g:ia'

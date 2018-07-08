@@ -1,0 +1,8 @@
+uuid: 9b3f7f7d-a591-4593-b1d7-65740de2f9eb
+langcode: en
+status: true
+dependencies: {  }
+id: camp_date_formats
+label: 'Camp Date Formats'
+locked: false
+pattern: 'l, F j'

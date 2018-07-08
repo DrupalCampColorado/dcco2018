@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.schedule
     - field.storage.node.field_session_schedule
     - node.type.session
   module:
@@ -62,11 +62,11 @@ display:
             -
               field: field_session_schedule_1
               rendered: true
-              rendered_strip: false
+              rendered_strip: true
             -
               field: field_session_schedule
               rendered: true
-              rendered_strip: false
+              rendered_strip: true
           row_class: ''
           default_row_class: true
       row:
@@ -128,8 +128,8 @@ display:
           click_sort_column: value
           type: daterange_default
           settings:
-            timezone_override: ''
-            format_type: html_date
+            timezone_override: America/Denver
+            format_type: camp_date_formats
             separator: '-'
           group_column: value
           group_columns: {  }
@@ -194,7 +194,7 @@ display:
           type: daterange_default
           settings:
             timezone_override: America/Denver
-            format_type: html_time
+            format_type: camp_time_format
             separator: '-'
           group_column: value
           group_columns: {  }
@@ -255,7 +255,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          view_mode: teaser
+          view_mode: schedule
           entity_type: node
           plugin_id: rendered_entity
       filters:
