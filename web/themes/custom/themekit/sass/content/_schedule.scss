@@ -1,0 +1,21 @@
+.view-session-schedule {
+  .view-grouping-header {
+    border-bottom: 2px solid $dark-orange;
+  }
+
+  .view-grouping-content {
+    display: flex;
+    flex-wrap: wrap;
+
+    > h3 {
+      width: 25%;
+    }
+
+    > ul {
+      flex: 75%;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
