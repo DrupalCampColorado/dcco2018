@@ -1,21 +1,26 @@
-.view-session-schedule {
-  .view-grouping-header {
-    border-bottom: 2px solid $dark-orange;
-  }
+.node--view-mode-schedule {
 
-  .view-grouping-content {
-    display: flex;
-    flex-wrap: wrap;
-
-    > h3 {
-      width: 25%;
+  &.node--type-session {
+    
+    .field--name-body {
+      margin-bottom: 15px;
+      
+      p {
+        display: inline;
+      }
+      
+      .more-link {
+        display: inline;
+        margin-left: 5px;
+      }
     }
+    
+    .details {
+      display: flex;
 
-    > ul {
-      flex: 75%;
-      list-style: none;
-      margin: 0;
-      padding: 0;
+      > div {
+        margin-right: 50px;
+      }
     }
   }
 }

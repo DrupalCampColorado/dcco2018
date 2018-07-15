@@ -1,0 +1,64 @@
+.view-session-schedule {
+  padding: 25px;
+
+  .schedule-menu {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    list-style-type: none;
+
+    li {
+      margin: 5px;
+
+      a {
+        @include btn(dark-orange, large);
+
+        @include selectors(active) {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .view-grouping-header {
+    border-bottom: 2px solid $dark-orange;
+    margin-bottom: 15px;
+  }
+
+  .view-grouping-content {
+    display: flex;
+    flex-wrap: wrap;
+
+    .views-field {
+      margin-bottom: 35px;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    h3 {
+      padding: 10px;
+      font-size: 1rem;
+      background: $dark-orange;
+      color: $white;
+
+      @include breakpoint(medium) {
+        width: 24%;
+        padding: 0;
+        margin-top: 5px;
+        margin-right: 1%;
+        font-size: 1.25rem;
+        color: $black;
+        background: transparent;
+      }
+    }
+
+    > ul {
+      flex: 75%;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

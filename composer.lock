@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8b6df0fa95de2ad65bf8a13c6a8e340f",
+    "content-hash": "edd671b272d534d6501ce2504f6457df",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -170,7 +170,7 @@
                 }
             ],
             "description": "Easily create a website for a Drupal camp in a short amount of time.",
-            "time": "2018-01-17T17:32:42+00:00"
+            "time": "2018-01-17 17:32:42"
         },
         {
             "name": "commerceguys/addressing",
@@ -1503,7 +1503,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -1515,7 +1515,6 @@
                     "homepage": "https://www.drupal.org/user/139189"
                 }
             ],
-            "description": "Drupal administration theme with modern minimalist design.",
             "homepage": "https://www.drupal.org/project/adminimal_theme",
             "support": {
                 "source": "http://cgit.drupalcode.org/adminimal_theme"
@@ -1670,7 +1669,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -1769,7 +1768,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/commerce"
             },
-            "time": "2018-03-22T22:47:54+00:00"
+            "time": "2018-03-22 22:47:54"
         },
         {
             "name": "drupal/commerce_order",
@@ -2122,7 +2121,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -2779,10 +2778,6 @@
                     "role": "Maintainer"
                 },
                 {
-                    "name": "joelpittet",
-                    "homepage": "https://www.drupal.org/user/160302"
-                },
-                {
                     "name": "merlinofchaos",
                     "homepage": "https://www.drupal.org/user/26979"
                 },
@@ -2843,7 +2838,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -2976,7 +2971,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -3157,7 +3152,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-alpha4",
-                    "datestamp": "1507897766",
+                    "datestamp": "1507897745",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -3166,7 +3161,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -3386,7 +3381,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -3529,7 +3524,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -4120,6 +4115,75 @@
             }
         },
         {
+            "name": "drupal/smart_trim",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/smart_trim",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/smart_trim-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "5f1c0f15914208e0ad2ec5cce1d6419040596fc0"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1516301286",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Casias (markie)",
+                    "homepage": "https://www.drupal.org/u/markie",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "chrisjlee",
+                    "homepage": "https://www.drupal.org/user/760600"
+                },
+                {
+                    "name": "drywall",
+                    "homepage": "https://www.drupal.org/user/192591"
+                },
+                {
+                    "name": "jsenich",
+                    "homepage": "https://www.drupal.org/user/58871"
+                },
+                {
+                    "name": "markie",
+                    "homepage": "https://www.drupal.org/user/206687"
+                },
+                {
+                    "name": "newsignature",
+                    "homepage": "https://www.drupal.org/user/765518"
+                }
+            ],
+            "description": "Provides a more robust alternative to 'summary or trimmed' textfield format.",
+            "homepage": "https://drupal.org/project/smart_trim",
+            "support": {
+                "source": "https://cgit.drupalcode.org/smart_trim",
+                "issues": "https://drupal.org/project/issues/smart_trim"
+            }
+        },
+        {
             "name": "drupal/state_machine",
             "version": "1.0.0-beta3",
             "source": {
@@ -4247,7 +4311,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -4314,7 +4378,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -4564,7 +4628,7 @@
             ],
             "description": "Drush is a command line shell and scripting interface for Drupal, a veritable Swiss Army knife designed to make life easier for those of us who spend some of our working hours hacking away at the command prompt.",
             "homepage": "http://www.drush.org",
-            "time": "2018-02-04T05:35:59+00:00"
+            "time": "2018-02-04 05:35:59"
         },
         {
             "name": "easyrdf/easyrdf",

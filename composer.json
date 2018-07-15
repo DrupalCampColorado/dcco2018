@@ -46,6 +46,7 @@
         "drupal/seckit": "^1.0@alpha",
         "drupal/shield": "^1.1",
         "drupal/simple_sitemap": "^2.11",
+        "drupal/smart_trim": "^1.0",
         "drupal/token": "^1.1",
         "drupal/twig_field_value": "^1.1",
         "drupal/video_embed_field": "^1.0",
