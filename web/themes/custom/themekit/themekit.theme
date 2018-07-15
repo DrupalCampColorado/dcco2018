@@ -155,7 +155,7 @@ function themekit_preprocess_field(&$variables) {
 
       // Array of sponsor IDs who's logos link to their website and not a bio
       // page.
-      $bypass_page_sponsors = ['3', '22'];
+      $bypass_page_sponsors = ['3', '22', '23', '24'];
       $overriden_sponsors = array_intersect($bypass_page_sponsors, $sponsor_ids);
 
       if (!empty($overriden_sponsors)) {
