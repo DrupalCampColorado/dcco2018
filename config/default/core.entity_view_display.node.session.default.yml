@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.session.body
+    - field.field.node.session.field_session_accepted
     - field.field.node.session.field_session_duration
     - field.field.node.session.field_session_level
     - field.field.node.session.field_session_room
@@ -27,6 +28,16 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_session_accepted:
+    weight: 108
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_session_duration:
     weight: 105
