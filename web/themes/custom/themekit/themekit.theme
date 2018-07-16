@@ -210,6 +210,7 @@ function themekit_preprocess_views_view_grouping(&$variables) {
 
     if (count($dates) > 1 && trim($dates[0]) == trim($dates[1])) {
       $variables['title'] = trim($dates[0]);
+      $variables['title_anchor'] = date('Y-m-d', strtotime(trim($dates[0])));
     }
   }
 }
@@ -334,6 +335,17 @@ function themekit_theme_suggestions_views_view_unformatted_alter(&$suggestions, 
 
   $suggestions[] = "views_view_unformatted__{$view->id()}";
   $suggestions[] = "views_view_unformatted__{$view->id()}__{$display->getPluginId()}";
+}
+
+/**
+ * Implements theme_theme_suggestions_views_view_grouping_alter().
+ */
+function themekit_theme_suggestions_views_view_grouping_alter(&$suggestions, $variables) {
+  $view = $variables['view'];
+  $display = $view->getDisplay();
+
+  $suggestions[] = "views_view_grouping__{$view->id()}";
+  $suggestions[] = "views_view_grouping__{$view->id()}__{$display->getPluginId()}";
 }
 
 /**
