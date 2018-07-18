@@ -4,7 +4,7 @@
   .schedule-menu {
     display: flex;
     justify-content: center;
-    margin-top: 25px;
+    margin: 0 0 50px;
     list-style-type: none;
 
     li {
@@ -16,6 +16,37 @@
         @include selectors(active) {
           text-decoration: none;
         }
+      }
+    }
+  }
+
+  .views-exposed-form {
+    margin: 25px 0;
+
+    .form--inline {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+
+      .form-item {
+        @include top-bottom(margin, 0);
+      }
+
+      .form-actions {
+        margin: 0;
+      }
+
+      select {
+        margin-bottom: 0;
+
+        @include breakpoint(commerce-md) {
+          min-width: 300px;
+        }
+      }
+
+      input[type=submit] {
+        @include btn(dark-orange);
+        min-height: 40px;
       }
     }
   }
@@ -40,7 +71,7 @@
     h3 {
       padding: 10px;
       font-size: 1rem;
-      background: $dark-orange;
+      background: $dark-gray;
       color: $white;
 
       @include breakpoint(medium) {

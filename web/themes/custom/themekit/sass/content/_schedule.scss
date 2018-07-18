@@ -16,10 +16,10 @@
     }
     
     .details {
-      display: flex;
+      @include tk-flex-block-grid(2, '.field');
 
-      > div {
-        margin-right: 50px;
+      @include breakpoint(commerce-md) {
+        @include tk-flex-block-grid(4, '.field');
       }
     }
   }
