@@ -90,7 +90,12 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 ]
 %}
 
-{% set rendered_content = content|without('field_session_speakers')|without('field_session_level')|without('field_session_track') %}
+{% set rendered_content = content|without(
+  'field_session_speakers',
+  'field_session_level',
+  'field_session_track',
+  'field_session_room'
+) %}
 
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
@@ -104,6 +109,7 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
       {{ content.field_session_speakers }}
       {{ content.field_session_track }}
       {{ content.field_session_level }}
+      {{ content.field_session_room }}
     </aside>
   </div>
 

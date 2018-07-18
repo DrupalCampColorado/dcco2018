@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.schedule
     - field.field.node.session.body
+    - field.field.node.session.field_session_accepted
     - field.field.node.session.field_session_duration
     - field.field.node.session.field_session_level
     - field.field.node.session.field_session_room
@@ -30,14 +31,14 @@ content:
       trim_type: words
       trim_suffix: ...
       wrap_class: trimmed
-      more_link: true
       more_text: 'read more'
       more_class: more-link
       summary_handler: full
-      trim_options:
-        text: true
-        trim_zero: false
       wrap_output: false
+      more_link: false
+      trim_options:
+        text: false
+        trim_zero: false
     third_party_settings: {  }
   field_session_level:
     weight: 4
@@ -72,6 +73,7 @@ content:
     type: entity_reference_label
     region: content
 hidden:
+  field_session_accepted: true
   field_session_duration: true
   field_session_schedule: true
   links: true
