@@ -50,29 +50,31 @@
       {{ header }}
     </div>
   {% endif %}
-  {% if exposed %}
-    <div class="view-filters">
-      {{ exposed }}
-    </div>
-  {% endif %}
   {% if attachment_before %}
     <div class="attachment attachment-before">
       {{ attachment_before }}
     </div>
   {% endif %}
 
-  {% if schedule_menu %}
-    <ul class="schedule-menu">
-      {% for stamp,day in schedule_menu %}
-        <li class="schedule-menu__item">
-          <a href="#{{ stamp }}" class="schedule-menu__link">
-            {{ day }}
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-  {% endif %}
+  <div class="filter-container">
+    {% if exposed %}
+      <div class="view-filters">
+        {{ exposed }}
+      </div>
+    {% endif %}
 
+    {% if schedule_menu %}
+      <ul class="schedule-menu">
+        {% for stamp,day in schedule_menu %}
+          <li class="schedule-menu__item">
+            <a href="#{{ stamp }}" class="schedule-menu__link">
+              {{ day }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
 
   {% if rows %}
     <div class="view-content">
