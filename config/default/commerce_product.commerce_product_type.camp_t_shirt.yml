@@ -1,0 +1,11 @@
+uuid: 52f3d668-b3fd-496d-aba0-9e540888bb6b
+langcode: en
+status: true
+dependencies: {  }
+id: camp_t_shirt
+label: 'Camp T-Shirt'
+description: ''
+variationType: t_shirts
+injectVariationFields: true
+traits: {  }
+locked: false

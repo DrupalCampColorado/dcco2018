@@ -1,0 +1,45 @@
+uuid: f2599e30-9e37-4f98-a68b-e9a88147d915
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.camp_t_shirt
+    - field.field.commerce_product.camp_t_shirt.body
+    - field.field.commerce_product.camp_t_shirt.stores
+    - field.field.commerce_product.camp_t_shirt.variations
+  module:
+    - commerce_product
+    - text
+id: commerce_product.camp_t_shirt.default
+targetEntityType: commerce_product
+bundle: camp_t_shirt
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: -4
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  variations:
+    type: commerce_add_to_cart
+    weight: 10
+    label: above
+    settings:
+      combine: true
+      skip_cart: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  stores: true
+  uid: true
