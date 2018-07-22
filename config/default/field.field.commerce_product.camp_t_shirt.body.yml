@@ -1,0 +1,22 @@
+uuid: 03e92f7a-e066-4787-9d17-8c05249a7467
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.camp_t_shirt
+    - field.storage.commerce_product.body
+  module:
+    - text
+id: commerce_product.camp_t_shirt.body
+field_name: body
+entity_type: commerce_product
+bundle: camp_t_shirt
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: null
+settings:
+  display_summary: false
+field_type: text_with_summary
