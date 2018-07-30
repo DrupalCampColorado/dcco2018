@@ -104,3 +104,22 @@
     }
   }
 }
+
+// T-Shirt Admin Product Pages
+.product.t-shirt {
+  @include content-width(page);
+  margin-top: 50px;
+  margin-bottom: 100px;
+
+  .field {
+    margin-bottom: 15px;
+  }
+
+  .field--widget-commerce-product-variation-attributes {
+    max-width: 300px;
+  }
+
+  input[type=submit] {
+    @include btn(dark-orange);
+  }
+}
