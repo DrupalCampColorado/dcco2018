@@ -1,0 +1,32 @@
+docker-compose-yaml: docker-compose.yml
+
+tasks:
+  post-rollout:
+    
+    - run:
+        name: task0
+        command: cd web && drush cim -y
+        service: cli
+    
+    - run:
+        name: task1
+        command: cd web && drush updb --cache-clear=0 -y
+        service: cli
+    
+    - run:
+        name: task2
+        command: cd web && drush cr -y
+        service: cli
+    
+
+environments:
+  prod:
+    routes:
+      - varnish:
+        - "2018.drupalcampcolorado.org" 
+    cronjobs:
+      - name: drush cron
+        schedule: "4 * * * *"
+        command: drush cron
+        service: cli
+

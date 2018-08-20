@@ -1,29 +1,31 @@
 <?php
 /**
  * @file
- * amazee.io Drupal 8 development environment configuration file.
+ * amazee.io Drupal 7 development environment configuration file.
  *
  * This file will only be included on development environments.
- *
  * It contains some defaults that the amazee.io team suggests, please edit them as required.
  */
 
 // Show all error messages on the site
-$config['system.logging']['error_level'] = 'all';
+$conf['error_level'] = 2;
 
-// Aggregate CSS files off
-$config['system.performance']['css']['preprocess'] = 1;
+// Anonymous caching disabled
+$conf['cache'] = 0;
+
+// Block caching disabled
+$conf['block_cache'] = 0;
+
+// Expiration of cached pages to 0
+$conf['page_cache_maximum_age'] = 0;
+
+// Aggregate and compress CSS files off
+$conf['preprocess_css'] = 0;
 
 // Aggregate JavaScript files off
-$config['system.performance']['js']['preprocess'] = 1;
+$conf['preprocess_js'] = 0;
 
-// Sets Mailchimp API key
-$config['mailchimp.settings']['api_key'] = getenv('AMAZEEIO_MAILCHIMP_API_KEY');
-
-// Configure shield for dev environment.
-$config['shield.settings']['user'] = 'dcco';
-$config['shield.settings']['pass'] = '3ditdcco';
-
-// Configure private and temp directories
-$settings['file_private_path'] = "sites/default/files/private";
-$config['system.file']['path']['temporary'] = "sites/default/files/private/tmp";
+// Stage file proxy URL from production URL
+if(getenv('LAGOON_PRODUCTION_URL')){
+  $conf['stage_file_proxy_origin'] = getenv('LAGOON_PRODUCTION_URL');
+}
