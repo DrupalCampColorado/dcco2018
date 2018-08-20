@@ -2,5 +2,5 @@ ARG CLI_IMAGE
 FROM ${CLI_IMAGE} as cli
 
 FROM amazeeio/nginx-drupal
-
+ENV WEBROOT=web
 COPY --from=cli /app /app

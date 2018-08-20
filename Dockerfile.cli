@@ -1,3 +1,5 @@
 FROM amazeeio/php:7.1-cli-drupal
 
+ENV WEBROOT=web
+
 COPY . /app
