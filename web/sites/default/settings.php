@@ -76,6 +76,7 @@ if (getenv('TMP')) {
 ### Hash Salt
 if (getenv('LAGOON')){
   $drupal_hash_salt = hash('sha256', getenv('LAGOON_PROJECT'));
+  $settings['hash_salt'] = $drupal_hash_salt;
 }
 
 // Loading settings for all environment types.
