@@ -29,3 +29,12 @@ $conf['preprocess_js'] = 1;
 // Disabling stage_file_proxy on production, with that the module can be enabled even on production
 $conf['stage_file_proxy_origin'] = false;
 $conf['stage_file_proxy_origin_dir'] = false;
+
+
+// Enable Tag Manager
+ $config['e3_google_tag.settings']['gtm_code'] = 'GTM-PQPMKR5';
+
+// Stripe production API config
+$config['commerce_payment.commerce_payment_gateway.stripe']['configuration']['mode'] = 'live';
+$config['commerce_payment.commerce_payment_gateway.stripe']['configuration']['publishable_key'] = getenv('AMAZEEIO_STRIPE_PK');
+$config['commerce_payment.commerce_payment_gateway.stripe']['configuration']['secret_key'] = getenv('AMAZEEIO_STRIPE_SK');

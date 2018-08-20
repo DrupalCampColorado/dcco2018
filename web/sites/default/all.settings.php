@@ -12,3 +12,6 @@ $conf['cache_lifetime'] = 0;
 
 // Pages will be compressed by nginx, no need for Drupal to do that
 $conf['page_compression'] = 0;
+
+// Sets Mailchimp API key
+$config['mailchimp.settings']['api_key'] = getenv('AMAZEEIO_MAILCHIMP_API_KEY');
